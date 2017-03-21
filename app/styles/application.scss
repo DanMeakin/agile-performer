@@ -1,0 +1,44 @@
+body {
+  font-family: -apple-system, Sans-Serif;
+}
+
+.container {
+  h1 {
+    font-family: -apple-system, Sans-Serif;
+    text-align: center;
+    font-size: 24pt;
+    color: #3F7D89;
+  }
+}
+
+a {
+  color: #3f894a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+a:hover {
+  color: #27552e;
+}
+
+h5 > a {
+  text-decoration: underline;
+}
+
+.legend {
+  width: 600px;
+
+  .line-legend, .bar-legend {
+    margin: 0px;
+    list-style: none;
+    position: relative;
+    float: right;
+
+    .line-legend-icon, .bar-legend-icon {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 7px;
+    }
+  }
+}

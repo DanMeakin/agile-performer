@@ -10,5 +10,11 @@ exports.files = {
 };
 
 exports.plugins = {
-  babel: {presets: ['latest', 'react']}
+  babel: {
+    presets: ['latest', 'react']
+  },
+
+  sass: {
+    mode: 'ruby' // set to 'native' to force libsass
+  }
 };
