@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import App from 'components/App';
+import BarLineChart from 'components/BarLineChart';
 import MultiBarChart from 'components/MultiBarChart';
 import SprintChart from 'components/SprintChart';
 import TeamSkillsChart from 'components/TeamSkillsChart';
@@ -57,13 +58,28 @@ var linesOfCode = [
 var testCoverage = [
   { description: "Tested functionality",
     data: {
-      "Sprint 1": 60,
-      "Sprint 2": 25,
-      "Sprint 3": 30,
-      "Sprint 4": 40
+      "Sprint 1": 0.6,
+      "Sprint 2": 0.25,
+      "Sprint 3": 0.3,
+      "Sprint 4": 0.4
     }
   }
 ]
+
+var testCovOpts = {
+  scales: {
+    yAxes: [{
+      ticks: {
+        callback: val => (
+          (val * 100).toFixed() + "%"
+        ),
+        suggestedMin: 0,
+        suggestedMax: 1,
+        beginAtZero: true
+      }
+    }]
+  }
+}
 
 var storyPoints = [
   { description: "Commitment",
@@ -127,10 +143,60 @@ var happinessIndex = [
   }
 ]
 
+var burndown = () => {
+  let burndownData = {
+        "Start":         420,
+        "Week 1, Day 1": 410,
+        "Week 1, Day 2": 400,
+        "Week 1, Day 3": 360,
+        "Week 1, Day 4": 320,
+        "Week 1, Day 5": 310,
+        "Week 2, Day 1": 290,
+        "Week 2, Day 2": 285,
+        "Week 2, Day 3": 260,
+        "Week 2, Day 4": 250,
+        "Week 2, Day 5": 230,
+        "Week 3, Day 1": 220,
+        "Week 3, Day 2": 215,
+        "Week 3, Day 3": 210,
+        "Week 3, Day 4": 210,
+        "Week 3, Day 5": 200,
+        "Week 4, Day 1": 170,
+        "Week 4, Day 2": 140,
+        "Week 4, Day 3": 130,
+        "Week 4, Day 4": 85,
+        "Week 4, Day 5": 30
+      },
+      makeBurndownTrend = (startVal, dataPoints) => {
+        let delta = startVal / (Object.keys(dataPoints).length - 1);
+        let trend = Object.keys(dataPoints).reduce(
+          (trendLine, label, i) => {
+            trendLine[label] = startVal - i * delta
+            return trendLine;
+          }, {}
+        );
+        return trend;
+      };
+
+  return [
+    { description: "Remaining Effort",
+      data: burndownData,
+      chartType: "bar"
+    },
+    { description: "Ideal Burndown",
+      data: makeBurndownTrend(420, burndownData),
+      chartType: "line",
+      isOverlay: true
+    }
+  ];
+};
+
 var colours = [
-  new RGB(99, 152, 255),
-  new RGB(99, 255, 139),
-  new RGB(255, 213, 133)
+  new RGB(238,64,53),
+  new RGB(243,119,54),
+  new RGB(253,244,152),
+  new RGB(123,192,67),
+  new RGB(3,146,207)
 ];
 
 var charts =
@@ -140,9 +206,10 @@ document.addEventListener('DOMContentLoaded', () => {
     <div>
       <TeamSkillsChart data={teamSkills} colours={colours} title="Team Skills"/>
       <SprintChart data={linesOfCode} colours={colours} title="Lines of Code" />
-      <SprintChart data={testCoverage} colours={colours} title="Code Coverage" />
+      <SprintChart data={testCoverage} colours={colours} options={testCovOpts} title="Code Coverage" />
       <MultiBarChart data={storyPoints} colours={colours} title="Story Points" />
-      <MultiBarChart data={happinessIndex} title="Happiness" />
+      <MultiBarChart data={happinessIndex} colours={colours} title="Happiness" />
+      <BarLineChart data={burndown()} colours={colours} title="Burndown" />
     </div>,
     document.querySelector('#app')
   );

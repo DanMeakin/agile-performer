@@ -17,19 +17,37 @@ const defaultColours = [
  *
  * @returns {} A full set of chart data ready for use within a Chart.js chart.
  */
-const chartData = (performanceData, colours = defaultColours) => {
+const chartData = (chartType, performanceData, colours = defaultColours) => {
   var makeDataset = function(data, i) {
+    let type = data.type || chartType;
     let colour = colours[i];
-    return {
+    let basicData = {
       label: data.label,
-      fillColor: colour.toRGBA(0.2),
-      strokeColor: colour.toRGBA(1),
-      pointColor: colour.toRGBA(1),
-      pointStrokeColor: "#fff",
-      pointHighlightFill: "#fff",
-      pointHighlightStroke: colour.toRGBA(1),
-      data: data.values
+      backgroundColor: colour.toRGBA(0.2),
+      borderColor: colour.toRGBA(1),
+      borderWidth: 1,
+      pointBackgroundColor: colour.toRGBA(1),
+      pointBorderColor: "#fff",
+      pointHoverBackgroundColor: "#fff",
+      pointHoverStrokeColor: colour.toRGBA(1),
+      data: data.values,
+      type: data.type
     };
+
+    switch(type) {
+    case "line":
+      let extraData = {
+        fill: false,
+        pointRadius: 0,
+        lineTension: 0.1,
+        borderWidth: 2
+      };
+      return Object.assign(basicData, extraData);
+    case "radar":
+    case "bar":
+    default:
+      return basicData;
+    }
   };
   return {
     labels: labels(performanceData),
@@ -49,7 +67,7 @@ const labels = (performanceData) => {
     ));
     return acc.concat(newLabels).sort();
   }, []);
-}
+};
 
 /**
  * Generate a set of bare values for use in chart data.
@@ -63,14 +81,27 @@ const labels = (performanceData) => {
  *
  * @returns {} A set of team values data.
  */
-const createValues = (performanceData) => {
-  return performanceData.map(({ description, data }) => (
-    { label: description,
-      values: labels(performanceData).map((dataLabel) => (
-        data[dataLabel] || 0
-      ))
-    }
-  ));
-}
+const createValues = performanceData => (
+  performanceData.map(createOneValue)
+);
+
+/**
+ * Generate one value for use in chart data.
+ *
+ * @param {} description
+ * @param {} data
+ * @param {} chartType
+ * @param {} _
+ * @param {} performanceData
+ */
+const createOneValue = ({ description, data, chartType }, _, performanceData) => (
+  { label: description,
+    values: labels(performanceData).map(dataLabel => (
+      data[dataLabel] || 0
+    )),
+    type: chartType
+  }
+);
 
 export default chartData;
+
