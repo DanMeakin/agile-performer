@@ -1,11 +1,13 @@
+
+import React, { Component } from 'react';
+import { bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
 import BarLineChart from './BarLineChart';
 import MultiBarChart from './MultiBarChart';
 import SprintChart from './SprintChart';
 import TeamSkillsChart from './TeamSkillsChart';
-import React, { Component } from 'react';
-import { bindActionCreators} from 'redux';
-import { connect } from 'react-redux';
 import RGB from 'js/lib/rgb';
+import {selectView} from 'js/actions/view_actions';
 
 var testCovOpts = {
   scales: {
@@ -54,7 +56,9 @@ function mapStateToProps(state) {
 
 function matchDispatchToProps(dispatch) {
   return bindActionCreators(
-    {},
+    {
+      selectView: selectView
+    },
     dispatch
   );
 }
