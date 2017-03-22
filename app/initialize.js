@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import App from 'components/App';
-import BarLineChart from 'components/BarLineChart';
-import MultiBarChart from 'components/MultiBarChart';
-import SprintChart from 'components/SprintChart';
-import TeamSkillsChart from 'components/TeamSkillsChart';
-import RGB from 'lib/rgb';
+import App from 'js/components/App';
+import BarLineChart from 'js/components/BarLineChart';
+import MultiBarChart from 'js/components/MultiBarChart';
+import SprintChart from 'js/components/SprintChart';
+import TeamSkillsChart from 'js/components/TeamSkillsChart';
+import RGB from 'js/lib/rgb';
 
 var teamSkills = [
   { description: "Team α",

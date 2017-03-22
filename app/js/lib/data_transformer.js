@@ -44,6 +44,7 @@ const chartData = (chartType, performanceData, colours = defaultColours) => {
       };
       return Object.assign(basicData, extraData);
     case "radar":
+      return Object.assign(basicData, { borderWidth: 2 });
     case "bar":
     default:
       return basicData;
