@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import App from 'js/components/App';
+import { scrumPractices, xpPractices } from 'js/data/mocked_practices';
 import BarLineChart from 'js/components/BarLineChart';
 import MultiBarChart from 'js/components/MultiBarChart';
 import SprintChart from 'js/components/SprintChart';
@@ -204,6 +205,7 @@ var charts =
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <div>
+      <TeamSkillsChart data={scrumPractices} colours={colours} title="Scrum Practices" />
       <TeamSkillsChart data={teamSkills} colours={colours} title="Team Skills"/>
       <SprintChart data={linesOfCode} colours={colours} title="Lines of Code" />
       <SprintChart data={testCoverage} colours={colours} options={testCovOpts} title="Code Coverage" />
