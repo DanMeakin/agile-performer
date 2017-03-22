@@ -26,7 +26,7 @@ const burndown = () => {
       let delta = startVal / (Object.keys(dataPoints).length - 1);
       let trend = Object.keys(dataPoints).reduce(
         (trendLine, label, i) => {
-          trendLine[label] = startVal - i * delta
+          trendLine[label] = startVal - i * delta;
           return trendLine;
         }, {}
       );
