@@ -15,6 +15,12 @@ exports.plugins = {
   },
 
   sass: {
-    mode: 'ruby' // set to 'native' to force libsass
+    mode: 'ruby', // set to 'native' to force libsass
+    options: {
+      includePaths: [
+        'node_modules/foundation-sites/scss'
+      ]
+    }
   }
 };
+ 
