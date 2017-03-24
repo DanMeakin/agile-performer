@@ -26,7 +26,7 @@ class App extends Component {
         <div className="small-3 columns">
           <NavBar/>
         </div>
-        <div className="small-5 columns">
+        <div className="small-9 columns">
           <RadarChart data={this.props.metrics.scrumPractices} colours={colours} title="Scrum Practices" />
           <RadarChart data={this.props.metrics.teamSkills} colours={colours} title="Team Skills"/>
           <LineChart data={this.props.metrics.linesOfCode} colours={colours} title="Lines of Code" />
