@@ -9,10 +9,7 @@ export default class LineChart extends React.Component {
     let opts = chartOptions(this.props.options),
         data = chartData("line", this.props.data, this.props.colours)
     return (
-      <div>
-        <h2>{this.props.title}</h2>
-        <Line ref="chart" data={data} options={opts} />
-      </div>
+      <Line ref="chart" data={data} options={opts} />
     )
   }
 }

@@ -1,12 +1,7 @@
-
 import React, { Component } from 'react';
-import { bindActionCreators} from 'redux';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import BarLineChart from './BarLineChart';
-import MultiBarChart from './MultiBarChart';
-import LineChart from './LineChart';
-import PercentageLineChart from './PercentageLineChart';
-import RadarChart from './RadarChart';
+import MetricContainer from './MetricContainer';
 import NavBar from './NavBar';
 import RGB from 'js/lib/rgb';
 import {selectView} from 'js/actions';
@@ -27,13 +22,7 @@ class App extends Component {
           <NavBar/>
         </div>
         <div className="small-9 columns">
-          <RadarChart data={this.props.metrics.scrumPractices} colours={colours} title="Scrum Practices" />
-          <RadarChart data={this.props.metrics.teamSkills} colours={colours} title="Team Skills"/>
-          <LineChart data={this.props.metrics.linesOfCode} colours={colours} title="Lines of Code" />
-          <PercentageLineChart data={this.props.metrics.testCoverage} colours={colours} title="Code Coverage" />
-          <MultiBarChart data={this.props.metrics.storyPoints} colours={colours} title="Story Points" />
-          <MultiBarChart data={this.props.metrics.happinessIndex} colours={colours} title="Happiness" />
-          <BarLineChart data={this.props.metrics.burndown() } colours={colours} title="Burndown" />
+          <MetricContainer />
         </div>
       </div>
     );

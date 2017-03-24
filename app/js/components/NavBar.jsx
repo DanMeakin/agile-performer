@@ -7,9 +7,9 @@ class NavBar extends Component {
 
   renderMenuItems(){
     console.log("this is menuitems: ", this.props.menuItems);
-    return this.props.menuItems.map((item) =>
+    return this.props.menuItems.map((item, i) =>
       (
-        <div className="nav-group">
+        <div className="nav-group" key={`nav-group-${i}`}>
           {this.renderMenuHeading(item.heading)}
           {this.renderSubMenu(item.entries)}
         </div>
@@ -26,7 +26,7 @@ class NavBar extends Component {
   renderSubMenu(entries) {
     return entries.map((entry) =>
       (
-        <li className="nav-entry">
+        <li className="nav-entry" key={entry.metric}>
           <a href="#" onClick={() => this.props.selectMetric(entry.metric)}>
             {entry.name}
           </a>
@@ -38,7 +38,7 @@ class NavBar extends Component {
   render(){
     return(
       <div>
-        <ul className="menu vertical">
+        <ul className="menu vertical" >
           {this.renderMenuItems()}
         </ul>
       </div>

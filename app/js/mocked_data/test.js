@@ -17,7 +17,7 @@ const linesOfCode = [
   }
 ]
 
-const testCoverage = [
+const codeCoverage = [
   { description: "Tested functionality",
     data: {
       "Sprint 1": 0.6,
@@ -28,4 +28,4 @@ const testCoverage = [
   }
 ]
 
-export {linesOfCode, testCoverage};
+export {linesOfCode, codeCoverage};
