@@ -20,3 +20,4 @@ var charts =
         document.querySelector('#app')
       );
   });
+ 

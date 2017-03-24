@@ -4,7 +4,7 @@ import chartData from '../lib/data_transformer';
 import chartOptions from '../lib/chart_options';
 import RGB from '../lib/rgb';
 
-export default class TeamSkillsChart extends React.Component {
+export default class RadarChart extends React.Component {
   render() {
     return (
       <div>

@@ -4,8 +4,8 @@ import { bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
 import BarLineChart from './BarLineChart';
 import MultiBarChart from './MultiBarChart';
-import SprintChart from './SprintChart';
-import TeamSkillsChart from './TeamSkillsChart';
+import LineChart from './LineChart';
+import RadarChart from './RadarChart';
 import RGB from 'js/lib/rgb';
 import {selectView} from 'js/actions/view_actions';
 
@@ -36,10 +36,10 @@ class App extends Component {
   render() {
     return (
       <div>
-      <TeamSkillsChart data={this.props.metrics.scrumPractices} colours={colours} title="Scrum Practices" />
-      <TeamSkillsChart data={this.props.metrics.teamSkills} colours={colours} title="Team Skills"/>
-      <SprintChart data={this.props.metrics.linesOfCode} colours={colours} title="Lines of Code" />
-      <SprintChart data={this.props.metrics.testCoverage} colours={colours} options={testCovOpts} title="Code Coverage" />
+      <RadarChart data={this.props.metrics.scrumPractices} colours={colours} title="Scrum Practices" />
+      <RadarChart data={this.props.metrics.teamSkills} colours={colours} title="Team Skills"/>
+      <LineChart data={this.props.metrics.linesOfCode} colours={colours} title="Lines of Code" />
+      <LineChart data={this.props.metrics.testCoverage} colours={colours} options={testCovOpts} title="Code Coverage" />
       <MultiBarChart data={this.props.metrics.storyPoints} colours={colours} title="Story Points" />
       <MultiBarChart data={this.props.metrics.happinessIndex} colours={colours} title="Happiness" />
       <BarLineChart data={this.props.metrics.burndown()} colours={colours} title="Burndown" />
