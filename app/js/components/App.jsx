@@ -8,7 +8,7 @@ import LineChart from './LineChart';
 import PercentageLineChart from './PercentageLineChart';
 import RadarChart from './RadarChart';
 import RGB from 'js/lib/rgb';
-import {selectView} from 'js/actions/view_actions';
+import {selectView} from 'js/actions';
 
 var colours = [
   new RGB(238, 64, 53),

@@ -3,6 +3,13 @@ const selectView = (viewName) => {
         type: "SELECT_VIEW",
         view: viewName
     }
-}   
+}
 
-export { selectView };
+const selectMetric = (metricName) => {
+    return {
+        type: "SELECT_METRIC",
+        metric: metricName
+    }
+}
+
+export { selectView, selectMetric };
