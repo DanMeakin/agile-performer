@@ -5,24 +5,10 @@ import { connect } from 'react-redux';
 import BarLineChart from './BarLineChart';
 import MultiBarChart from './MultiBarChart';
 import LineChart from './LineChart';
+import PercentageLineChart from './PercentageLineChart';
 import RadarChart from './RadarChart';
 import RGB from 'js/lib/rgb';
 import {selectView} from 'js/actions/view_actions';
-
-var testCovOpts = {
-  scales: {
-    yAxes: [{
-      ticks: {
-        callback: val => (
-          (val * 100).toFixed() + "%"
-        ),
-        suggestedMin: 0,
-        suggestedMax: 1,
-        beginAtZero: true
-      }
-    }]
-  }
-}
 
 var colours = [
   new RGB(238, 64, 53),
@@ -39,7 +25,7 @@ class App extends Component {
       <RadarChart data={this.props.metrics.scrumPractices} colours={colours} title="Scrum Practices" />
       <RadarChart data={this.props.metrics.teamSkills} colours={colours} title="Team Skills"/>
       <LineChart data={this.props.metrics.linesOfCode} colours={colours} title="Lines of Code" />
-      <LineChart data={this.props.metrics.testCoverage} colours={colours} options={testCovOpts} title="Code Coverage" />
+      <PercentageLineChart data={this.props.metrics.testCoverage} colours={colours} title="Code Coverage" />
       <MultiBarChart data={this.props.metrics.storyPoints} colours={colours} title="Story Points" />
       <MultiBarChart data={this.props.metrics.happinessIndex} colours={colours} title="Happiness" />
       <BarLineChart data={this.props.metrics.burndown()} colours={colours} title="Burndown" />
