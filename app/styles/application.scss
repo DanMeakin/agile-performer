@@ -1,9 +1,6 @@
+@import 'settings';
 @import 'foundation';
 @include foundation-everything;
-
-body {
-  font-family: -apple-system, Sans-Serif;
-}
 
 .container {
   max-width: 720px;
@@ -11,7 +8,6 @@ body {
   margin-right: auto;
 
   h1 {
-    font-family: -apple-system, Sans-Serif;
     text-align: center;
     font-size: 24pt;
     color: #3F7D89;
