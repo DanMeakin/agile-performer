@@ -6,6 +6,7 @@ import { selectMetric } from "../actions";
 class NavBar extends Component {
 
   renderMenuItems(){
+    console.log("this is menuitems: ", this.props.menuItems);
     return this.props.menuItems.map((item) =>
       (
         <div className="nav-group">
@@ -46,6 +47,7 @@ class NavBar extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log("state of menuitem: ", state)
   return {
     menuItems: state.menuItems
   };
@@ -63,4 +65,4 @@ function matchDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   matchDispatchToProps
-)
+)(NavBar)
