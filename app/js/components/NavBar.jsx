@@ -5,13 +5,12 @@ import { selectMetric } from "../actions";
 
 class NavBar extends Component {
 
-  renderMenuItems(){
-    console.log("this is menuitems: ", this.props.menuItems);
+  renderMenuItems() {
     return this.props.menuItems.map((item, i) =>
       (
         <div className="nav-group" key={`nav-group-${i}`}>
           {this.renderMenuHeading(item.heading)}
-          {this.renderSubMenu(item.entries)}
+          {this.renderEntries(item.metrics)}
         </div>
       )
     )
@@ -23,25 +22,23 @@ class NavBar extends Component {
     )
   }
 
-  renderSubMenu(entries) {
-    return entries.map((entry) =>
+  renderEntries(metrics) {
+    return metrics.map((metric) =>
       (
-        <li className="nav-entry" key={entry.metric}>
-          <a href="#" onClick={() => this.props.selectMetric(entry.metric)}>
-            {entry.name}
+        <li className="nav-entry" key={metric.type}>
+          <a href="#" onClick={() => this.props.selectMetric(metric.type)}>
+            {metric.name}
           </a>
         </li>
       )
     )
   }
 
-  render(){
-    return(
-      <div>
-        <ul className="menu vertical" >
-          {this.renderMenuItems()}
-        </ul>
-      </div>
+  render() {
+    return (
+      <ul className="menu vertical" >
+        {this.renderMenuItems()}
+      </ul>
     )
   }
 }

@@ -1,26 +1,26 @@
 const menuItems = [
     {
         heading: "Test Driven Development",
-        entries: [
+        metrics: [
             {
-                metric: "CODE_COVERAGE",
+                type: "CODE_COVERAGE",
                 name: "Code coverage"
             } ,
             {
-                metric: "LINES_OF_CODE",
+                type: "LINES_OF_CODE",
                 name: "Lines of code"
             }
         ]
     },
     {
         heading: "Practices",
-        entries: [
+        metrics: [
             {
-                metric: "SCRUM_PRACTICES",
+                type: "SCRUM_PRACTICES",
                 name: "Scrum practices"
             } ,
             {
-                metric: "XP_PRACTICES",
+                type: "XP_PRACTICES",
                 name: "XP practices"
             }
         ]

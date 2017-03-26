@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import PercentageLineChart from './PercentageLineChart';
+import PercentageLineChart from './charts/PercentageLineChart';
 
 class CodeCoverageMetric extends Component {
   render() {
-    console.log("Our props", this.props);
     return (
       <PercentageLineChart data={this.props.chartData} title="Code Coverage" />
     )
