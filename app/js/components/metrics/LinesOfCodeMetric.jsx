@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import LineChart from './charts/LineChart';
+import LineChart from '../charts/LineChart';
 
 class LinesOfCodeMetric extends Component {
   render() {
