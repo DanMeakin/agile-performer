@@ -1,5 +1,5 @@
 
-const storyPoints = [
+const velocity = [
   {
     description: "Commitment",
     data: {
@@ -10,7 +10,7 @@ const storyPoints = [
     }
   },
   {
-    description: "Work completed",
+    description: "Work Completed",
     data: {
       "Sprint 1": 250,
       "Sprint 2": 280,
@@ -20,4 +20,4 @@ const storyPoints = [
   }
 ]
 
-export { storyPoints };
+export { velocity };
