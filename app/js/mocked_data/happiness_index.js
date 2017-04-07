@@ -1,49 +1,15 @@
 const happinessIndex = [
-  {
-    description: "Resources",
-    data: {
-      "Sprint 1": 1,
-      "Sprint 2": 2,
-      "Sprint 3": 4,
-      "Sprint 4": 2
+    {
+        describtion: "Happiness",
+        data: {
+            "Week 1": 3.2,
+            "Week 2": 3.9,
+            "Week 3": 4.2,
+            "Week 4": 2.1,
+            "Week 5": 3.6,
+            "Week 6": 3.7, 
+        }
     }
-  },
-  {
-    description: "Communication",
-    data: {
-      "Sprint 1": 4,
-      "Sprint 2": 3,
-      "Sprint 3": 4,
-      "Sprint 4": 5
-    }
-  },
-  {
-    description: "Requirements",
-    data: {
-      "Sprint 1": 3,
-      "Sprint 2": 4,
-      "Sprint 3": 4,
-      "Sprint 4": 4
-    }
-  },
-  {
-    description: "Management",
-    data: {
-      "Sprint 1": 2,
-      "Sprint 2": 2,
-      "Sprint 3": 2,
-      "Sprint 4": 3
-    }
-  },
-  {
-    description: "Technical",
-    data: {
-      "Sprint 1": 5,
-      "Sprint 2": 2,
-      "Sprint 3": 3,
-      "Sprint 4": 3
-    }
-  }
 ]
 
-export {happinessIndex};
+export { happinessIndex };

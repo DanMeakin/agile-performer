@@ -16,12 +16,12 @@ const scrumPractices = [
       "Product Owner": ADOPTION
     }
   },
-  { description: "Team β",
-    data: {
-      "Daily scrum": ACCEPTANCE,
-      "Definition of \"Done\"": ACCEPTANCE
-    }
-  }
+//  { description: "Team β",
+//    data: {
+//      "Daily scrum": ACCEPTANCE,
+//      "Definition of \"Done\"": ACCEPTANCE
+//    }
+//  }
 ];
 
 const xpPractices = [

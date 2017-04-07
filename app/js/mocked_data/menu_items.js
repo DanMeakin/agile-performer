@@ -1,15 +1,27 @@
 const menuItems = [
     {
-        heading: "Test Driven Development",
+        heading: "Statistics",
         metrics: [
             {
                 type: "CODE_COVERAGE",
-                name: "Code coverage"
+                name: "Code Coverage"
             } ,
             {
                 type: "LINES_OF_CODE",
-                name: "Lines of code"
-            }
+                name: "Lines of Code"
+            },
+            {
+                type: "TEAM_SATISFACTION",
+                name: "Team Satisfaction"
+            },
+            {
+                type: "VELOCITY",
+                name: "Velocity"
+            },
+            {
+                type: "HAPPINESS_INDEX",
+                name: "Happiness Index"
+            },
         ]
     },
     {
@@ -17,11 +29,11 @@ const menuItems = [
         metrics: [
             {
                 type: "SCRUM_PRACTICES",
-                name: "Scrum practices"
+                name: "Scrum Practices"
             } ,
             {
                 type: "XP_PRACTICES",
-                name: "XP practices"
+                name: "XP Practices"
             }
         ]
     }
