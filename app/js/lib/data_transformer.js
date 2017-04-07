@@ -1,12 +1,14 @@
 import RGB from './rgb';
 
 const defaultColours = [
-  new RGB(179, 181, 198),
-  new RGB(255, 99, 132),
-  new RGB(205, 99, 255),
-  new RGB(99, 126, 255),
-  new RGB(99, 255, 215)
+  new RGB(219, 70, 70),   // red
+  new RGB(92, 153, 237),  // blue
+  new RGB(244, 214, 33), // yellow
+  new RGB(203, 80, 230),  // purple
+  new RGB(80, 186, 104), // green
 ];
+
+const opacity = 0.65;
 
 /**
  * Generate chart data.
@@ -18,12 +20,12 @@ const defaultColours = [
  * @returns {} A full set of chart data ready for use within a Chart.js chart.
  */
 const chartData = (chartType, performanceData, colours = defaultColours) => {
-  var makeDataset = function(data, i) {
+  var makeDataset = function (data, i) {
     let type = data.type || chartType;
     let colour = colours[i];
     let basicData = {
       label: data.label,
-      backgroundColor: colour.toRGBA(0.2),
+      backgroundColor: colour.toRGBA(opacity),
       borderColor: colour.toRGBA(1),
       borderWidth: 1,
       pointBackgroundColor: colour.toRGBA(1),
@@ -34,20 +36,23 @@ const chartData = (chartType, performanceData, colours = defaultColours) => {
       type: data.type
     };
 
-    switch(type) {
-    case "line":
-      let extraData = {
-        fill: false,
-        pointRadius: 0,
-        lineTension: 0.1,
-        borderWidth: 2
-      };
-      return Object.assign(basicData, extraData);
-    case "radar":
-      return Object.assign(basicData, { borderWidth: 2 });
-    case "bar":
-    default:
-      return basicData;
+    switch (type) {
+      case "line":
+        let extraData = {
+          fill: false,
+          pointRadius: 0,
+          lineTension: 0.1,
+          borderWidth: 2
+        };
+        return Object.assign(basicData, extraData);
+      case "radar":
+        return Object.assign(basicData, { 
+          borderWidth: 2,
+          backgroundColor: colour.toRGBA(0.3)
+         });
+      case "bar":
+      default:
+        return basicData;
     }
   };
   return {
@@ -96,7 +101,8 @@ const createValues = performanceData => (
  * @param {} performanceData
  */
 const createOneValue = ({ description, data, chartType }, _, performanceData) => (
-  { label: description,
+  {
+    label: description,
     values: labels(performanceData).map(dataLabel => (
       data[dataLabel] || 0
     )),
