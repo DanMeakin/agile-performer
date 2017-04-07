@@ -22,7 +22,7 @@ const codeCoverage = [
     data: {
       "Sprint 1": 0.6,
       "Sprint 2": 0.25,
-      "Sprint 3": 0.3,
+      "Sprint 3": 0.5,
       "Sprint 4": 0.4
     }
   }
