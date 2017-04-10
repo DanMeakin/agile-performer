@@ -8,7 +8,7 @@ const defaultColours = [
   new RGB(80, 186, 104), // green
 ];
 
-const opacity = 0.65;
+const opacity = 1;
 
 /**
  * Generate chart data.

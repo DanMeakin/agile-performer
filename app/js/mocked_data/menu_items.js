@@ -22,6 +22,10 @@ const menuItems = [
                 type: "HAPPINESS_INDEX",
                 name: "Happiness Index"
             },
+            {
+                type: "SPRINT_BURNDOWN",
+                name: "Sprint Burndown"
+            }
         ]
     },
     {
