@@ -4,7 +4,7 @@ const defaultColours = [
   new RGB(219, 70, 70),   // red
   new RGB(92, 153, 237),  // blue
   new RGB(244, 214, 33), // yellow
-  new RGB(203, 80, 230),  // purple
+  new RGB(203, 120, 230),  // purple
   new RGB(80, 186, 104), // green
 ];
 

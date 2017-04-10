@@ -36,9 +36,17 @@ class NavBar extends Component {
 
   render() {
     return (
-      <ul className="menu vertical" >
-        {this.renderMenuItems()}
-      </ul>
+      <div className="sidenav">
+        <header className="nav-header" role="banner">
+          <h5 className="nav-titel">Agile Performer</h5>
+          <form className="input">
+            <input className="" type="search" placeholder="Search.." />
+          </form>
+        </header>
+        <ul className="menu vertical" >
+          {this.renderMenuItems()}
+        </ul>
+      </div>
     )
   }
 }

@@ -19,7 +19,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <TopBar></TopBar>
         <div className="row">
           <div className="small-2 columns sidebar">
             <NavBar />
