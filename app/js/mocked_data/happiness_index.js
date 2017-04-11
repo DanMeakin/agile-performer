@@ -1,6 +1,6 @@
 const happinessIndex = [
     {
-        describtion: "Happiness",
+        description: "Happiness",
         data: {
             "Week 1": 3.2,
             "Week 2": 3.9,

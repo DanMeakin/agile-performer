@@ -25,7 +25,11 @@ const menuItems = [
             {
                 type: "SPRINT_BURNDOWN",
                 name: "Sprint Burndown"
-            }
+            },
+            {
+                type: "LEAD_TIME",
+                name: "Lead Time"
+            },
         ]
     },
     {
