@@ -10,7 +10,7 @@ const teamSkills = [
             "Implementation": 4
         }
     },
-    {
+ /**   {
         description: "Team β",
         data: {
             "Requirements/PO": 2,
@@ -20,7 +20,8 @@ const teamSkills = [
             "Business": 3
         }
     },
-    {
+    */
+    /**{
         description: "Team γ",
         data: {
             "Testing": 7,
@@ -28,6 +29,7 @@ const teamSkills = [
             "QA": 7
         }
     }
+    */
 ]
 
 export { teamSkills };

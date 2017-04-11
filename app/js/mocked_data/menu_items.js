@@ -29,7 +29,7 @@ const menuItems = [
         ]
     },
     {
-        heading: "Practices",
+        heading: "Profile",
         metrics: [
             {
                 type: "SCRUM_PRACTICES",
@@ -38,6 +38,10 @@ const menuItems = [
             {
                 type: "XP_PRACTICES",
                 name: "XP Practices"
+            },
+            {
+                type: "TEAM_SKILLS",
+                name: "Team Skills"
             }
         ]
     }

@@ -9,6 +9,7 @@ import HappinessIndexMetric from './metrics/HappinessIndexMetric';
 import SprintBurndownMetric from './metrics/SprintBurndownMetric';
 import ScrumPracticesMetric from './metrics/ScrumPracticesMetric';
 import XpPracticesMetric from './metrics/XpPracticesMetric';
+import TeamSkillsMetric from './metrics/TeamSkillsMetric';
 
 const metricComponents = {
   "CODE_COVERAGE": (<CodeCoverageMetric />),
@@ -18,7 +19,8 @@ const metricComponents = {
   "VELOCITY": (<VelocityMetric />),
   "SPRINT_BURNDOWN": (<SprintBurndownMetric />),
   "SCRUM_PRACTICES": (<ScrumPracticesMetric />),
-  "XP_PRACTICES": (<XpPracticesMetric />)
+  "XP_PRACTICES": (<XpPracticesMetric />),
+  "TEAM_SKILLS": (<TeamSkillsMetric />),
 }
 
 class MetricContainer extends Component {
