@@ -34,15 +34,23 @@ class NavBar extends Component {
     )
   }
 
+  renderNavBarHeading() {
+    return (
+      <div className="row collapse postfix-round">
+        <header className="nav-header" role="banner">
+          <h5 className="nav-titel">Agile Performer</h5>
+          <form>
+            <input type="text" placeholder="Search.." />
+          </form>
+        </header>
+      </div>
+    )
+  }
+
   render() {
     return (
       <div className="sidenav">
-        <header className="nav-header" role="banner">
-          <h5 className="nav-titel">Agile Performer</h5>
-          <form className="input">
-            <input className="" type="search" placeholder="Search.." />
-          </form>
-        </header>
+        {this.renderNavBarHeading()}
         <ul className="menu vertical" >
           {this.renderMenuItems()}
         </ul>
