@@ -28,6 +28,7 @@ export default class PercentageLineChart extends React.Component {
     return (
       <div className="chart-panel">
         <h3>{this.props.title}</h3>
+        {this.props.children}
         <Line ref="chart" data={data} options={opts} />
       </div>
     )

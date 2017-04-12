@@ -11,6 +11,7 @@ export default class BarLineChart extends React.Component {
     return (
       <div className="chart-panel">
         <h3>{this.props.title}</h3>
+        {this.props.children}
         <Bar data={data} options={opts} />
       </div>
     )

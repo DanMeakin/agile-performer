@@ -9,6 +9,7 @@ export default class RadarChart extends React.Component {
     return (
       <div className="chart-panel">
         <h3>{this.props.title}</h3>
+        {this.props.children}
         <Radar data={chartData("radar", this.props.data, this.props.colours)} options={chartOptions(this.props.options)} />
       </div>
     )
