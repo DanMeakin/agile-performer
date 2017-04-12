@@ -6,7 +6,7 @@ import RadarChart from '../charts/RadarChart';
 class ScrumPracticesMetric extends Component {
   render() {
     return (
-      <RadarChart data={this.props.chartData} title="Happiness Index" />
+      <RadarChart data={this.props.chartData} title="Scrum Practices" />
     )
   }
 }

@@ -6,7 +6,7 @@ import RadarChart from '../charts/RadarChart';
 class TeamSkillsMetric extends Component {
   render() {
     return (
-      <RadarChart data={this.props.chartData} title="Lines of Code" />
+      <RadarChart data={this.props.chartData} title="Team Skills" />
     )
   }
 }
