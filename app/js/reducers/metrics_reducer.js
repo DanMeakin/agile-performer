@@ -7,6 +7,7 @@ import { sprintBurndown } from 'js/mocked_data/sprint_burndown';
 import { happinessIndex } from 'js/mocked_data/happiness_index';
 import { averageLeadTime } from 'js/mocked_data/lead_time';
 import { projectCodeOwnership, teamCodeOwnership } from 'js/mocked_data/code_ownership';
+import { numberOfTestCases } from 'js/mocked_data/test_cases'
 
 const initialState = {
   currentMetric: null,
@@ -21,6 +22,7 @@ const initialState = {
   sprintBurndown,
   happinessIndex,
   averageLeadTime,
+  numberOfTestCases,
   codeOwnership: {
     project: projectCodeOwnership,
     team: teamCodeOwnership

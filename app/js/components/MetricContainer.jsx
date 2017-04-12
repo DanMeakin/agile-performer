@@ -13,6 +13,8 @@ import TeamSkillsMetric from './metrics/TeamSkillsMetric';
 import LeadTimeMetric from './metrics/LeadTimeMetric';
 import ProjectCodeOwnershipMetric from './metrics/ProjectCodeOwnership';
 import TeamCodeOwnershipMetric from './metrics/TeamCodeOwnership';
+import TestCasesMetric from './metrics/TestCases';
+
 
 const metricComponents = {
   "CODE_COVERAGE": (<CodeCoverageMetric />),
@@ -26,7 +28,8 @@ const metricComponents = {
   "TEAM_SKILLS": (<TeamSkillsMetric />),
   "LEAD_TIME": (<LeadTimeMetric />),
   "CODE_OWNERSHIP_PROJECT": (<ProjectCodeOwnershipMetric />),
-  "CODE_OWNERSHIP_TEAM": (<TeamCodeOwnershipMetric />)
+  "CODE_OWNERSHIP_TEAM": (<TeamCodeOwnershipMetric />),
+  "TEST_CASES_COUNT": (<TestCasesMetric />)
 }
 
 class MetricContainer extends Component {

@@ -19,6 +19,10 @@ const menuItems = [
                 name: "Lines of Code"
             },
             {
+                type: "TEST_CASES_COUNT",
+                name: "Number of Test Cases"
+            },
+            {
                 type: "TEAM_SATISFACTION",
                 name: "Team Satisfaction"
             },

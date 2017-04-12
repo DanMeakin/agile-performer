@@ -1,4 +1,3 @@
-
 const velocity = [
   {
     description: "Commitment",

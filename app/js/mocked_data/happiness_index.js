@@ -7,9 +7,9 @@ const happinessIndex = [
             "Week 3": 4.2,
             "Week 4": 2.1,
             "Week 5": 3.6,
-            "Week 6": 3.7, 
+            "Week 6": 3.7
         }
     }
-]
+];
 
 export { happinessIndex };
