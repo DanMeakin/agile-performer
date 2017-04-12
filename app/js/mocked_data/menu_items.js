@@ -7,6 +7,14 @@ const menuItems = [
                 name: "Code Coverage"
             } ,
             {
+                type: "CODE_OWNERSHIP_PROJECT",
+                name: "Code Ownership (Project)"
+            },
+            {
+                type: "CODE_OWNERSHIP_TEAM",
+                name: "Code Ownership (Team)"
+            },
+            {
                 type: "LINES_OF_CODE",
                 name: "Lines of Code"
             },

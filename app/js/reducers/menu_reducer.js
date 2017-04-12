@@ -1,5 +1,5 @@
-import {menuItems } from 'js/mocked_data/menu_items'
- 
+import { menuItems } from 'js/mocked_data/menu_items';
+
  const initialState = menuItems;
 
  const menuReducer = (state = initialState, action) => {

@@ -46,11 +46,16 @@ const chartData = (chartType, performanceData, colours = defaultColours) => {
         };
         return Object.assign(basicData, extraData);
       case "radar":
-        return Object.assign(basicData, { 
+        return Object.assign(basicData, {
           borderWidth: 2,
           backgroundColor: colour.toRGBA(0.3)
          });
-      case "bar":
+    case "pie":
+        return Object.assign(basicData, {
+          backgroundColor: colours.map(colour => (colour.toRGBA(0.5))),
+          borderColor: []
+        });
+    case "bar":
       default:
         return basicData;
     }
