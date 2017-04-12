@@ -11,6 +11,7 @@ import ScrumPracticesMetric from './metrics/ScrumPracticesMetric';
 import XpPracticesMetric from './metrics/XpPracticesMetric';
 import TeamSkillsMetric from './metrics/TeamSkillsMetric';
 import LeadTimeMetric from './metrics/LeadTimeMetric';
+import StoryPointEffortMetric from './metrics/StoryPointEffortMetric';
 
 const metricComponents = {
   "CODE_COVERAGE": (<CodeCoverageMetric />),
@@ -23,6 +24,7 @@ const metricComponents = {
   "XP_PRACTICES": (<XpPracticesMetric />),
   "TEAM_SKILLS": (<TeamSkillsMetric />),
   "LEAD_TIME": (<LeadTimeMetric />),
+  "STORY_POINT_EFFORT": (<StoryPointEffortMetric />),
 }
 
 class MetricContainer extends Component {

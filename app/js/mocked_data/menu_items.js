@@ -30,6 +30,10 @@ const menuItems = [
                 type: "LEAD_TIME",
                 name: "Lead Time"
             },
+            {
+                type: "STORY_POINT_EFFORT",
+                name: "Story Point Effort"
+            }
         ]
     },
     {
