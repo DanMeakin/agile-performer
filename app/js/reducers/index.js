@@ -4,7 +4,8 @@ import menuReducer from './menu_reducer';
 
 const allReducers = combineReducers({
   metrics: metricsReducer,
-  menuItems: menuReducer
+  menuItems: menuReducer,
+  metricFilter: ""
 });
 
 export default allReducers;

@@ -77,8 +77,16 @@ const menuItems = [
             }
         ]
     }
-]
+];
 
-export { menuItems };
+const filterMenuItems = (term) => (
+  menuItems.map(({ heading, metrics }) => (
+    { heading,
+      metrics: metrics.filter(({ name }) => (
+        name.toLowerCase().includes(term.toLowerCase())
+      ))
+    }
+  ))
+);
 
-     
+export { menuItems, filterMenuItems };

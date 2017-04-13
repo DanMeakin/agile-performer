@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { selectMetric } from "../actions";
+import { selectMetric, filterMetrics } from "../actions";
 
 class NavBar extends Component {
+  constructor(props) {
+    super(props);
+    this.handleFilterChange = this.handleFilterChange.bind(this);
+  }
 
   renderMenuItems() {
     return this.props.menuItems.map((item, i) =>
@@ -40,11 +44,15 @@ class NavBar extends Component {
         <header className="nav-header" role="banner">
           <h5 className="nav-titel">Agile Performer</h5>
           <form>
-            <input type="text" placeholder="Search.." />
+            <input type="text" value={this.props.metricFilter} onChange={this.handleFilterChange} placeholder="Search.." />
           </form>
         </header>
       </div>
     )
+  }
+
+  handleFilterChange(event) {
+    this.props.filterMetrics(event.target.value);
   }
 
   render() {
@@ -61,14 +69,16 @@ class NavBar extends Component {
 
 function mapStateToProps(state) {
   return {
-    menuItems: state.menuItems
+    menuItems: state.menuItems,
+    metricFilter: state.metricFilter
   };
 }
 
 function matchDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      selectMetric: selectMetric
+      selectMetric: selectMetric,
+      filterMetrics: filterMetrics
     },
     dispatch
   );
