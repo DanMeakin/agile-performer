@@ -24,7 +24,6 @@ class VelocityTrendMetric extends Component {
       let val = this.props.chartData.find(entry => {
         return entry.description == desc;
       })
-      console.log("Value", val);
       return val
     }),
       trendCommitment = {

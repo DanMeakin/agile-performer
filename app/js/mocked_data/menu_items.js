@@ -43,6 +43,10 @@ const menuItems = [
                 name: "Happiness Index"
             },
             {
+                type: "ENHANCED_RELEASE_BURNDOWN",
+                name: "Enhanced Release Burndown"
+            },
+            {
                 type: "SPRINT_BURNDOWN",
                 name: "Sprint Burndown"
             },

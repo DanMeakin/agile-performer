@@ -4,6 +4,7 @@ import { linesOfCode, codeCoverage } from 'js/mocked_data/test';
 import { velocity, detailedVelocity } from 'js/mocked_data/velocity';
 import { teamSatisfaction } from 'js/mocked_data/team_satisfaction';
 import { sprintBurndown } from 'js/mocked_data/sprint_burndown';
+import { releaseBurndown } from 'js/mocked_data/release_burndown';
 import { happinessIndex } from 'js/mocked_data/happiness_index';
 import { averageLeadTime } from 'js/mocked_data/lead_time';
 import { projectCodeOwnership, teamCodeOwnership } from 'js/mocked_data/code_ownership';
@@ -21,6 +22,7 @@ const initialState = {
   detailedVelocity,
   teamSatisfaction,
   sprintBurndown,
+  releaseBurndown,
   happinessIndex,
   averageLeadTime,
   numberOfTestCases,

@@ -37,7 +37,6 @@ class RemedialFocusMetric extends Component {
           }]
       }
     });
-    console.log("Remedial options", opts);
     return opts;
   }
 

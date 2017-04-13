@@ -7,6 +7,7 @@ import TeamSatisfactionMetric from './metrics/TeamSatisfactionMetric';
 import VelocityMetric from './metrics/VelocityMetric';
 import VelocityTrendMetric from './metrics/VelocityTrend';
 import HappinessIndexMetric from './metrics/HappinessIndexMetric';
+import EnhancedReleaseBurndownMetric from './metrics/EnhancedReleaseBurndown';
 import SprintBurndownMetric from './metrics/SprintBurndownMetric';
 import ScrumPracticesMetric from './metrics/ScrumPracticesMetric';
 import XpPracticesMetric from './metrics/XpPracticesMetric';
@@ -25,6 +26,7 @@ const metricComponents = {
   "VELOCITY": (<VelocityMetric />),
   "VELOCITY_TREND": (<VelocityTrendMetric />),
   "SPRINT_BURNDOWN": (<SprintBurndownMetric />),
+  "ENHANCED_RELEASE_BURNDOWN": (<EnhancedReleaseBurndownMetric />),
   "SCRUM_PRACTICES": (<ScrumPracticesMetric />),
   "XP_PRACTICES": (<XpPracticesMetric />),
   "TEAM_SKILLS": (<TeamSkillsMetric />),

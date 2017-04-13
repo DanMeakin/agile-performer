@@ -60,7 +60,6 @@ class NavBar extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log("state of menuitem: ", state)
   return {
     menuItems: state.menuItems
   };
