@@ -23,6 +23,10 @@ const menuItems = [
                 name: "Number of Test Cases"
             },
             {
+                type: "REMEDIAL_FOCUS",
+                name: "Remedial Focus"
+            },
+            {
                 type: "TEAM_SATISFACTION",
                 name: "Team Satisfaction"
             },

@@ -15,7 +15,7 @@ import LeadTimeMetric from './metrics/LeadTimeMetric';
 import ProjectCodeOwnershipMetric from './metrics/ProjectCodeOwnership';
 import TeamCodeOwnershipMetric from './metrics/TeamCodeOwnership';
 import TestCasesMetric from './metrics/TestCases';
-
+import RemedialFocusMetric from './metrics/RemedialFocus';
 
 const metricComponents = {
   "CODE_COVERAGE": (<CodeCoverageMetric />),
@@ -31,6 +31,7 @@ const metricComponents = {
   "LEAD_TIME": (<LeadTimeMetric />),
   "CODE_OWNERSHIP_PROJECT": (<ProjectCodeOwnershipMetric />),
   "CODE_OWNERSHIP_TEAM": (<TeamCodeOwnershipMetric />),
+  "REMEDIAL_FOCUS": (<RemedialFocusMetric />),
   "TEST_CASES_COUNT": (<TestCasesMetric />)
 }
 
