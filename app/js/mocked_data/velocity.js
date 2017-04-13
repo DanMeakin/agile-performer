@@ -31,10 +31,13 @@ const detailedVelocity = [
 ];
 
 const velocity = detailedVelocity.map(({ description, data }) => {
-  let newData = Object.keys(data).reduce((acc, k) => {
-    acc[k] = data[k].total;
+  return Object.keys(data).reduce((acc, k) => {
+    acc.data[k] = data[k].total;
     return acc;
-  }, {});
+  }, {
+    data: {},
+    description
+  });
 });
 
 export { velocity, detailedVelocity };

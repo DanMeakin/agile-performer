@@ -8,7 +8,7 @@ class VelocityTrendMetric extends Component {
   colours() {
     return [
       new RGB(200, 200, 200),
-      new RGB(100, 255, 0)
+      new RGB(255, 0, 0)
     ];
   }
 
