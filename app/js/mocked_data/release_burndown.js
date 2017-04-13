@@ -1,3 +1,5 @@
+import RGB from '../lib/rgb';
+
 let burndownData = {
   "Start": { remaining: 220, added: 0 },
   "Sprint 1": { remaining: 200, added: 0 },
@@ -67,9 +69,6 @@ let burndownData = {
       return [...Array(numPoints).keys()].reduce(reducer, {});
     };
 
-console.log("Adj trend", makeAddedTrend());
-console.log("Est trend", makeReleaseTrend());
-
 const releaseBurndown = [
   {
     description: "Story Points",
@@ -82,16 +81,18 @@ const releaseBurndown = [
     chartType: "bar"
   },
   {
-    description: "Adjusted Release Trend",
-    data: makeAddedTrend(),
-    chartType: "line",
-    yAxisID: "releaseTrends"
-  },
-  {
     description: "Estimated Release Trend",
     data: makeReleaseTrend(),
     chartType: "line",
-    yAxisID: "releaseTrends"
+    borderDash: [10, 5],
+    borderColor: new RGB(150, 150, 200)
+  },
+  {
+    description: "Adjusted Release Trend",
+    data: makeAddedTrend(),
+    chartType: "line",
+    borderDash: [10, 5],
+    borderColor: new RGB(200, 150, 150)
   }
 ];
 

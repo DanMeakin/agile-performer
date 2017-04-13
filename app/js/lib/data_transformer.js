@@ -21,13 +21,16 @@ const opacity = 1;
  */
 const chartData = (chartType, performanceData, colours = defaultColours, sortLabels = true) => {
   var makeDataset = function (data, i) {
-    let type = data.type || chartType;
-    let colour = colours[i];
-    let basicData = {
+    console.log("Data", data);
+    let type = data.type || chartType,
+        borderDash = data.borderDash || [],
+        colour = data.borderColor || colours[i],
+        basicData = {
       label: data.label,
       backgroundColor: colour.toRGBA(opacity),
       borderColor: colour.toRGBA(1),
       borderWidth: 1,
+      borderDash,
       pointBackgroundColor: colour.toRGBA(1),
       pointBorderColor: "#fff",
       pointHoverBackgroundColor: "#fff",
@@ -40,6 +43,7 @@ const chartData = (chartType, performanceData, colours = defaultColours, sortLab
       case "line":
         let extraData = {
           fill: false,
+          backgroundColor: (new RGB(255, 255, 255)).toRGBA(0),
           pointRadius: 0,
           lineTension: 0.1,
           borderWidth: 2
@@ -97,14 +101,18 @@ const labels = (performanceData, sortLabels = true) => {
  * @returns {} A set of team values data.
  */
 const createValues = (performanceData, sortLabels) => {
-  let createOneValue = ({ description, data, chartType }, _, performanceData) => (
-    {
-      label: description,
-      values: labels(performanceData, sortLabels).map(dataLabel => (
-        data[dataLabel] || 0
-      )),
-      type: chartType
-    }
+  let createOneValue = (dataset, _, performanceData) => (
+    Object.assign(
+      {},
+      {
+        label: dataset.description,
+        values: labels(performanceData, sortLabels).map(dataLabel => (
+          dataset.data[dataLabel] || 0
+        )),
+        type: dataset.chartType
+      },
+      dataset
+    )
   );
   return performanceData.map(createOneValue);
 };
