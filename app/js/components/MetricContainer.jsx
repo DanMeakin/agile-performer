@@ -5,6 +5,7 @@ import CodeCoverageMetric from './metrics/CodeCoverageMetric';
 import LinesOfCodeMetric from './metrics/LinesOfCodeMetric';
 import TeamSatisfactionMetric from './metrics/TeamSatisfactionMetric';
 import VelocityMetric from './metrics/VelocityMetric';
+import VelocityTrendMetric from './metrics/VelocityTrend';
 import HappinessIndexMetric from './metrics/HappinessIndexMetric';
 import SprintBurndownMetric from './metrics/SprintBurndownMetric';
 import ScrumPracticesMetric from './metrics/ScrumPracticesMetric';
@@ -22,6 +23,7 @@ const metricComponents = {
   "TEAM_SATISFACTION": (<TeamSatisfactionMetric />),
   "HAPPINESS_INDEX": (<HappinessIndexMetric />),
   "VELOCITY": (<VelocityMetric />),
+  "VELOCITY_TREND": (<VelocityTrendMetric />),
   "SPRINT_BURNDOWN": (<SprintBurndownMetric />),
   "SCRUM_PRACTICES": (<ScrumPracticesMetric />),
   "XP_PRACTICES": (<XpPracticesMetric />),

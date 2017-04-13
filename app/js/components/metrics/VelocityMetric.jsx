@@ -5,7 +5,6 @@ import BarLineChart from '../charts/BarLineChart';
 
 class VelocityMetric extends Component {
   render() {
-    console.log("Where is my metrics?", this.props)
     return (
         <BarLineChart data={this.props.chartData} title="Velocity"></BarLineChart>
     )

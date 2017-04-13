@@ -31,6 +31,10 @@ const menuItems = [
                 name: "Velocity"
             },
             {
+                type: "VELOCITY_TREND",
+                name: "Velocity Trend"
+            },
+            {
                 type: "HAPPINESS_INDEX",
                 name: "Happiness Index"
             },
