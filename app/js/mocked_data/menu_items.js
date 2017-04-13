@@ -51,6 +51,10 @@ const menuItems = [
                 name: "Sprint Burndown"
             },
             {
+                type: "SPRINT_INTERFERENCE",
+                name: "Sprint Interference"
+            },
+            {
                 type: "LEAD_TIME",
                 name: "Lead Time"
             },

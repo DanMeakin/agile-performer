@@ -9,6 +9,7 @@ import { happinessIndex } from 'js/mocked_data/happiness_index';
 import { averageLeadTime } from 'js/mocked_data/lead_time';
 import { projectCodeOwnership, teamCodeOwnership } from 'js/mocked_data/code_ownership';
 import { numberOfTestCases } from 'js/mocked_data/test_cases';
+import { sprintInterference } from 'js/mocked_data/sprint_interference';
 
 const initialState = {
   currentMetric: null,
@@ -29,7 +30,8 @@ const initialState = {
   codeOwnership: {
     project: projectCodeOwnership,
     team: teamCodeOwnership
-  }
+  },
+  sprintInterference
 };
 
 const metricsReducer = (state = initialState, action) => {
