@@ -1,5 +1,8 @@
 @import 'settings';
 @import 'foundation';
 @import 'custom';
+
+@include foundation-flex-classes;
+@include foundation-flex-grid;
 @include foundation-everything;
 

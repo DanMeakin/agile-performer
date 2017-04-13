@@ -1,4 +1,6 @@
-const menuItems = [
+const menuItems = {
+  filterTerm: "",
+  items: [
     {
         heading: "Statistics",
         metrics: [
@@ -77,16 +79,19 @@ const menuItems = [
             }
         ]
     }
-];
+  ]
+};
 
 const filterMenuItems = (term) => (
-  menuItems.map(({ heading, metrics }) => (
-    { heading,
-      metrics: metrics.filter(({ name }) => (
-        name.toLowerCase().includes(term.toLowerCase())
-      ))
-    }
-  ))
+  { filterTerm: term,
+    items: menuItems.items.map(({ heading, metrics }) => (
+      { heading,
+        metrics: metrics.filter(({ name }) => (
+          name.toLowerCase().includes(term.toLowerCase())
+        ))
+      }
+    ))
+  }
 );
 
 export { menuItems, filterMenuItems };

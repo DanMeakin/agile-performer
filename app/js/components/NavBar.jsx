@@ -7,6 +7,7 @@ class NavBar extends Component {
   constructor(props) {
     super(props);
     this.handleFilterChange = this.handleFilterChange.bind(this);
+    this.clearFilter = this.clearFilter.bind(this);
   }
 
   renderMenuItems() {
@@ -44,7 +45,14 @@ class NavBar extends Component {
         <header className="nav-header" role="banner">
           <h5 className="nav-titel">Agile Performer</h5>
           <form>
-            <input type="text" value={this.props.metricFilter} onChange={this.handleFilterChange} placeholder="Search.." />
+            <div className="row align-middle">
+              <div className="small-9 columns">
+                <input type="text" value={this.props.metricFilter} onChange={this.handleFilterChange} placeholder="Search.." />
+              </div>
+              <div className="small-3 columns">
+                <button className="button small alert" onClick={this.clearFilter}>×</button>
+              </div>
+            </div>
           </form>
         </header>
       </div>
@@ -53,6 +61,10 @@ class NavBar extends Component {
 
   handleFilterChange(event) {
     this.props.filterMetrics(event.target.value);
+  }
+
+  clearFilter(event) {
+    this.props.filterMetrics("");
   }
 
   render() {
@@ -69,8 +81,8 @@ class NavBar extends Component {
 
 function mapStateToProps(state) {
   return {
-    menuItems: state.menuItems,
-    metricFilter: state.metricFilter
+    menuItems: state.menuItems.items,
+    metricFilter: state.menuItems.filterTerm
   };
 }
 
