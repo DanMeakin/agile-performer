@@ -114,6 +114,8 @@ const filterMenuItems = (term) => (
           name.toLowerCase().includes(term.toLowerCase())
         ))
       }
+    )).filter(({ metrics }) => (
+      metrics.length > 0
     ))
   }
 );
