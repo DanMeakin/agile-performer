@@ -43,7 +43,7 @@ class NavBar extends Component {
     return (
       <div className="row collapse postfix-round">
         <header className="nav-header" role="banner">
-          <h5 className="nav-titel">Agile Performer</h5>
+          <h5 className="nav-title">Agile Performer</h5>
           <form>
             <div className="row align-middle">
               <div className="small-9 columns">

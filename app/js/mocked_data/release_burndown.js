@@ -1,12 +1,12 @@
 import RGB from '../lib/rgb';
 
 let burndownData = {
-  "Start": { remaining: 220, added: 0 },
-  "Sprint 1": { remaining: 200, added: 0 },
-  "Sprint 2": { remaining: 170, added: 10 },
-  "Sprint 3": { remaining: 130, added: 20 },
-  "Sprint 4": { remaining: 80, added: 35 }
-},
+    "Start": { remaining: 220, added: 0 },
+    "Sprint 1": { remaining: 200, added: 0 },
+    "Sprint 2": { remaining: 170, added: 10 },
+    "Sprint 3": { remaining: 130, added: 20 },
+    "Sprint 4": { remaining: 80, added: 35 }
+  },
     storyPoints = Object.keys(burndownData).reduce((acc, k) => {
       acc[k] = burndownData[k].remaining;
       return acc;

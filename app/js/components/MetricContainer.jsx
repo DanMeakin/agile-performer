@@ -18,6 +18,7 @@ import TeamCodeOwnershipMetric from './metrics/TeamCodeOwnership';
 import TestCasesMetric from './metrics/TestCases';
 import RemedialFocusMetric from './metrics/RemedialFocus';
 import SprintInterferenceMetric from './metrics/SprintInterference';
+import DefectsOverTimeMetric from './metrics/DefectsOverTime';
 
 const metricComponents = {
   "CODE_COVERAGE": (<CodeCoverageMetric />),
@@ -36,7 +37,8 @@ const metricComponents = {
   "CODE_OWNERSHIP_TEAM": (<TeamCodeOwnershipMetric />),
   "REMEDIAL_FOCUS": (<RemedialFocusMetric />),
   "TEST_CASES_COUNT": (<TestCasesMetric />),
-  "SPRINT_INTERFERENCE": (<SprintInterferenceMetric />)
+  "SPRINT_INTERFERENCE": (<SprintInterferenceMetric />),
+  "DEFECTS_OVER_TIME": (<DefectsOverTimeMetric />)
 }
 
 class MetricContainer extends Component {

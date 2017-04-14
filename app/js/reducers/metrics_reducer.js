@@ -10,6 +10,7 @@ import { averageLeadTime } from 'js/mocked_data/lead_time';
 import { projectCodeOwnership, teamCodeOwnership } from 'js/mocked_data/code_ownership';
 import { numberOfTestCases } from 'js/mocked_data/test_cases';
 import { sprintInterference } from 'js/mocked_data/sprint_interference';
+import { defectsOverTime } from 'js/mocked_data/defects_over_time';
 
 const initialState = {
   currentMetric: null,
@@ -31,7 +32,8 @@ const initialState = {
     project: projectCodeOwnership,
     team: teamCodeOwnership
   },
-  sprintInterference
+  sprintInterference,
+  defectsOverTime
 };
 
 const metricsReducer = (state = initialState, action) => {

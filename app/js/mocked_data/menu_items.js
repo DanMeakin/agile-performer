@@ -60,6 +60,10 @@ const menuItems = {
                 type: "LEAD_TIME",
                 name: "Lead Time"
             },
+            {
+                type: "DEFECTS_OVER_TIME",
+                name: "Defects Over Time"
+            }
         ]
     },
     {
