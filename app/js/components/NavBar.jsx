@@ -45,12 +45,10 @@ class NavBar extends Component {
         <header className="nav-header" role="banner">
           <h5 className="nav-title">Agile Performer</h5>
           <form>
-            <div className="row align-middle">
-              <div className="small-9 columns">
-                <input type="text" value={this.props.metricFilter} onChange={this.handleFilterChange} placeholder="Search.." />
-              </div>
-              <div className="small-3 columns">
-                <button className="button small alert" onClick={this.clearFilter}>×</button>
+            <div className="input-group">
+              <input className="input-group-field" type="text" value={this.props.metricFilter} onChange={this.handleFilterChange} placeholder="Search.." />
+              <div className="input-group-button">
+                <button className="button" onClick={this.clearFilter}>×</button>
               </div>
             </div>
           </form>
