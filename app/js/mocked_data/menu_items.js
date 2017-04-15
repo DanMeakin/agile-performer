@@ -36,7 +36,7 @@ const menuItems = {
       ]
     },
     {
-      heading: "Defects",
+      heading: "Quality Assurance",
       metrics: [
         {
           type: "DEFECTS_OVER_TIME",
@@ -46,6 +46,10 @@ const menuItems = {
           type: "REMEDIAL_FOCUS",
           name: "Remedial Focus"
         },
+        {
+          type: "CUSTOMER_SATISFACTION",
+          name: "Customer Satisfaction"
+        }
       ]
     },
     {
@@ -70,6 +74,10 @@ const menuItems = {
         {
           type: "VELOCITY_TREND",
           name: "Velocity Trend"
+        },
+        {
+          type: "STORY_POINT_EFFORT",
+          name: "Story Point Effort"
         }
       ]
     },
@@ -87,7 +95,11 @@ const menuItems = {
           {
             type: "TEAM_SKILLS",
             name: "Skills"
-          }
+          },
+          {
+            type: "COMMITMENT_LEVEL",
+            name: "Commitment Level"
+          },
         ]
     },
     {

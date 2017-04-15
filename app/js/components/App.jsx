@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import TopBar from './TopBar';
 import NavBar from './NavBar';
 import MetricContainer from './MetricContainer';
 import RGB from 'js/lib/rgb';
