@@ -5,7 +5,9 @@ import CodeCoverageMetric from './metrics/CodeCoverageMetric';
 import LinesOfCodeMetric from './metrics/LinesOfCodeMetric';
 import TeamSatisfactionMetric from './metrics/TeamSatisfactionMetric';
 import VelocityMetric from './metrics/VelocityMetric';
+import VelocityTrendMetric from './metrics/VelocityTrend';
 import HappinessIndexMetric from './metrics/HappinessIndexMetric';
+import EnhancedReleaseBurndownMetric from './metrics/EnhancedReleaseBurndown';
 import SprintBurndownMetric from './metrics/SprintBurndownMetric';
 import ScrumPracticesMetric from './metrics/ScrumPracticesMetric';
 import XpPracticesMetric from './metrics/XpPracticesMetric';
@@ -15,6 +17,12 @@ import StoryPointEffortMetric from './metrics/StoryPointEffortMetric';
 import CommitmentLevelMetric from './metrics/CommitmentLevelMetric';
 import CustomerSatisfactionMetric from './metrics/CustomerSatisfactionMetric';
 import SprintCadenceMetric from './metrics/SprintCadenceMetric';
+import ProjectCodeOwnershipMetric from './metrics/ProjectCodeOwnership';
+import TeamCodeOwnershipMetric from './metrics/TeamCodeOwnership';
+import TestCasesMetric from './metrics/TestCases';
+import RemedialFocusMetric from './metrics/RemedialFocus';
+import SprintInterferenceMetric from './metrics/SprintInterference';
+import DefectsOverTimeMetric from './metrics/DefectsOverTime';
 
 const metricComponents = {
   "CODE_COVERAGE": (<CodeCoverageMetric />),
@@ -22,7 +30,9 @@ const metricComponents = {
   "TEAM_SATISFACTION": (<TeamSatisfactionMetric />),
   "HAPPINESS_INDEX": (<HappinessIndexMetric />),
   "VELOCITY": (<VelocityMetric />),
+  "VELOCITY_TREND": (<VelocityTrendMetric />),
   "SPRINT_BURNDOWN": (<SprintBurndownMetric />),
+  "ENHANCED_RELEASE_BURNDOWN": (<EnhancedReleaseBurndownMetric />),
   "SCRUM_PRACTICES": (<ScrumPracticesMetric />),
   "XP_PRACTICES": (<XpPracticesMetric />),
   "TEAM_SKILLS": (<TeamSkillsMetric />),
@@ -31,6 +41,12 @@ const metricComponents = {
   "COMMITMENT_LEVEL": (<CommitmentLevelMetric />),
   "CUSTOMER_SATISFACTION": (<CustomerSatisfactionMetric />),
   "SPRINT_CADENCE": (<SprintCadenceMetric />),
+  "CODE_OWNERSHIP_PROJECT": (<ProjectCodeOwnershipMetric />),
+  "CODE_OWNERSHIP_TEAM": (<TeamCodeOwnershipMetric />),
+  "REMEDIAL_FOCUS": (<RemedialFocusMetric />),
+  "TEST_CASES_COUNT": (<TestCasesMetric />),
+  "SPRINT_INTERFERENCE": (<SprintInterferenceMetric />),
+  "DEFECTS_OVER_TIME": (<DefectsOverTimeMetric />)
 }
 
 class MetricContainer extends Component {

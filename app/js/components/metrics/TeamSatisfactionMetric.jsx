@@ -5,7 +5,6 @@ import BarLineChart from '../charts/BarLineChart';
 
 class TeamSatisfactionMetric extends Component {
   render() {
-    console.log("Where is my metrics?", this.props)
     return (
         <BarLineChart data={this.props.chartData} title="Team Satisfaction"></BarLineChart>
     )

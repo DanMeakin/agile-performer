@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import RadarChart from '../charts/RadarChart';
+import LineChart from '../charts/LineChart';
 
-class TeamSkillsMetric extends Component {
+class TestCasesMetric extends Component {
   render() {
     return (
-      <RadarChart data={this.props.chartData} title="Team Skills" />
+      <LineChart data={this.props.chartData} title="Number of Test Cases" />
     )
   }
 }
+
 function mapStateToProps(state) {
   return {
-    chartData: state.metrics.teamSkills
+    chartData: state.metrics.numberOfTestCases
   }
 }
 
 export default connect(
   mapStateToProps
-)(TeamSkillsMetric);
+)(TestCasesMetric);

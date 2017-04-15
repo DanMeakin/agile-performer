@@ -34,15 +34,15 @@ let burndownData = {
 
 const sprintBurndown = [
   {
-    description: "Remaining Effort",
-    data: burndownData,
-    chartType: "bar"
-  },
-  {
     description: "Ideal Burndown",
     data: makeBurndownTrend(420, burndownData),
     chartType: "line",
     isOverlay: true
+  },
+  {
+    description: "Remaining Effort",
+    data: burndownData,
+    chartType: "bar"
   }
 ];
 

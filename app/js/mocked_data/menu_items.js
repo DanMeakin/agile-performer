@@ -1,72 +1,123 @@
-const menuItems = [
+const menuItems = {
+  filterTerm: "",
+  items: [
     {
-        heading: "Statistics",
+      heading: "Agility",
+      metrics: [
+        {
+          type: "CODE_OWNERSHIP_PROJECT",
+          name: "Code Ownership (Project)"
+        },
+        {
+          type: "CODE_OWNERSHIP_TEAM",
+          name: "Code Ownership (Team)"
+        },
+        {
+          type: "SCRUM_PRACTICES",
+          name: "Scrum Practices"
+        },
+        {
+          type: "SPRINT_INTERFERENCE",
+          name: "Sprint Interference"
+        },
+        {
+          type: "XP_PRACTICES",
+          name: "XP Practices"
+        },
+      ]
+    },
+    {
+      heading: "Codebase",
+      metrics: [
+        {
+          type: "LINES_OF_CODE",
+          name: "Lines of Code"
+        }
+      ]
+    },
+    {
+      heading: "Defects",
+      metrics: [
+        {
+          type: "DEFECTS_OVER_TIME",
+          name: "Defects Over Time"
+        },
+        {
+          type: "REMEDIAL_FOCUS",
+          name: "Remedial Focus"
+        },
+      ]
+    },
+    {
+      heading: "Performance",
+      metrics: [
+        {
+          type: "ENHANCED_RELEASE_BURNDOWN",
+          name: "Enhanced Release Burndown"
+        },
+        {
+          type: "LEAD_TIME",
+          name: "Lead Time"
+        },
+        {
+          type: "SPRINT_BURNDOWN",
+          name: "Sprint Burndown"
+        },
+        {
+          type: "VELOCITY",
+          name: "Velocity"
+        },
+        {
+          type: "VELOCITY_TREND",
+          name: "Velocity Trend"
+        }
+      ]
+    },
+    {
+        heading: "Team Profile",
         metrics: [
-            {
-                type: "CODE_COVERAGE",
-                name: "Code Coverage"
-            } ,
-            {
-                type: "LINES_OF_CODE",
-                name: "Lines of Code"
-            },
-            {
-                type: "TEAM_SATISFACTION",
-                name: "Team Satisfaction"
-            },
-            {
-                type: "VELOCITY",
-                name: "Velocity"
-            },
-            {
-                type: "HAPPINESS_INDEX",
-                name: "Happiness Index"
-            },
-            {
-                type: "SPRINT_BURNDOWN",
-                name: "Sprint Burndown"
-            },
-            {
-                type: "LEAD_TIME",
-                name: "Lead Time"
-            },
-            {
-                type: "STORY_POINT_EFFORT",
-                name: "Story Point Effort"
-            },
-            {
-                type: "COMMITMENT_LEVEL",
-                name: "Commitment Level"
-            },
-            {
-                type: "CUSTOMER_SATISFACTION",
-                name: "Customer Satisfaction"
-            },
-            {
-                type: "SPRINT_CADENCE",
-                name: "Sprint Cadence"
-            },
+          {
+            type: "HAPPINESS_INDEX",
+            name: "Happiness Index"
+          },
+          {
+            type: "TEAM_SATISFACTION",
+            name: "Satisfaction"
+          },
+          {
+            type: "TEAM_SKILLS",
+            name: "Skills"
+          }
         ]
     },
     {
-        heading: "Profile",
-        metrics: [
-            {
-                type: "SCRUM_PRACTICES",
-                name: "Scrum Practices"
-            } ,
-            {
-                type: "XP_PRACTICES",
-                name: "XP Practices"
-            },
-            {
-                type: "TEAM_SKILLS",
-                name: "Team Skills"
-            }
-        ]
+      heading: "Testing",
+      metrics: [
+        {
+          type: "CODE_COVERAGE",
+          name: "Code Coverage"
+        },
+        {
+          type: "TEST_CASES_COUNT",
+          name: "Number of Test Cases"
+        }
+      ]
     }
-]
+  ]
+};
 
-export { menuItems };
+const filterMenuItems = (term) => (
+  { filterTerm: term,
+    items: menuItems.items.map(({ heading, metrics }) => (
+      { heading,
+        metrics: metrics.filter(({ name }) => (
+          name.toLowerCase().includes(term.toLowerCase())
+        ))
+      }
+    )).filter(({ metrics }) => (
+      metrics.length > 0
+    ))
+  }
+);
 
-     
+export { menuItems, filterMenuItems };

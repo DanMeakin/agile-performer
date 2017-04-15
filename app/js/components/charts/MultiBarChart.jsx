@@ -9,7 +9,8 @@ export default class MultiBarChart extends React.Component {
     return (
       <div className="chart-panel">
         <h3>{this.props.title}</h3>
-        <Bar ref="chart" data={chartData("bar", this.props.data, this.props.colours)} options={chartOptions(this.props.options)} />
+        {this.props.children}
+        <Bar ref="chart" data={chartData("bar", this.props.data, this.props.colours, false)} options={chartOptions(this.props.options)} />
       </div>
     )
   }

@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { selectMetric } from "../actions";
+import { selectMetric, filterMetrics } from "../actions";
 
 class NavBar extends Component {
+  constructor(props) {
+    super(props);
+    this.handleFilterChange = this.handleFilterChange.bind(this);
+    this.clearFilter = this.clearFilter.bind(this);
+  }
 
   renderMenuItems() {
     return this.props.menuItems.map((item, i) =>
@@ -38,13 +43,26 @@ class NavBar extends Component {
     return (
       <div className="row collapse postfix-round">
         <header className="nav-header" role="banner">
-          <h5 className="nav-titel">Agile Performer</h5>
+          <h5 className="nav-title">Agile Performer</h5>
           <form>
-            <input type="text" placeholder="Search.." />
+            <div className="input-group">
+              <input className="input-group-field" type="text" value={this.props.metricFilter} onChange={this.handleFilterChange} placeholder="Search.." />
+              <div className="input-group-button">
+                <button className="button" onClick={this.clearFilter}>×</button>
+              </div>
+            </div>
           </form>
         </header>
       </div>
     )
+  }
+
+  handleFilterChange(event) {
+    this.props.filterMetrics(event.target.value);
+  }
+
+  clearFilter(event) {
+    this.props.filterMetrics("");
   }
 
   render() {
@@ -60,16 +78,17 @@ class NavBar extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log("state of menuitem: ", state)
   return {
-    menuItems: state.menuItems
+    menuItems: state.menuItems.items,
+    metricFilter: state.menuItems.filterTerm
   };
 }
 
 function matchDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      selectMetric: selectMetric
+      selectMetric: selectMetric,
+      filterMetrics: filterMetrics
     },
     dispatch
   );

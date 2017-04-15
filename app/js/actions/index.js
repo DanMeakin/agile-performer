@@ -12,4 +12,11 @@ const selectMetric = (metricName) => {
     };
 };
 
-export { selectView, selectMetric };
+const filterMetrics = (term) => {
+  return {
+    type: "FILTER_METRICS",
+    term
+  };
+};
+
+export { selectView, selectMetric, filterMetrics };

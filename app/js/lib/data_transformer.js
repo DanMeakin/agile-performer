@@ -1,8 +1,8 @@
 import RGB from './rgb';
 
 const defaultColours = [
-  new RGB(219, 70, 70),   // red
   new RGB(92, 153, 237),  // blue
+  new RGB(219, 70, 70),   // red
   new RGB(244, 214, 33), // yellow
   new RGB(203, 120, 230),  // purple
   new RGB(80, 186, 104), // green
@@ -19,15 +19,18 @@ const opacity = 1;
  *
  * @returns {} A full set of chart data ready for use within a Chart.js chart.
  */
-const chartData = (chartType, performanceData, colours = defaultColours) => {
+const chartData = (chartType, performanceData, colours = defaultColours, sortLabels = true) => {
   var makeDataset = function (data, i) {
-    let type = data.type || chartType;
-    let colour = colours[i];
-    let basicData = {
+    console.log("Data", data);
+    let type = data.type || chartType,
+        borderDash = data.borderDash || [],
+        colour = data.borderColor || colours[i],
+        basicData = {
       label: data.label,
       backgroundColor: colour.toRGBA(opacity),
       borderColor: colour.toRGBA(1),
       borderWidth: 1,
+      borderDash,
       pointBackgroundColor: colour.toRGBA(1),
       pointBorderColor: "#fff",
       pointHoverBackgroundColor: "#fff",
@@ -40,24 +43,30 @@ const chartData = (chartType, performanceData, colours = defaultColours) => {
       case "line":
         let extraData = {
           fill: false,
+          backgroundColor: (new RGB(255, 255, 255)).toRGBA(0),
           pointRadius: 0,
           lineTension: 0.1,
           borderWidth: 2
         };
         return Object.assign(basicData, extraData);
       case "radar":
-        return Object.assign(basicData, { 
+        return Object.assign(basicData, {
           borderWidth: 2,
           backgroundColor: colour.toRGBA(0.3)
          });
-      case "bar":
+    case "pie":
+        return Object.assign(basicData, {
+          backgroundColor: colours.map(colour => (colour.toRGBA(0.5))),
+          borderColor: []
+        });
+    case "bar":
       default:
         return basicData;
     }
   };
   return {
-    labels: labels(performanceData),
-    datasets: createValues(performanceData).map(makeDataset)
+    labels: labels(performanceData, sortLabels),
+    datasets: createValues(performanceData, sortLabels).map(makeDataset)
   };
 };
 
@@ -66,13 +75,17 @@ const chartData = (chartType, performanceData, colours = defaultColours) => {
  *
  * @returns {} A list of labels for use within a chart.
  */
-const labels = (performanceData) => {
-  return performanceData.reduce((acc, { data }) => {
+const labels = (performanceData, sortLabels = true) => {
+  let labels = performanceData.reduce((acc, { data }) => {
     let newLabels = Object.keys(data).filter((label) => (
       acc.indexOf(label) == -1
     ));
-    return acc.concat(newLabels).sort();
+    return acc.concat(newLabels);
   }, []);
+  if (sortLabels) {
+    labels.sort();
+  }
+  return labels;
 };
 
 /**
@@ -87,28 +100,22 @@ const labels = (performanceData) => {
  *
  * @returns {} A set of team values data.
  */
-const createValues = performanceData => (
-  performanceData.map(createOneValue)
-);
-
-/**
- * Generate one value for use in chart data.
- *
- * @param {} description
- * @param {} data
- * @param {} chartType
- * @param {} _
- * @param {} performanceData
- */
-const createOneValue = ({ description, data, chartType }, _, performanceData) => (
-  {
-    label: description,
-    values: labels(performanceData).map(dataLabel => (
-      data[dataLabel] || 0
-    )),
-    type: chartType
-  }
-);
+const createValues = (performanceData, sortLabels) => {
+  let createOneValue = (dataset, _, performanceData) => (
+    Object.assign(
+      {},
+      {
+        label: dataset.description,
+        values: labels(performanceData, sortLabels).map(dataLabel => (
+          dataset.data[dataLabel] || 0
+        )),
+        type: dataset.chartType
+      },
+      dataset
+    )
+  );
+  return performanceData.map(createOneValue);
+};
 
 export default chartData;
 
