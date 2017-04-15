@@ -6,6 +6,7 @@ import { teamSatisfaction } from 'js/mocked_data/team_satisfaction';
 import { sprintBurndown } from 'js/mocked_data/sprint_burndown';
 import { happinessIndex } from 'js/mocked_data/happiness_index';
 import { averageLeadTime } from 'js/mocked_data/lead_time';
+import { commitmentLevel } from 'js/mocked_data/commitment';
 
 const initialState = {
   currentMetric: null,
@@ -21,6 +22,7 @@ const initialState = {
   happinessIndex,
   averageLeadTime,
   storyPointEffort,
+  commitmentLevel,
 };
 
 const metricsReducer = (state = initialState, action) => {

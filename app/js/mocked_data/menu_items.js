@@ -33,6 +33,10 @@ const menuItems = [
             {
                 type: "STORY_POINT_EFFORT",
                 name: "Story Point Effort"
+            },
+            {
+                type: "COMMITMENT_LEVEL",
+                name: "Commitment Level"
             }
         ]
     },
