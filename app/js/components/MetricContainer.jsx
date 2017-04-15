@@ -14,6 +14,7 @@ import LeadTimeMetric from './metrics/LeadTimeMetric';
 import StoryPointEffortMetric from './metrics/StoryPointEffortMetric';
 import CommitmentLevelMetric from './metrics/CommitmentLevelMetric';
 import CustomerSatisfactionMetric from './metrics/CustomerSatisfactionMetric';
+import SprintCadenceMetric from './metrics/SprintCadenceMetric';
 
 const metricComponents = {
   "CODE_COVERAGE": (<CodeCoverageMetric />),
@@ -29,6 +30,7 @@ const metricComponents = {
   "STORY_POINT_EFFORT": (<StoryPointEffortMetric />),
   "COMMITMENT_LEVEL": (<CommitmentLevelMetric />),
   "CUSTOMER_SATISFACTION": (<CustomerSatisfactionMetric />),
+  "SPRINT_CADENCE": (<SprintCadenceMetric />),
 }
 
 class MetricContainer extends Component {

@@ -41,7 +41,11 @@ const menuItems = [
             {
                 type: "CUSTOMER_SATISFACTION",
                 name: "Customer Satisfaction"
-            }
+            },
+            {
+                type: "SPRINT_CADENCE",
+                name: "Sprint Cadence"
+            },
         ]
     },
     {
