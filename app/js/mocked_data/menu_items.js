@@ -37,6 +37,10 @@ const menuItems = [
             {
                 type: "COMMITMENT_LEVEL",
                 name: "Commitment Level"
+            },
+            {
+                type: "CUSTOMER_SATISFACTION",
+                name: "Customer Satisfaction"
             }
         ]
     },

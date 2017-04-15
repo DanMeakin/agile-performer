@@ -13,6 +13,7 @@ import TeamSkillsMetric from './metrics/TeamSkillsMetric';
 import LeadTimeMetric from './metrics/LeadTimeMetric';
 import StoryPointEffortMetric from './metrics/StoryPointEffortMetric';
 import CommitmentLevelMetric from './metrics/CommitmentLevelMetric';
+import CustomerSatisfactionMetric from './metrics/CustomerSatisfactionMetric';
 
 const metricComponents = {
   "CODE_COVERAGE": (<CodeCoverageMetric />),
@@ -27,6 +28,7 @@ const metricComponents = {
   "LEAD_TIME": (<LeadTimeMetric />),
   "STORY_POINT_EFFORT": (<StoryPointEffortMetric />),
   "COMMITMENT_LEVEL": (<CommitmentLevelMetric />),
+  "CUSTOMER_SATISFACTION": (<CustomerSatisfactionMetric />),
 }
 
 class MetricContainer extends Component {
