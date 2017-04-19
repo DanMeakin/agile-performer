@@ -14,7 +14,6 @@ import XpPracticesMetric from './metrics/XpPracticesMetric';
 import TeamSkillsMetric from './metrics/TeamSkillsMetric';
 import LeadTimeMetric from './metrics/LeadTimeMetric';
 import StoryPointEffortMetric from './metrics/StoryPointEffortMetric';
-import CommitmentLevelMetric from './metrics/CommitmentLevelMetric';
 import CustomerSatisfactionMetric from './metrics/CustomerSatisfactionMetric';
 import SprintCadenceMetric from './metrics/SprintCadenceMetric';
 import ProjectCodeOwnershipMetric from './metrics/ProjectCodeOwnership';
@@ -25,28 +24,26 @@ import SprintInterferenceMetric from './metrics/SprintInterference';
 import DefectsOverTimeMetric from './metrics/DefectsOverTime';
 
 const metricComponents = {
-  "CODE_COVERAGE": <CodeCoverageMetric />,
-  "LINES_OF_CODE": <LinesOfCodeMetric />,
-  "TEAM_SATISFACTION": <TeamSatisfactionMetric />,
-  "HAPPINESS_INDEX": <HappinessIndexMetric />,
-  "VELOCITY": <VelocityMetric />,
-  "VELOCITY_TREND": <VelocityTrendMetric />,
-  "SPRINT_BURNDOWN": <SprintBurndownMetric />,
-  "ENHANCED_RELEASE_BURNDOWN": <EnhancedReleaseBurndownMetric />,
-  "SCRUM_PRACTICES": <ScrumPracticesMetric />,
-  "XP_PRACTICES": <XpPracticesMetric />,
-  "TEAM_SKILLS": <TeamSkillsMetric />,
-  "LEAD_TIME": <LeadTimeMetric />,
-  "STORY_POINT_EFFORT": <StoryPointEffortMetric />,
-  "COMMITMENT_LEVEL": <CommitmentLevelMetric />,
-  "CUSTOMER_SATISFACTION": <CustomerSatisfactionMetric />,
-  "SPRINT_CADENCE": <SprintCadenceMetric />,
-  "CODE_OWNERSHIP_PROJECT": <ProjectCodeOwnershipMetric />,
-  "CODE_OWNERSHIP_TEAM": <TeamCodeOwnershipMetric />,
-  "REMEDIAL_FOCUS": <RemedialFocusMetric />,
-  "TEST_CASES_COUNT": <TestCasesMetric />,
-  "SPRINT_INTERFERENCE": <SprintInterferenceMetric />,
-  "DEFECTS_OVER_TIME": <DefectsOverTimeMetric />
+  "CODE_COVERAGE": (<CodeCoverageMetric />),
+  "LINES_OF_CODE": (<LinesOfCodeMetric />),
+  "TEAM_SATISFACTION": (<TeamSatisfactionMetric />),
+  "HAPPINESS_INDEX": (<HappinessIndexMetric />),
+  "VELOCITY": (<VelocityMetric />),
+  "VELOCITY_TREND": (<VelocityTrendMetric />),
+  "SPRINT_BURNDOWN": (<SprintBurndownMetric />),
+  "ENHANCED_RELEASE_BURNDOWN": (<EnhancedReleaseBurndownMetric />),
+  "SCRUM_PRACTICES": (<ScrumPracticesMetric />),
+  "XP_PRACTICES": (<XpPracticesMetric />),
+  "LEAD_TIME": (<LeadTimeMetric />),
+  "STORY_POINT_EFFORT": (<StoryPointEffortMetric />),
+  "CUSTOMER_SATISFACTION": (<CustomerSatisfactionMetric />),
+  "SPRINT_CADENCE": (<SprintCadenceMetric />),
+  "CODE_OWNERSHIP_PROJECT": (<ProjectCodeOwnershipMetric />),
+  "CODE_OWNERSHIP_TEAM": (<TeamCodeOwnershipMetric />),
+  "REMEDIAL_FOCUS": (<RemedialFocusMetric />),
+  "TEST_CASES_COUNT": (<TestCasesMetric />),
+  "SPRINT_INTERFERENCE": (<SprintInterferenceMetric />),
+  "DEFECTS_OVER_TIME": (<DefectsOverTimeMetric />)
 }
 
 class MetricContainer extends Component {

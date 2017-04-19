@@ -15,7 +15,7 @@ const linesOfCode = [
       "Sprint 4": 16000
     }
   }
-]
+];
 
 const codeCoverage = [
   { description: "Tested functionality",
@@ -26,6 +26,6 @@ const codeCoverage = [
       "Sprint 4": 0.4
     }
   }
-]
+];
 
 export {linesOfCode, codeCoverage};
