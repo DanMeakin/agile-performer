@@ -1,5 +1,4 @@
 import { scrumPractices, xpPractices } from 'js/mocked_data/practices';
-import { teamSkills } from 'js/mocked_data/team_skills';
 import { linesOfCode, codeCoverage } from 'js/mocked_data/test';
 import { storyPointEffort, velocity, detailedVelocity } from 'js/mocked_data/velocity';
 import { teamSatisfaction } from 'js/mocked_data/team_satisfaction';
@@ -20,7 +19,6 @@ const initialState = {
   // Probably temporary
   scrumPractices,
   xpPractices,
-  teamSkills,
   linesOfCode,
   codeCoverage,
   velocity,

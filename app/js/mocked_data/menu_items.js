@@ -68,14 +68,6 @@ const menuItems = {
           name: "Sprint Burndown"
         },
         {
-          type: "VELOCITY",
-          name: "Velocity"
-        },
-        {
-          type: "VELOCITY_TREND",
-          name: "Velocity Trend"
-        },
-        {
           type: "STORY_POINT_EFFORT",
           name: "Story Point Effort"
         }
@@ -91,15 +83,7 @@ const menuItems = {
           {
             type: "TEAM_SATISFACTION",
             name: "Satisfaction"
-          },
-          {
-            type: "TEAM_SKILLS",
-            name: "Skills"
-          },
-          {
-            type: "COMMITMENT_LEVEL",
-            name: "Commitment Level"
-          },
+          }
         ]
     },
     {
@@ -113,6 +97,23 @@ const menuItems = {
           type: "TEST_CASES_COUNT",
           name: "Number of Test Cases"
         }
+      ]
+    },
+    {
+      heading: "Velocity",
+      metrics: [
+        {
+          type: "SPRINT_CADENCE",
+          name: "Sprint Cadence"
+        },
+        {
+          type: "VELOCITY",
+          name: "Velocity"
+        },
+        {
+          type: "VELOCITY_TREND",
+          name: "Velocity Trend"
+        },
       ]
     }
   ]
