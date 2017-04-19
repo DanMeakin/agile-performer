@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div>
         <div className="row">
-          <div className="small-2 columns sidebar">
+          <div className="small-2 columns sidebar app-dashboard-sidebar">
             <NavBar />
           </div>
           <div className="small-10 columns">

@@ -1,7 +1,4 @@
-.top-bar {
-    background: royalblue;
-    color: #FAFAFA;
-}
+/****SIDE-NAV****/
 
 .sidebar {
     background: #FAFAFA;
@@ -29,6 +26,14 @@
 .row{
     max-width: 200rem;
 }
+
+/****METRIC-DISPLAY****/
+
+.metric-info {
+    margin: 3em 2em 2em 3em 
+}
+
+/****MISC****/
 
 .chart-panel {
     margin: 3em;

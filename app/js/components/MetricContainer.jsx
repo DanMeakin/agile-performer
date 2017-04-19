@@ -25,33 +25,45 @@ import SprintInterferenceMetric from './metrics/SprintInterference';
 import DefectsOverTimeMetric from './metrics/DefectsOverTime';
 
 const metricComponents = {
-  "CODE_COVERAGE": (<CodeCoverageMetric />),
-  "LINES_OF_CODE": (<LinesOfCodeMetric />),
-  "TEAM_SATISFACTION": (<TeamSatisfactionMetric />),
-  "HAPPINESS_INDEX": (<HappinessIndexMetric />),
-  "VELOCITY": (<VelocityMetric />),
-  "VELOCITY_TREND": (<VelocityTrendMetric />),
-  "SPRINT_BURNDOWN": (<SprintBurndownMetric />),
-  "ENHANCED_RELEASE_BURNDOWN": (<EnhancedReleaseBurndownMetric />),
-  "SCRUM_PRACTICES": (<ScrumPracticesMetric />),
-  "XP_PRACTICES": (<XpPracticesMetric />),
-  "TEAM_SKILLS": (<TeamSkillsMetric />),
-  "LEAD_TIME": (<LeadTimeMetric />),
-  "STORY_POINT_EFFORT": (<StoryPointEffortMetric />),
-  "COMMITMENT_LEVEL": (<CommitmentLevelMetric />),
-  "CUSTOMER_SATISFACTION": (<CustomerSatisfactionMetric />),
-  "SPRINT_CADENCE": (<SprintCadenceMetric />),
-  "CODE_OWNERSHIP_PROJECT": (<ProjectCodeOwnershipMetric />),
-  "CODE_OWNERSHIP_TEAM": (<TeamCodeOwnershipMetric />),
-  "REMEDIAL_FOCUS": (<RemedialFocusMetric />),
-  "TEST_CASES_COUNT": (<TestCasesMetric />),
-  "SPRINT_INTERFERENCE": (<SprintInterferenceMetric />),
-  "DEFECTS_OVER_TIME": (<DefectsOverTimeMetric />)
+  "CODE_COVERAGE": <CodeCoverageMetric />,
+  "LINES_OF_CODE": <LinesOfCodeMetric />,
+  "TEAM_SATISFACTION": <TeamSatisfactionMetric />,
+  "HAPPINESS_INDEX": <HappinessIndexMetric />,
+  "VELOCITY": <VelocityMetric />,
+  "VELOCITY_TREND": <VelocityTrendMetric />,
+  "SPRINT_BURNDOWN": <SprintBurndownMetric />,
+  "ENHANCED_RELEASE_BURNDOWN": <EnhancedReleaseBurndownMetric />,
+  "SCRUM_PRACTICES": <ScrumPracticesMetric />,
+  "XP_PRACTICES": <XpPracticesMetric />,
+  "TEAM_SKILLS": <TeamSkillsMetric />,
+  "LEAD_TIME": <LeadTimeMetric />,
+  "STORY_POINT_EFFORT": <StoryPointEffortMetric />,
+  "COMMITMENT_LEVEL": <CommitmentLevelMetric />,
+  "CUSTOMER_SATISFACTION": <CustomerSatisfactionMetric />,
+  "SPRINT_CADENCE": <SprintCadenceMetric />,
+  "CODE_OWNERSHIP_PROJECT": <ProjectCodeOwnershipMetric />,
+  "CODE_OWNERSHIP_TEAM": <TeamCodeOwnershipMetric />,
+  "REMEDIAL_FOCUS": <RemedialFocusMetric />,
+  "TEST_CASES_COUNT": <TestCasesMetric />,
+  "SPRINT_INTERFERENCE": <SprintInterferenceMetric />,
+  "DEFECTS_OVER_TIME": <DefectsOverTimeMetric />
 }
 
 class MetricContainer extends Component {
   render() {
-    return metricComponents[this.props.currentMetric] || (<div>Nothing here!</div>)
+    if (!this.props.currentMetric) {
+      return (<div>Please select a menuitem! :)</div>)
+    } else {
+      return (this.renderMetric(this.props.currentMetric))
+    }
+  }
+
+  renderMetric(currentMetric) {
+    return (
+      <div>
+        {metricComponents[currentMetric]}
+      </div>
+    )
   }
 }
 
