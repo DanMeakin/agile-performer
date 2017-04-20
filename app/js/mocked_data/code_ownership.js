@@ -1,10 +1,3 @@
-let getProjectCodeOwnershipLeadText = () => {
-  return "Project Code Ownership measures the per-module contribution to the codebase by different Scrum teams within the project."
-}, getProjectCodeOwnershipBreadText = () => {
-  return "A team can be either a <em>Major</em> or a <em>Minor</em> contributor to a module within the codebase (or it may not be a contributor to that module at all). A <em>Major</em> contributor is a team which has made 5% or more of all commits to that module; a <em>Minor</em> contributor is a team making less than 5% of all commits."
-}
-
-
 const projectCodeOwnership = {
   chart: [
     {
@@ -17,16 +10,10 @@ const projectCodeOwnership = {
     }
   ],
   description: {
-    leadText: getProjectCodeOwnershipLeadText(),
-    breadText: getProjectCodeOwnershipBreadText()
+    leadText: "Project Code Ownership measures the per-module contribution to the codebase by different Scrum teams within the project.",
+    breadText: "The chart illustrates the proportion of the codebase with commits solely from one team, from two teams, or from three or more teams."
   }
 };
-
-let getTeamCodeOwnershipLeadText = () => {
-  return "Team Code Ownership measures the per-module contribution to the codebase by members of one Scrum team."
-}, getTeamCodeOwnershipInfoText = () => {
-  return "A team member can be either a <em>Major</em> or a <em>Minor</em> contributor to a module within the codebase (or it may not be a contributor to that module at all). A <em>Major</em> contributor is a team which has made 5% or more of all commits to that module; a <em>Minor</em> contributor is a team making less than 5% of all commits."
-}
 
 const teamCodeOwnership = {
   chart: [
@@ -37,12 +24,12 @@ const teamCodeOwnership = {
         "2 team members": 7,
         "3+ team members": 2,
         "no Contribution": 25
-      },
+      }
     }
   ],
   description: {
-    leadText: getTeamCodeOwnershipLeadText(),
-    breadText: getTeamCodeOwnershipInfoText()
+    leadText: "Team Code Ownership measures the per-module contribution to the codebase by members of one Scrum team.",
+    breadText: "The chart illustrates the proportion of the codebase with commits from this team, and the number of different team members who have made commits to a particular module."
   }
 };
 
