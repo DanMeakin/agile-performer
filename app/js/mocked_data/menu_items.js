@@ -27,15 +27,6 @@ const menuItems = {
       ]
     },
     {
-      heading: "Codebase",
-      metrics: [
-        {
-          type: "LINES_OF_CODE",
-          name: "Lines of Code"
-        }
-      ]
-    },
-    {
       heading: "Quality Assurance",
       metrics: [
         {
@@ -46,10 +37,6 @@ const menuItems = {
           type: "REMEDIAL_FOCUS",
           name: "Remedial Focus"
         },
-        {
-          type: "CUSTOMER_SATISFACTION",
-          name: "Customer Satisfaction"
-        }
       ]
     },
     {
@@ -66,10 +53,6 @@ const menuItems = {
         {
           type: "SPRINT_BURNDOWN",
           name: "Sprint Burndown"
-        },
-        {
-          type: "STORY_POINT_EFFORT",
-          name: "Story Point Effort"
         }
       ]
     },

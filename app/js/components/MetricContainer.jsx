@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import CodeCoverageMetric from './metrics/CodeCoverageMetric';
-import LinesOfCodeMetric from './metrics/LinesOfCodeMetric';
 import TeamSatisfactionMetric from './metrics/TeamSatisfactionMetric';
 import VelocityMetric from './metrics/VelocityMetric';
 import VelocityTrendMetric from './metrics/VelocityTrend';
@@ -13,8 +12,6 @@ import ScrumPracticesMetric from './metrics/ScrumPracticesMetric';
 import XpPracticesMetric from './metrics/XpPracticesMetric';
 import TeamSkillsMetric from './metrics/TeamSkillsMetric';
 import LeadTimeMetric from './metrics/LeadTimeMetric';
-import StoryPointEffortMetric from './metrics/StoryPointEffortMetric';
-import CustomerSatisfactionMetric from './metrics/CustomerSatisfactionMetric';
 import SprintCadenceMetric from './metrics/SprintCadenceMetric';
 import ProjectCodeOwnershipMetric from './metrics/ProjectCodeOwnership';
 import TeamCodeOwnershipMetric from './metrics/TeamCodeOwnership';
@@ -25,7 +22,6 @@ import DefectsOverTimeMetric from './metrics/DefectsOverTime';
 
 const metricComponents = {
   "CODE_COVERAGE": (<CodeCoverageMetric />),
-  "LINES_OF_CODE": (<LinesOfCodeMetric />),
   "TEAM_SATISFACTION": (<TeamSatisfactionMetric />),
   "HAPPINESS_INDEX": (<HappinessIndexMetric />),
   "VELOCITY": (<VelocityMetric />),
@@ -35,8 +31,6 @@ const metricComponents = {
   "SCRUM_PRACTICES": (<ScrumPracticesMetric />),
   "XP_PRACTICES": (<XpPracticesMetric />),
   "LEAD_TIME": (<LeadTimeMetric />),
-  "STORY_POINT_EFFORT": (<StoryPointEffortMetric />),
-  "CUSTOMER_SATISFACTION": (<CustomerSatisfactionMetric />),
   "SPRINT_CADENCE": (<SprintCadenceMetric />),
   "CODE_OWNERSHIP_PROJECT": (<ProjectCodeOwnershipMetric />),
   "CODE_OWNERSHIP_TEAM": (<TeamCodeOwnershipMetric />),
