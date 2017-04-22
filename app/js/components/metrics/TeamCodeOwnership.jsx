@@ -6,7 +6,6 @@ import MetricDescription from '../metrics/helpers/MetricDescription'
 
 class TeamCodeOwnershipMetric extends Component {
   render() {
-    console.log("Props", this.props);
     return (
       <PieChart data={this.props.chartData} title="Team Code Ownership" >
         <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
