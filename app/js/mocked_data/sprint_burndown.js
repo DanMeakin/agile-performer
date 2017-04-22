@@ -15,11 +15,11 @@ let burndownData = {
   "Week 3, Day 3": 210,
   "Week 3, Day 4": 210,
   "Week 3, Day 5": 200,
-  "Week 4, Day 1": 170,
-  "Week 4, Day 2": 140,
-  "Week 4, Day 3": 130,
-  "Week 4, Day 4": 85,
-  "Week 4, Day 5": 30
+  "Week 4, Day 1": null,
+  "Week 4, Day 2": null,
+  "Week 4, Day 3": null,
+  "Week 4, Day 4": null,
+  "Week 4, Day 5": null
 },
   makeBurndownTrend = (startVal, dataPoints) => {
     let delta = startVal / (Object.keys(dataPoints).length - 1);

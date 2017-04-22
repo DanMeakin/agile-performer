@@ -5,24 +5,12 @@ import LineChart from '../charts/LineChart';
 
 class SprintBurndownLineMetric extends Component {
   chartData() {
-    return this.props.chartData.map(dataPoint => {
-      console.log("Datapoint", dataPoint);
-      let data = dataPoint.data,
-        description = dataPoint.description;
-      if (description == "Remaining Effort") {
-        let dropWeek4 = dateKey => (
-          !dateKey.includes("Week 4")
-        );
-        data = Object.keys(data).filter(dropWeek4).reduce((acc, k) => {
-          acc[k] = data[k];
-          return acc;
-        }, {});
-      }
-      return Object.assign({}, dataPoint, {
-        description,
-        data
-      });
-    })
+    return this.props.chartData.map(dataPoint => (
+      Object.assign({}, dataPoint, {
+        description: dataPoint.description,
+        data: dataPoint.data
+      })
+    ));
   }
 
   render() {
