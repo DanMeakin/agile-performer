@@ -30,7 +30,7 @@ class NavBar extends Component {
   renderEntries(metrics) {
     return metrics.map((metric) =>
       (
-        <li className="nav-entry" key={metric.type}>
+        <li className="nav-entry" key={metric.name}>
           <a href="#" onClick={() => this.props.selectMetric(metric.type)}>
             {metric.name}
           </a>

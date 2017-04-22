@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import BarLineChart from '../charts/BarLineChart';
 
-class VelocityMetric extends Component {
+class VelocityBarMetric extends Component {
   render() {
     return (
         <BarLineChart data={this.props.chartData} title="Velocity"></BarLineChart>
@@ -19,4 +19,4 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps
-)(VelocityMetric);
+)(VelocityBarMetric);

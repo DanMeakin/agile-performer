@@ -1,3 +1,51 @@
+import React from 'react';
+import {
+  TeamSatisfactionMetric,
+  VelocityBarMetric,
+  VelocityLineMetric,
+  HappinessIndexMetric,
+  EnhancedReleaseBurndownMetric,
+  SprintBurndownBarMetric,
+  SprintBurndownLineMetric,
+  ScrumPracticesMetric,
+  XpPracticesMetric,
+  ProjectCodeOwnershipMetric,
+  TeamCodeOwnershipMetric,
+  RemedialFocusMetric,
+  SprintInterferenceMetric,
+  DefectsOverTimeMetric
+} from '../components/metrics/';
+
+/*
+   Opinion on the best ten metrics:-
+
+   Enhanced release burndown (it's pretty new, interesting)
+   Velocity (traditional, but needed; maybe rework as line chart with clearer variances?)
+   Sprint Burndown (traditional, but needed, though should be line chart)
+   Code Ownership - both in same vis (it's pretty new too, and interesting)
+   Scrum / XP Practices - both in same vis (it's pretty interesting tho maybe difficult)
+   Sprint Interference
+   Remedial Focus
+   Team Satisfaction (useful, different perspective, important as it's about people)
+   Happiness index (not too sure how different from the above?)
+   Defects over time (least favourite of the 10, but probably useful)
+
+   ---
+
+   Agreed upon metrics:
+
+   Code Ownership - A - CM
+   Practices (both) - M - Retro
+   Defects over time - A - Jira
+   Remedial Focus - A - Jira (?)
+   Enh. Rel. Burndown - M/A - Jira (?)
+   Sprint Burndown - A - Jira
+   Happiness index - M - Weekly
+   Satisfaction - M - Retro
+   Velocity A/B - A - Jira
+   Sprint Interference - M - Retro
+
+ */
 const menuItems = {
   filterTerm: "",
   items: [
@@ -5,23 +53,23 @@ const menuItems = {
       heading: "Agility",
       metrics: [
         {
-          type: "CODE_OWNERSHIP_PROJECT",
+          type: ProjectCodeOwnershipMetric,
           name: "Code Ownership (Project)"
         },
         {
-          type: "CODE_OWNERSHIP_TEAM",
+          type: TeamCodeOwnershipMetric,
           name: "Code Ownership (Team)"
         },
         {
-          type: "SCRUM_PRACTICES",
+          type: ScrumPracticesMetric,
           name: "Scrum Practices"
         },
         {
-          type: "SPRINT_INTERFERENCE",
+          type: SprintInterferenceMetric,
           name: "Sprint Interference"
         },
         {
-          type: "XP_PRACTICES",
+          type: XpPracticesMetric,
           name: "XP Practices"
         },
       ]
@@ -30,11 +78,11 @@ const menuItems = {
       heading: "Quality Assurance",
       metrics: [
         {
-          type: "DEFECTS_OVER_TIME",
+          type: DefectsOverTimeMetric,
           name: "Defects Over Time"
         },
         {
-          type: "REMEDIAL_FOCUS",
+          type: RemedialFocusMetric,
           name: "Remedial Focus"
         },
       ]
@@ -43,16 +91,24 @@ const menuItems = {
       heading: "Performance",
       metrics: [
         {
-          type: "ENHANCED_RELEASE_BURNDOWN",
+          type: EnhancedReleaseBurndownMetric,
           name: "Enhanced Release Burndown"
         },
         {
-          type: "LEAD_TIME",
-          name: "Lead Time"
+          type: SprintBurndownBarMetric,
+          name: "Sprint Burndown A"
         },
         {
-          type: "SPRINT_BURNDOWN",
-          name: "Sprint Burndown"
+          type: SprintBurndownLineMetric,
+          name: "Sprint Burndown B"
+        },
+        {
+          type: VelocityBarMetric,
+          name: "Velocity A"
+        },
+        {
+          type: VelocityLineMetric,
+          name: "Velocity B"
         }
       ]
     },
@@ -60,44 +116,14 @@ const menuItems = {
         heading: "Team Profile",
         metrics: [
           {
-            type: "HAPPINESS_INDEX",
+            type: HappinessIndexMetric,
             name: "Happiness Index"
           },
           {
-            type: "TEAM_SATISFACTION",
+            type: TeamSatisfactionMetric,
             name: "Satisfaction"
           }
         ]
-    },
-    {
-      heading: "Testing",
-      metrics: [
-        {
-          type: "CODE_COVERAGE",
-          name: "Code Coverage"
-        },
-        {
-          type: "TEST_CASES_COUNT",
-          name: "Number of Test Cases"
-        }
-      ]
-    },
-    {
-      heading: "Velocity",
-      metrics: [
-        {
-          type: "SPRINT_CADENCE",
-          name: "Sprint Cadence"
-        },
-        {
-          type: "VELOCITY",
-          name: "Velocity"
-        },
-        {
-          type: "VELOCITY_TREND",
-          name: "Velocity Trend"
-        },
-      ]
     }
   ]
 };

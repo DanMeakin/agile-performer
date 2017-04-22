@@ -26,6 +26,7 @@ let burndownData = {
     let trend = Object.keys(dataPoints).reduce(
       (trendLine, label, i) => {
         trendLine[label] = startVal - i * delta;
+        console.log("Burndown label", label);
         return trendLine;
       }, {}
     );
@@ -37,12 +38,11 @@ const sprintBurndown = [
     description: "Ideal Burndown",
     data: makeBurndownTrend(420, burndownData),
     chartType: "line",
-    isOverlay: true
+    borderDash: [10, 5]
   },
   {
     description: "Remaining Effort",
-    data: burndownData,
-    chartType: "bar"
+    data: burndownData
   }
 ];
 

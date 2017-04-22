@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import LineChart from '../charts/LineChart';
 
-class VelocityMetric extends Component {
+class VelocityLineMetric extends Component {
   chartData() {
     return this.props.chartData.map(({ description, data }) => (
       {
@@ -30,4 +30,4 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps
-)(VelocityMetric);
+)(VelocityLineMetric);

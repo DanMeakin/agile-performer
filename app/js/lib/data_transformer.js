@@ -107,7 +107,7 @@ const createValues = (performanceData, sortLabels) => {
       {
         label: dataset.description,
         values: labels(performanceData, sortLabels).map(dataLabel => (
-          dataset.data[dataLabel] || 0
+          dataset.data[dataLabel]
         )),
         type: dataset.chartType
       },
