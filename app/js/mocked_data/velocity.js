@@ -116,5 +116,35 @@ const velocity = detailedVelocity.map(({ description, data }) => {
   });
 });
 
-export { storyPointEffort, velocity, detailedVelocity };
+let remedialChartData = () => {
+    let commitment = detailedVelocity.find(entry => {
+      return entry.description == "Commitment";
+    });
+    return [
+      { description: "Bug Fixing",
+        stack: "remedialFocus",
+        data: Object.keys(commitment.data).reduce((acc, k) => {
+          acc[k] = commitment.data[k].bugFixPoints;
+          return acc;
+        }, {})
+      },
+      { description: "User Stories",
+        stack: "remedialFocus",
+        data: Object.keys(commitment.data).reduce((acc, k) => {
+          acc[k] = commitment.data[k].userStoryPoints;
+          return acc;
+        }, {})
+      }
+    ];
+  }
+
+const remedialFocus = {
+  chart: remedialChartData(),
+  description: {
+    leadText: "Remedial focus provides insight into the amount of time spend on remidial tasks during a sprint",
+    breadText: "The chart displays how many story points where allocated on user stories and bug fixing during each sprint"
+  }
+}
+
+export { storyPointEffort, velocity, detailedVelocity, remedialFocus };
 

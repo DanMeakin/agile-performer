@@ -6,11 +6,10 @@ export default class MetricDescription extends Component {
     render() {
         return (
             <div className="callout primary metric-info">
-              <p className="lead">
+              <p>
                 {this.props.leadText}
               </p>
-              <p>
-                {this.props.breadText}
+              <p dangerouslySetInnerHTML={{ __html: this.props.breadText}}>
               </p>
             </div>
         )

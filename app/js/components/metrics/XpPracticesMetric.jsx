@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import RadarChart from '../charts/RadarChart';
+import MetricDescription from './helpers/MetricDescription'
 
 class XpPracticesMetric extends Component {
   chartOptions() {
@@ -28,13 +29,16 @@ class XpPracticesMetric extends Component {
 
   render() {
     return (
-      <RadarChart data={this.props.chartData} options={this.chartOptions()} title="XP Practices" />
+      <RadarChart data={this.props.chartData} options={this.chartOptions()} title="XP Practices" >
+                <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />  
+      </RadarChart>
     )
   }
 }
 function mapStateToProps(state) {
   return {
-    chartData: state.metrics.xpPractices
+    chartData: state.metrics.xpPractices.chart,
+    description: state.metrics.xpPractices.description
   }
 }
 

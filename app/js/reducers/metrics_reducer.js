@@ -1,6 +1,6 @@
 import { scrumPractices, xpPractices } from 'js/mocked_data/practices';
 import { linesOfCode, codeCoverage } from 'js/mocked_data/test';
-import { storyPointEffort, velocity, detailedVelocity } from 'js/mocked_data/velocity';
+import { storyPointEffort, velocity, detailedVelocity, remedialFocus } from 'js/mocked_data/velocity';
 import { teamSatisfaction } from 'js/mocked_data/team_satisfaction';
 import { sprintBurndown } from 'js/mocked_data/sprint_burndown';
 import { releaseBurndown } from 'js/mocked_data/release_burndown';
@@ -23,6 +23,7 @@ const initialState = {
   codeCoverage,
   velocity,
   detailedVelocity,
+  remedialFocus,
   teamSatisfaction,
   sprintBurndown,
   releaseBurndown,

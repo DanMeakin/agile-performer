@@ -2,39 +2,19 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import MultiBarChart from '../charts/MultiBarChart';
+import MetricDescription from './helpers/MetricDescription'
 
 class RemedialFocusMetric extends Component {
-  remedialChartData() {
-    let commitment = this.props.chartData.find(entry => {
-      return entry.description == "Commitment";
-    });
-    return [
-      { description: "Bug Fixing",
-        stack: "remedialFocus",
-        data: Object.keys(commitment.data).reduce((acc, k) => {
-          acc[k] = commitment.data[k].bugFixPoints;
-          return acc;
-        }, {})
-      },
-      { description: "User Stories",
-        stack: "remedialFocus",
-        data: Object.keys(commitment.data).reduce((acc, k) => {
-          acc[k] = commitment.data[k].userStoryPoints;
-          return acc;
-        }, {})
-      }
-    ];
-  }
 
   remedialChartOptions() {
     let opts = Object.assign({}, this.props.options, {
-        scales: {
-          xAxes: [{
-            stacked: true
-          }],
-          yAxes: [{
-            stacked: true
-          }]
+      scales: {
+        xAxes: [{
+          stacked: true
+        }],
+        yAxes: [{
+          stacked: true
+        }]
       }
     });
     return opts;
@@ -42,14 +22,17 @@ class RemedialFocusMetric extends Component {
 
   render() {
     return (
-      <MultiBarChart data={this.remedialChartData()} options={this.remedialChartOptions()} title="Remedial Focus" />
+      <MultiBarChart data={this.props.chartData} options={this.remedialChartOptions()} title="Remedial Focus" >
+        <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
+      </MultiBarChart>
     )
   }
 }
 
 function mapStateToProps(state) {
   return {
-    chartData: state.metrics.detailedVelocity
+    chartData: state.metrics.remedialFocus.chart,
+    description: state.metrics.remedialFocus.description
   };
 };
 
