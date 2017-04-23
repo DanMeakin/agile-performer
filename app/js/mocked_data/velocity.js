@@ -141,8 +141,8 @@ let remedialChartData = () => {
 const remedialFocus = {
   chart: remedialChartData(),
   description: {
-    leadText: "Remedial focus provides insight into the amount of time spend on remidial tasks during a sprint",
-    breadText: "The chart displays how many story points where allocated on user stories and bug fixing during each sprint"
+    leadText: "Remedial focus provides insight into the amount of time spent on remedial tasks during a sprint",
+    breadText: "The chart displays how many story points were allocated on user stories and bug fixing during each sprint"
   }
 }
 

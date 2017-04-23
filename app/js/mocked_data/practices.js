@@ -21,7 +21,7 @@ const scrumPractices = {
   ],
   description: {
     leadText: "The practices metric visualizes the rate of agile practice assimilation in the team. The data is inserted by the team itself",
-    breadText: "<div>The chart operates with 4 stages of agile assimilation for each practice in use:<ul><li><em>Adoption</em>, the decision to adopt a practice has been made;</li><li><em>Adaptation</em>, the practice is being put to use, and teammembers are trained to use the practice;</li><li><em>Acceptance</em>, the teammembers are commited to using the innovation;</li><li><em>Routinisation</em>, usage of the practice is now encouraged as a normal activity, and is no longer defined as something out of the ordinary.</li></ul></div>"
+    breadText: "<div>The chart operates with 4 stages of agile assimilation for each practice in use:<ul><li><em>Adoption</em>, the decision to adopt a practice has been made;</li><li><em>Adaptation</em>, the practice is being put to use, and team members are trained to use the practice;</li><li><em>Acceptance</em>, the team members are commited to using the innovation;</li><li><em>Routinisation</em>, usage of the practice is now encouraged as a normal activity, and is no longer defined as something out of the ordinary.</li></ul></div>"
   }
 }
 //  { description: "Team β",
@@ -50,7 +50,7 @@ const xpPractices = {
   ],
   description: {
     leadText: "The practices metric visualizes the rate of agile practice assimilation in the team. The data is inserted by the team itself",
-    breadText: "<div>The chart operates with 4 stages of agile assimilation for each practice in use:<ul><li><em>Adoption</em>, the decision to adopt a practice has been made;</li><li><em>Adaptation</em>, the practice is being put to use, and teammembers are trained to use the practice;</li><li><em>Acceptance</em>, the teammembers are commited to using the innovation;</li><li><em>Routinisation</em>, usage of the practice is now encouraged as a normal activity, and is no longer defined as something out of the ordinary.</li></ul></div>"
+    breadText: "<div>The chart operates with 4 stages of agile assimilation for each practice in use:<ul><li><em>Adoption</em>, the decision to adopt a practice has been made;</li><li><em>Adaptation</em>, the practice is being put to use, and team members are trained to use the practice;</li><li><em>Acceptance</em>, the team members are commited to using the innovation;</li><li><em>Routinisation</em>, usage of the practice is now encouraged as a normal activity, and is no longer defined as something out of the ordinary.</li></ul></div>"
   }
 }
 
