@@ -72,7 +72,7 @@ const storyPointEffort = [
     description: "Story Point Effort",
     data: calcStoryPointEffort()
   }
-] 
+]
 
 class VelocityData {
   constructor(userStoryPoints, bugFixPoints) {
@@ -146,5 +146,24 @@ const remedialFocus = {
   }
 }
 
-export { storyPointEffort, velocity, detailedVelocity, remedialFocus };
+const velocityBar = {
+  chart: velocity,
+  description: {
+    leadText: "Remedial focus provides insight into the amount of time spend on remidial tasks during a sprint",
+    breadText: "The chart displays how many story points where allocated on user stories and bug fixing during each sprint"
+  }
+}
 
+const velocityLine = {
+  chart: velocity,
+  description: {
+    leadText: "Remedial focus provides insight into the amount of time spend on remidial tasks during a sprint",
+    breadText: "The chart displays how many story points where allocated on user stories and bug fixing during each sprint"
+  }
+}
+
+
+console.log("velocityLine chart", velocityLine.chart);
+console.log("velocity", velocity);
+
+export { storyPointEffort, detailedVelocity, velocity, remedialFocus, velocityBar, velocityLine };
