@@ -47,8 +47,8 @@ const teamSatisfaction = {
     }
   ],
   description: {
-    leadText: "Sprint Burndown illustrates task/story completion over the course of a Sprint.",
-    breadText: "The Remaining Effort trendline/bars shows how many points are remaining at a given point in time during the sprint. This chart illustrates an incomplete Sprint, with Week 4 remaining incomplete."
+    leadText: "Team Satisfaction displays a team’s or teams’ satisfaction on five aspects of the development process for each sprint.",
+    breadText: "The five measured aspects are <i>resources</i>, <i>communication</i>, <i>requirements</i>, <i>management</i> and <i>technical</i>."
   }
 };
 

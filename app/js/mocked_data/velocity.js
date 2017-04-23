@@ -149,21 +149,17 @@ const remedialFocus = {
 const velocityBar = {
   chart: velocity,
   description: {
-    leadText: "Remedial focus provides insight into the amount of time spend on remidial tasks during a sprint",
-    breadText: "The chart displays how many story points where allocated on user stories and bug fixing during each sprint"
+    leadText: "Sprint velocity indicates the relation between upfront commitment and actual work done, represented in story points.",
+    breadText: "The bars or lines in these graphs show the number of story points associated with the tasks a team, or teams, <i>intended to complete</i> during a given sprint and the number of points that represents the tasks that were <i>actually completed</i>."
   }
 }
 
 const velocityLine = {
   chart: velocity,
   description: {
-    leadText: "Remedial focus provides insight into the amount of time spend on remidial tasks during a sprint",
-    breadText: "The chart displays how many story points where allocated on user stories and bug fixing during each sprint"
+    leadText: "Sprint velocity indicates the relation between upfront commitment and actual work done, represented in story points.",
+    breadText: "The bars or lines in these graphs show the number of story points associated with the tasks a team, or teams, <i>intended to complete</i> during a given sprint and the number of points that represents the tasks that were <i>actually completed</i>."
   }
 }
-
-
-console.log("velocityLine chart", velocityLine.chart);
-console.log("velocity", velocity);
 
 export { storyPointEffort, detailedVelocity, velocity, remedialFocus, velocityBar, velocityLine };
