@@ -2,17 +2,21 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import MultiBarChart from '../charts/MultiBarChart';
+import MetricDescription from '../metrics/helpers/MetricDescription'
 
 class SprintBurndownBarMetric extends Component {
     render() {
         return (
-            <MultiBarChart data={this.props.chartData} title="Sprint Burndown" />
+          <MultiBarChart data={this.props.chartData} title="Sprint Burndown">
+            <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
+          </MultiBarChart>
         )
     }
 }
 function mapStateToProps(state) {
     return {
-        chartData: state.metrics.sprintBurndown
+      chartData: state.metrics.sprintBurndown.chart,
+      description: state.metrics.sprintBurndown.description
     }
 }
 

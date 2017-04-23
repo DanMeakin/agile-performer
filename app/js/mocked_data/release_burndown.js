@@ -69,31 +69,39 @@ let burndownData = {
       return [...Array(numPoints).keys()].reduce(reducer, {});
     };
 
-const releaseBurndown = [
-  {
-    description: "Story Points",
-    data: storyPoints,
-    chartType: "bar"
-  },
-  {
-    description: "Added Stories",
-    data: addedPoints,
-    chartType: "bar"
-  },
-  {
-    description: "Estimated Release Trend",
-    data: makeReleaseTrend(),
-    chartType: "line",
-    borderDash: [10, 5],
-    borderColor: new RGB(150, 150, 200)
-  },
-  {
-    description: "Adjusted Release Trend",
-    data: makeAddedTrend(),
-    chartType: "line",
-    borderDash: [10, 5],
-    borderColor: new RGB(200, 150, 150)
+const releaseBurndown = {
+  chart: [
+    {
+      description: "Story Points",
+      data: storyPoints,
+      chartType: "bar"
+    },
+    {
+      description: "Added Stories",
+      data: addedPoints,
+      chartType: "bar"
+    },
+    {
+      description: "Estimated Release Trend",
+      data: makeReleaseTrend(),
+      chartType: "line",
+      borderDash: [10, 5],
+      borderColor: new RGB(150, 150, 200)
+    },
+    {
+      description: "Adjusted Release Trend",
+      data: makeAddedTrend(),
+      chartType: "line",
+      borderDash: [10, 5],
+      borderColor: new RGB(200, 150, 150)
+    }
+  ],
+  description: {
+    leadText: "Enhanced Release Burndown measures the release burndown rate for a given Scrum team, with an adjustment made for additional requirements added to the release after initial planning.",
+    breadText: `The purpose of this chart is to illustrate the impact of additional requirements on the delivery of a planned release. Additional requirements will push back the release date.
+
+Release is estimated to take place where the Estimated Release Trend line meets the x-axis. With additional requirements added, the likely release date will be pushed back to where the Adjusted Release Trend line meets the Estimated Release Trend line.`
   }
-];
+};
 
 export { releaseBurndown };
