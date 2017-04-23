@@ -79,12 +79,19 @@ let defectsPerDay = [
         return acc;
       }, {})
     },
-    defectsOverTime = [
+    combinedDefects = [
       discoveredDefects,
       resolvedDefects
     ];
 
 console.log("Defects over time", defectsOverTime);
 
+const defectsOverTime = {
+  chart: combinedDefects,
+  description: {
+    leadText: "Remedial focus provides insight into the amount of time spend on remidial tasks during a sprint",
+    breadText: "The chart displays how many story points where allocated on user stories and bug fixing during each sprint"
+  }
+}
 
 export { defectsOverTime };
