@@ -11,8 +11,8 @@ const sprintInterference = {
     }
   ],
   description: {
-    leadText: "Sprint Interference is measurering the degree of inteference experienced by the team",
-    breadText: "The chart displays the Person-Days spent on Non-Sprint Backlock tasks for every Sprint"
+    leadText: "Sprint Interference is measuring the degree of interference experienced by the team",
+    breadText: "The chart displays the Person-Days spent on Non-Sprint Backlog tasks for every Sprint"
   } 
 }
 
