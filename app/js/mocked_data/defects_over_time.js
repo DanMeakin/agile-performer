@@ -84,14 +84,12 @@ let defectsPerDay = [
       resolvedDefects
     ];
 
-console.log("Defects over time", defectsOverTime);
-
 const defectsOverTime = {
   chart: combinedDefects,
   description: {
     leadText: "Defects over time visualises the number of discovered and resolved defects.",
     breadText: "The lines in this chart represent the <i>total number of defects found</i> and the <i>total number of resolved defects</i> against time."
   }
-}
+};
 
 export { defectsOverTime };

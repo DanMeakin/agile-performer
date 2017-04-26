@@ -21,7 +21,6 @@ const opacity = 1;
  */
 const chartData = (chartType, performanceData, colours = defaultColours, sortLabels = true) => {
   var makeDataset = function (data, i) {
-    console.log("Data", data);
     let type = data.type || chartType,
         borderDash = data.borderDash || [],
         colour = data.borderColor || colours[i],
