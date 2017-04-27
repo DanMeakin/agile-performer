@@ -142,7 +142,7 @@ const remedialFocus = {
   chart: remedialChartData(),
   description: {
     leadText: "Remedial focus provides insight into the amount of time spent on remedial tasks during a sprint",
-    breadText: "The chart displays how many story points were allocated on user stories and bug fixing during each sprint"
+    bodyText: "The chart displays how many story points were allocated on user stories and bug fixing during each sprint"
   }
 }
 
@@ -150,7 +150,7 @@ const velocityBar = {
   chart: velocity,
   description: {
     leadText: "Sprint velocity indicates the relation between upfront commitment and actual work done, represented in story points.",
-    breadText: "The bars or lines in these graphs show the number of story points associated with the tasks a team, or teams, <i>intended to complete</i> during a given sprint and the number of points that represents the tasks that were <i>actually completed</i>."
+    bodyText: "The bars or lines in these graphs show the number of story points associated with the tasks a team, or teams, <i>intended to complete</i> during a given sprint and the number of points that represents the tasks that were <i>actually completed</i>."
   }
 }
 
@@ -158,7 +158,7 @@ const velocityLine = {
   chart: velocity,
   description: {
     leadText: "Sprint velocity indicates the relation between upfront commitment and actual work done, represented in story points.",
-    breadText: "The bars or lines in these graphs show the number of story points associated with the tasks a team, or teams, <i>intended to complete</i> during a given sprint and the number of points that represents the tasks that were <i>actually completed</i>."
+    bodyText: "The bars or lines in these graphs show the number of story points associated with the tasks a team, or teams, <i>intended to complete</i> during a given sprint and the number of points that represents the tasks that were <i>actually completed</i>."
   }
 }
 

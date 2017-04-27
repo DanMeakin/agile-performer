@@ -21,7 +21,7 @@ class SprintInterferenceMetric extends Component {
   render() {
     return (
       <LineChart data={this.props.chartData} options={this.chartOptions()} title="Sprint Interference">
-            <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />  
+            <MetricDescription description={this.props.description} />
       </LineChart>
     )
   }

@@ -17,7 +17,7 @@ class SprintBurndownLineMetric extends Component {
   render() {
       return (
           <LineChart data={this.chartData()} title="Sprint Burndown">
-            <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
+            <MetricDescription description={this.props.description} />
           </LineChart>
       )
   }

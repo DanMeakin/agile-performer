@@ -8,7 +8,7 @@ class HappinessIndexMetric extends Component {
   render() {
     return (
       <LineChart data={this.props.chartData} title="Happiness Index" >
-        <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
+        <MetricDescription description={this.props.description} />
       </LineChart>
     )
   }

@@ -19,7 +19,7 @@ class VelocityLineMetric extends Component {
   render() {
     return (
         <LineChart data={this.chartData()} title="Velocity">
-          <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
+          <MetricDescription description={this.props.description} />
         </LineChart>
     )
   }

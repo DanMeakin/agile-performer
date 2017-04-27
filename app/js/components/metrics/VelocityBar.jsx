@@ -7,9 +7,9 @@ import MetricDescription from '../metrics/helpers/MetricDescription'
 class VelocityBarMetric extends Component {
   render() {
     return (
-        <BarLineChart data={this.props.chartData} title="Velocity">
-          <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
-        </BarLineChart>
+      <BarLineChart data={this.props.chartData} title="Velocity">
+        <MetricDescription description={this.props.description} />
+      </BarLineChart>
     )
   }
 }

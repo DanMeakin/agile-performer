@@ -23,7 +23,7 @@ class RemedialFocusMetric extends Component {
   render() {
     return (
       <MultiBarChart data={this.props.chartData} options={this.remedialChartOptions()} title="Remedial Focus" >
-        <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
+        <MetricDescription description={this.props.description} />
       </MultiBarChart>
     )
   }

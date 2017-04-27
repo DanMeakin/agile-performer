@@ -8,7 +8,7 @@ class TeamSatisfactionMetric extends Component {
   render() {
     return (
         <BarLineChart data={this.props.chartData} title="Team Satisfaction">
-          <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
+          <MetricDescription description={this.props.description} />
         </BarLineChart>
     )
   }

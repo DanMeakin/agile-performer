@@ -21,7 +21,7 @@ class EnhancedReleaseBurndownMetric extends Component {
   render() {
     return (
       <MultiBarChart data={this.props.chartData} options={this.chartOptions()} title="Enhanced Release Burndown">
-        <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
+        <MetricDescription description={this.props.description} />
       </MultiBarChart>
     );
   }

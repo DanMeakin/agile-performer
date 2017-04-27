@@ -47,7 +47,7 @@ const sprintBurndown = {
   ],
   description: {
     leadText: "Sprint Burndown illustrates task/story completion over the course of a Sprint.",
-    breadText: "The Remaining Effort trendline/bars shows how many points are remaining at a given point in time during the sprint. This chart illustrates an incomplete Sprint, with Week 4 remaining incomplete."
+    bodyText: "The Remaining Effort trendline/bars shows how many points are remaining at a given point in time during the sprint. This chart illustrates an incomplete Sprint, with Week 4 remaining incomplete."
   }
 };
 

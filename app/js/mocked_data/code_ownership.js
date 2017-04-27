@@ -11,7 +11,7 @@ const projectCodeOwnership = {
   ],
   description: {
     leadText: "Project Code Ownership measures the per-module contribution to the codebase by different Scrum teams within the project.",
-    breadText: "The chart illustrates the proportion of the codebase with commits solely from one team, from two teams, or from three or more teams."
+    bodyText: "The chart illustrates the proportion of the codebase with commits solely from one team, from two teams, or from three or more teams."
   }
 };
 
@@ -29,7 +29,7 @@ const teamCodeOwnership = {
   ],
   description: {
     leadText: "Team Code Ownership measures the per-module contribution to the codebase by members of one Scrum team.",
-    breadText: "The chart illustrates the proportion of the codebase with commits from this team, and the number of different team members who have made commits to a particular module."
+    bodyText: "The chart illustrates the proportion of the codebase with commits from this team, and the number of different team members who have made commits to a particular module."
   }
 };
 

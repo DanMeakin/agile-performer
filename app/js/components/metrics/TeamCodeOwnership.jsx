@@ -16,7 +16,7 @@ class TeamCodeOwnershipMetric extends Component {
   render() {
     return (
       <PieChart data={this.props.chartData} colours={colours} title="Team Code Ownership" >
-        <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
+        <MetricDescription description={this.props.description} />
       </PieChart>
     )
   }

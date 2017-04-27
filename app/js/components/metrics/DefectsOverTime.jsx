@@ -8,7 +8,7 @@ class DefectsOverTimeMetric extends Component {
   render() {
     return (
       <UnsortedLineChart data={this.props.chartData} options={this.props.options} title="Defects Over Time">
-        <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
+        <MetricDescription description={this.props.description} />
       </UnsortedLineChart>
     )
   }

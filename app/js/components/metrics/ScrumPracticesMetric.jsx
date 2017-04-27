@@ -30,7 +30,7 @@ class ScrumPracticesMetric extends Component {
   render() {
     return (
       <RadarChart data={this.props.chartData} options={this.chartOptions()} title="Scrum Practices" >
-        <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
+        <MetricDescription description={this.props.description} />
       </RadarChart>
     )
   }

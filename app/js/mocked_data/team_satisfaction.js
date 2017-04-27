@@ -48,7 +48,7 @@ const teamSatisfaction = {
   ],
   description: {
     leadText: "Team Satisfaction displays a team’s or teams’ satisfaction on five aspects of the development process for each sprint.",
-    breadText: "The five measured aspects are <i>resources</i>, <i>communication</i>, <i>requirements</i>, <i>management</i> and <i>technical</i>."
+    bodyText: "The five measured aspects are <i>resources</i>, <i>communication</i>, <i>requirements</i>, <i>management</i> and <i>technical</i>."
   }
 };
 

@@ -8,7 +8,7 @@ class ProjectCodeOwnershipMetric extends Component {
   render() {
     return (
       <PieChart data={this.props.chartData} title="Project Code Ownership">
-        <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />
+        <MetricDescription description={this.props.description} />
       </PieChart>
     )
   }

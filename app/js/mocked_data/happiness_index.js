@@ -14,7 +14,7 @@ const happinessIndex = {
   ],
   description: {
       leadText: "Happiness index displays a team’s or teams’ happiness over time.",
-      breadText: ""
+      bodyText: ""
   }
 };
 

@@ -30,7 +30,7 @@ class XpPracticesMetric extends Component {
   render() {
     return (
       <RadarChart data={this.props.chartData} options={this.chartOptions()} title="XP Practices" >
-                <MetricDescription leadText={this.props.description.leadText} breadText={this.props.description.breadText} />  
+        <MetricDescription description={this.props.description} />
       </RadarChart>
     )
   }
