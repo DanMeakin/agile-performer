@@ -8,5 +8,12 @@ export default class Release {
   constructor(userStories, plannedDate) {
     this.userStories = userStories;
     this.plannedDate = plannedDate;
+    this.sprints = [];
+  }
+
+  planSprint(team, startDate, endDate, stories) {
+    let sprintNum = 1,
+        sprint = new Sprint(team, sprintNum, stories, startDate, endDate);
+    this.sprints.push(sprint);
   }
 };
