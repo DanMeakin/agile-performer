@@ -10,7 +10,8 @@ class Team {
     this.practiceAssessments = [];
     this.defects = [];
     this.happinessAssessments = [];
-    this.retrospectives = [];
+    this.satisfactionAssessments = [];
+    this.timeBreakdowns = [];
   }
 
   /**
@@ -41,11 +42,20 @@ class Team {
   }
 
   /**
-   * Add a retrospective assessment for this team.
+   * Add a satisfaction assessment for this team.
    *
-   * @param {Retrospective} retrospective - A retrospective assessment for this team
+   * @param {Satisfaction} satisfaction - A satisfaction assessment for this team
    */
-  addRetrospective(retrospective) {
-    this.retrospectives.push(retrospective);
+  addSatisfactionAssessment(satisfaction) {
+    this.satisfactionAssessments.push(satisfaction);
+  }
+
+  /**
+   * Add a time breakdown for this team.
+   *
+   * @param {TimeBreakdown} breakdown - A time breakdown for this team
+   */
+  addTimeBreakdown(breakdown) {
+    this.timeBreakdowns.push(breakdown);
   }
 };
