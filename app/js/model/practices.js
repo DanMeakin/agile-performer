@@ -1,8 +1,11 @@
 // Maturity assessment stages.
-const ADOPTION = 1,
-      ADAPTATION = 2,
-      ACCEPTANCE = 3,
-      ROUTINISATION = 4;
+const maturity = {
+  adoption: 1,
+  adaptation: 2,
+  acceptance: 3,
+  routinisation: 4,
+  infusion: 5
+};
 
 class Practices {
   /**
@@ -10,7 +13,7 @@ class Practices {
    *
    * Each set of practices consists of an object whose keys are practices, and
    * whose values is a maturity assessment. The latter should be set using
-   * the ADOPTION, ADAPTATION, ACCEPTANCE, and ROUTINISATION constants.
+   * the maturity constants.
    *
    * @param {Object} scrumAssessment - A series of Scrum practices with maturity
    * assessments
@@ -40,4 +43,4 @@ class Practices {
   }
 };
 
-export { Practices, ADOPTION, ADAPTATION, ACCEPTANCE, ROUTINISATION };
+export { Practices, maturity };
