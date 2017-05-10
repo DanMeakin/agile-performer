@@ -32,4 +32,17 @@ function makePeriod(startDate, endDate, excludePredicate) {
   };
 };
 
-export { makePeriod };
+/**
+ * Add a number of days to a date.
+ *
+ * @param {Date} date - the date to which to add days
+ * @param {Integer} days - the number of days to add
+ * @returns {Date} - the modified date 
+ */
+function addDays(date, days) {
+  let newDate = new Date(date);
+  newDate.setDate(newDate.getDate() + days);
+  return newDate;
+}
+
+export { makePeriod, addDays };
