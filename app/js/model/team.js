@@ -3,7 +3,7 @@
 
  * @param {String} name - the name of the team
  */
-class Team {
+export default class Team {
   constructor(name) {
     this.name = name;
     // Initialise a series of arrays for collecting data on the team.
