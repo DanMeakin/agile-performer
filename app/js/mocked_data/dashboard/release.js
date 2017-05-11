@@ -18,7 +18,7 @@ import Release from '../../model/release';
 
 let createSprints = (teamName => [...Array(5).keys()].map(sprintNumber => {
     let startDate = addDays(startingDates[teamName], sprintNumber * 21),
-      endDate = addDays(startDate, 11),
+      endDate = addDays(startDate, 12),
       team = teams[teamName],
       stories = userStories[teamName][sprintNumber];
     return new Sprint(team, sprintNumber + 1, stories, startDate, endDate);
