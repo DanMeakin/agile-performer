@@ -15,7 +15,7 @@ import {
   SprintInterferenceMetric,
   DefectsOverTimeMetric,
 } from '../../components/metrics';
-import Velocity from '../../components/dashboards/product_tracking/Velocity';
+import { SprintBurndown, Velocity } from '../../components/dashboards/product_tracking';
 
 /*
    Opinion on the best ten metrics:-
@@ -56,6 +56,10 @@ const menuItems = {
         {
           type: Velocity,
           name: "Velocity (Product Tracking)"
+        },
+        {
+          type: SprintBurndown,
+          name: "Sprint Burndown (Product Tracking)"
         }
       ]
     },
