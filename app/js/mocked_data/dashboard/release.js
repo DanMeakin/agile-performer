@@ -23,7 +23,7 @@ let createSprints = (teamName => [...Array(5).keys()].map(sprintNumber => {
       stories = userStories[teamName][sprintNumber];
     return new Sprint(team, sprintNumber + 1, stories, startDate, endDate);
   })),
-  sprints = Object.keys(teams).map(createSprints),
+  sprints = [].concat.apply([], Object.keys(teams).map(createSprints)),
   release = new Release(userStories.unassigned, new Date("2017-05-26"));
 
 release.sprints = sprints;

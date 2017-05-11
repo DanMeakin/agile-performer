@@ -13,8 +13,9 @@ import {
   TeamCodeOwnershipMetric,
   RemedialFocusMetric,
   SprintInterferenceMetric,
-  DefectsOverTimeMetric
+  DefectsOverTimeMetric,
 } from '../../components/metrics';
+import Velocity from '../../components/dashboards/product_tracking/Velocity';
 
 /*
    Opinion on the best ten metrics:-
@@ -49,6 +50,15 @@ import {
 const menuItems = {
   filterTerm: "",
   items: [
+    {
+      heading: "NEW",
+      metrics: [
+        {
+          type: Velocity,
+          name: "Velocity (Product Tracking)"
+        }
+      ]
+    },
     {
       heading: "Agility",
       metrics: [

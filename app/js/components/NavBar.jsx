@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { selectMetric, filterMetrics } from "../actions";
+import { selectMetric, filterMetrics, selectTeam } from "../actions";
 
 class NavBar extends Component {
   constructor(props) {
     super(props);
     this.handleFilterChange = this.handleFilterChange.bind(this);
     this.clearFilter = this.clearFilter.bind(this);
+    this.handleSelectTeam = this.handleSelectTeam.bind(this);
+    this.clearTeam = this.clearTeam.bind(this);
   }
 
   renderMenuItems() {
@@ -51,6 +53,16 @@ class NavBar extends Component {
                 <button className="button" onClick={this.clearFilter}>×</button>
               </div>
             </div>
+            <div className="input-group">
+              <label>Team
+                <select className="input-group-field" onChange={this.handleSelectTeam}>
+                  {this.props.teamNames.map(teamName => (
+                    <option value={teamName} key={teamName}>{"Team " + teamName}</option>
+                  ))
+                  }
+                </select>
+              </label>
+            </div>
           </form>
         </header>
       </div>
@@ -63,6 +75,15 @@ class NavBar extends Component {
 
   clearFilter(event) {
     this.props.filterMetrics("");
+  }
+
+  handleSelectTeam(event) {
+    console.log("Target value", event.target.value);
+    this.props.selectTeam(event.target.value);
+  }
+
+  clearTeam(event) {
+    this.props.selectTeam(null);
   }
 
   render() {
@@ -78,9 +99,14 @@ class NavBar extends Component {
 }
 
 function mapStateToProps(state) {
+  let teamNames = Object.keys(state.metrics.teams).map(key => (
+      state.metrics.teams[key].name
+  ));
   return {
     menuItems: state.menuItems.items,
-    metricFilter: state.menuItems.filterTerm
+    metricFilter: state.menuItems.filterTerm,
+    currentTeam: state.metrics.currentTeam,
+    teamNames
   };
 }
 
@@ -88,7 +114,8 @@ function matchDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       selectMetric: selectMetric,
-      filterMetrics: filterMetrics
+      filterMetrics: filterMetrics,
+      selectTeam: selectTeam
     },
     dispatch
   );
