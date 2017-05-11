@@ -15,7 +15,7 @@ import {
   SprintInterferenceMetric,
   DefectsOverTimeMetric,
 } from '../../components/metrics';
-import { SprintBurndown, Velocity } from '../../components/dashboards/product_tracking';
+import { SprintBurndown, Velocity, Happiness, Satisfaction } from '../../components/dashboards/product_tracking';
 
 /*
    Opinion on the best ten metrics:-
@@ -51,15 +51,23 @@ const menuItems = {
   filterTerm: "",
   items: [
     {
-      heading: "NEW",
+      heading: "PRODUCT TRACKING DASHBOARD",
       metrics: [
         {
           type: Velocity,
-          name: "Velocity (Product Tracking)"
+          name: "Velocity"
         },
         {
           type: SprintBurndown,
-          name: "Sprint Burndown (Product Tracking)"
+          name: "Sprint Burndown"
+        },
+        {
+          type: Happiness,
+          name: "Happiness"
+        },
+        {
+          type: Satisfaction,
+          name: "Satisfaction"
         }
       ]
     },
