@@ -45,4 +45,16 @@ function addDays(date, days) {
   return newDate;
 }
 
-export { makePeriod, addDays };
+/**
+ * Calculate the difference between two dates.
+ *
+ * @param {Date} date1
+ * @param {Date} date2
+ * @returns {Integer} - the number of days between two dates 
+ */
+function dateDiff(date1, date2) {
+  let milliseconds = date2 - date1;
+  return Math.round(Math.abs(milliseconds / (1000 * 60 * 60 * 24)));
+}
+
+export { makePeriod, addDays, dateDiff };
