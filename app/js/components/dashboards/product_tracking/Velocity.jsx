@@ -12,7 +12,7 @@ class Velocity extends Component {
 }
 
 function mapStateToProps(state) {
-  let currentTeam = state.metrics.currentTeam || "θ";
+  let currentTeam = state.metrics.currentTeam;
   return {
     chartData: state.metrics.release.velocityData(currentTeam)
   };
