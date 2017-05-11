@@ -1,6 +1,17 @@
 import { makePeriod, dateDiff } from '../lib/dates';
 import { groupBy } from '../lib/array';
 
+let makeBurndownTrend = (startVal, dataPoints) => {
+  let delta = startVal / (Object.keys(dataPoints).length - 1);
+  let trend = Object.keys(dataPoints).reduce(
+    (trendLine, label, i) => {
+      trendLine[label] = startVal - i * delta;
+      return trendLine;
+    }, {}
+  );
+  return trend;
+};
+
 /**
  * Calculate the total number of story points in a list of stories.
  *
@@ -118,5 +129,29 @@ export default class Sprint {
       dailyCumulative.push(newTotal);
       return dailyCumulative;
     }, []);
+  }
+
+  /**
+   * Generate burndown data for use in charts.
+   *
+   * @returns {Array[Object]} - burndown data for use in a sprint burndown 
+   */
+  burndownData() {
+    let remaining = this.burndown().reduce((data, points, idx) => {
+      data[idx] = points;
+      return data;
+    }, {});
+    return [
+      {
+        description: "Ideal Burndown",
+        data: makeBurndownTrend(this.committedStoryPoints(), remaining),
+        chartType: "line",
+        borderDash: [10, 5]
+      },
+      {
+        description: "Remaining Effort",
+        data: remaining
+      }
+    ];
   }
 };
