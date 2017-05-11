@@ -14,19 +14,22 @@ var tauSprint5 = [
     "As a user i would like to go out and have fun",
     1,
     new Date("2017-04-24"),
-    new Date("2017-04-24")
+    new Date("2017-04-24"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
     new Date("2017-04-24"),
-    new Date("2017-04-25")
+    new Date("2017-04-25"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
     new Date("2017-04-24"),
-    new Date("2017-04-24")
+    new Date("2017-04-24"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -217,7 +220,8 @@ var tauSprint4 = [
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-04-03"),
-    new Date("2017-04-05")
+    new Date("2017-04-05"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -431,13 +435,15 @@ var tauSprint3 = [
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-03-13"),
-    new Date("2017-03-16")
+    new Date("2017-03-16"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-03-13"),
-    new Date("2017-03-19")
+    new Date("2017-03-19"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -1185,13 +1191,15 @@ var thetaSprint4 = [
     "As a user i would like to go out and have fun",
     1,
     new Date("2017-04-03"),
-    new Date("2017-04-06")
+    new Date("2017-04-06"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
     new Date("2017-04-03"),
-    new Date("2017-04-07")
+    new Date("2017-04-07"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -1404,7 +1412,8 @@ var thetaSprint3 = [
     "As a user i would like to go out and have fun",
     1,
     new Date("2017-03-13"),
-    new Date("2017-03-15")
+    new Date("2017-03-15"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -1885,31 +1894,36 @@ var lambdaSprint5 = [
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-04-17"),
-    new Date("2017-04-19")
+    new Date("2017-04-19"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-04-17"),
-    new Date("2017-04-18")
+    new Date("2017-04-18"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
     new Date("2017-04-17"),
-    new Date("2017-04-17")
+    new Date("2017-04-17"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
     new Date("2017-04-17"),
-    new Date("2017-04-17")
+    new Date("2017-04-17"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
     new Date("2017-04-17"),
-    new Date("2017-04-18")
+    new Date("2017-04-18"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -2076,25 +2090,29 @@ var lambdaSprint4 = [
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-03-27"),
-    new Date("2017-03-30")
+    new Date("2017-03-30"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-03-27"),
-    new Date("2017-03-28")
+    new Date("2017-03-28"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-03-27"),
-    new Date("2017-03-27")
+    new Date("2017-03-27"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
     new Date("2017-03-27"),
-    new Date("2017-03-27")
+    new Date("2017-03-27"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -2272,19 +2290,22 @@ var lambdaSprint3 = [
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-03-13"),
-    new Date("2017-03-15")
+    new Date("2017-03-15"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-03-13"),
-    new Date("2017-03-16")
+    new Date("2017-03-16"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-03-13"),
-    new Date("2017-03-15")
+    new Date("2017-03-15"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -2461,25 +2482,29 @@ var lambdaSprint2 = [
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-02-13"),
-    new Date("2017-02-23")
+    new Date("2017-02-23"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-02-13"),
-    new Date("2017-02-17")
+    new Date("2017-02-17"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
     new Date("2017-02-15"),
-    new Date("2017-02-21")
+    new Date("2017-02-21"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-02-14"),
-    new Date("2017-02-16")
+    new Date("2017-02-16"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -2797,13 +2822,15 @@ var epsSprint5 = [
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-04-10"),
-    new Date("2017-04-13")
+    new Date("2017-04-13"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-04-10"),
-    new Date("2017-04-14")
+    new Date("2017-04-14"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -3012,7 +3039,8 @@ var epsSprint4 = [
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-03-20"),
-    new Date("2017-03-25")
+    new Date("2017-03-25"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -3219,13 +3247,15 @@ var epsSprint3 = [
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-02-27"),
-    new Date("2017-03-01")
+    new Date("2017-03-01"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-02-27"),
-    new Date("2017-03-01")
+    new Date("2017-03-01"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -3434,7 +3464,8 @@ var epsSprint2 = [
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-02-06"),
-    new Date("2017-02-09")
+    new Date("2017-02-09"),
+    true
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
