@@ -23,8 +23,8 @@ class TeamSelector extends Component {
     return (
       <div className="input-group">
         <label>Team
-          <select className="input-group-field" onChange={this.handleSelectTeam}>
-            <option value={null} key="empty" disabled="true" selected={!this.props.currentTeam}>---</option>
+          <select className="input-group-field" onChange={this.handleSelectTeam} defaultValue="---">
+            <option value={null} key="empty" disabled="true">---</option>
             {this.props.teamNames.map(teamName => (
               <option value={teamName} key={teamName}>{"Team " + teamName}</option>
             ))
@@ -32,14 +32,12 @@ class TeamSelector extends Component {
           </select>
         </label>
       </div>
-    )
+    );
   }
 }
 
 function mapStateToProps(state) {
-  let teamNames = Object.keys(state.metrics.teams).map(key => (
-      state.metrics.teams[key].name
-  ));
+  let teamNames = state.metrics.teams.shortNames;
   return {
     currentTeam: state.metrics.currentTeam,
     teamNames

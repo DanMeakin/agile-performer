@@ -1,3 +1,7 @@
+import {
+  shortDate
+} from '../lib/dates';
+
 /**
  * Define a Scrum team.
 
@@ -57,5 +61,37 @@ export default class Team {
    */
   addTimeBreakdown(breakdown) {
     this.timeBreakdowns.push(breakdown);
+  }
+
+  /**
+   * Generate a set of happiness data for this team, for use in charts.
+   *
+   * @returns {Array[Object]} - A set of chart data for a happiness index chart
+   */
+  happinessData() {
+    let data = this.happinessAssessments.reduce((allAssessments, happinessAssessment) => {
+      allAssessments[shortDate(happinessAssessment.date)] = happinessAssessment.happiness;
+      return allAssessments;
+    }, {});
+    return [{
+      description: "Happiness",
+      data
+    }];
+  }
+
+  satisfactionData() {
+    let criteria = this.satisfactionAssessments[0].satisfactionCriteria(),
+      dataForCriterion = criterion => {
+        let dataset = this.satisfactionAssessments.reduce((all, assessment) => {
+          all[shortDate(assessment.date)] = assessment.satisfaction[criterion];
+          return all;
+        }, {});
+        return {
+          description: criterion,
+          data: dataset
+        };
+      },
+      data = criteria.map(dataForCriterion);
+    return data;
   }
 };
