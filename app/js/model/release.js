@@ -18,15 +18,23 @@ export default class Release {
   }
 
   /**
+   * Select all sprints for a given team.
+   *
+   * @param {String} teamName - the name of the team whose sprints to select
+   * @returns {Array[Object]} - sprints for the given team
+   */
+  sprintsForTeam(teamName) {
+    return this.sprints.filter(sprint => sprint.team.name == teamName);
+  }
+
+  /**
    * Generate a set of velocity data for use in a velocity chart.
    *
    * @param {String} teamName - the name of the team whose velocity to collect
    * @returns {Array[Object]} - velocity data for use within a Velocity chart
    */
   velocityData(teamName) {
-    let teamSprints = this.sprints.filter(sprint =>
-        sprint.team.name == teamName
-      ),
+    let teamSprints = this.sprintsForTeam(teamName),
       commitment = teamSprints.reduce((commitmentData, sprint) => {
         commitmentData["Sprint " + sprint.number] = sprint.committedStoryPoints();
         return commitmentData;
