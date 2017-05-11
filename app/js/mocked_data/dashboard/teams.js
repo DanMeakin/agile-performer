@@ -72,4 +72,4 @@ Object.keys(teams).forEach(teamName => {
   teams[teamName].defects = teamDefects;
 });
 
-export default teams;
+export { startingDates, teams };
