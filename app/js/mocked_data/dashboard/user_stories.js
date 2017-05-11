@@ -4967,59 +4967,16 @@ var alphaSprint1 = [
   ),
 ];
 
-var teamEpsStories = epsSprint1.concat(
-  epsSprint5,
-  epsSprint4,
-  epsSprint3,
-  epsSprint2
-);
+var unassignedStories = [];
 
-var teamBetaStories = betaSprint1.concat(
-  betaSprint5,
-  betaSprint4,
-  betaSprint3,
-  betaSprint2
-);
-
-var teamAlphaStories = alphaSprint1.concat(
-  alphaSprint2,
-  alphaSprint3,
-  alphaSprint4,
-  alphaSprint5
-);
-
-var teamLambdaStories = lambdaSprint1.concat(
-  lambdaSprint2,
-  lambdaSprint3,
-  lambdaSprint4,
-  lambdaSprint5
-);
-
-var teamThetaStories = thetaSprint1.concat(
-  thetaSprint2,
-  thetaSprint3,
-  thetaSprint4,
-  thetaSprint5
-);
-
-var teamTauStories = tauSprint1.concat(
-  tauSprint2,
-  tauSprint3,
-  tauSprint4,
-  tauSprint5
-);
-
-const userStories = teamAlphaStories.concat(
-  teamBetaStories,
-  teamEpsStories,
-  teamLambdaStories,
-  teamThetaStories,
-  teamTauStories
-);
-
-//console.log("what is in userStories", userStories)
-//console.log("what is in teamAlphaStories", teamAlphaStories)
-
-export {
-  userStories
+const userStories = {
+  alpha: [alphaSprint1, alphaSprint2, alphaSprint3, alphaSprint4, alphaSprint5],
+  beta: [betaSprint1, betaSprint2, betaSprint3, betaSprint4, betaSprint5],
+  epsilon: [epsSprint1, epsSprint2, epsSprint3, epsSprint4, epsSprint5],
+  lambda: [lambdaSprint1, lambdaSprint2, lambdaSprint3, lambdaSprint4, lambdaSprint5],
+  theta: [thetaSprint1, thetaSprint2, thetaSprint3, thetaSprint4, thetaSprint5],
+  tau: [tauSprint1, tauSprint2, tauSprint3, tauSprint4, tauSprint5],
+  unassigned: unassignedStories
 };
+
+export default userStories;
