@@ -13,7 +13,6 @@ import { projectCodeOwnership, teamCodeOwnership } from 'js/mocked_data/old_mock
 import { numberOfTestCases } from 'js/mocked_data/old_mocked_data/test_cases';
 import { sprintInterference } from 'js/mocked_data/old_mocked_data/sprint_interference';
 import { defectsOverTime } from 'js/mocked_data/old_mocked_data/defects_over_time';
-import  {userStories}  from '../mocked_data/dashboard/user_stories';
 
 import { release } from '../mocked_data/dashboard/release';
 import { teams } from '../mocked_data/dashboard/teams';
@@ -49,7 +48,6 @@ const initialState = {
   },
   sprintInterference,
   defectsOverTime,
-  userStories
 };
 
 console.log("Initial state", initialState);
