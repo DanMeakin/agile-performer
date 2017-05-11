@@ -15,8 +15,14 @@ import { sprintInterference } from 'js/mocked_data/old_mocked_data/sprint_interf
 import { defectsOverTime } from 'js/mocked_data/old_mocked_data/defects_over_time';
 import  {userStories}  from '../mocked_data/dashboard/user_stories';
 
+import { release } from '../mocked_data/dashboard/release';
+import { teams } from '../mocked_data/dashboard/teams';
+
 const initialState = {
   currentMetric: null,
+  // New data
+  release,
+  teams,
   // Probably temporary
   scrumPractices,
   xpPractices,
@@ -43,8 +49,10 @@ const initialState = {
   },
   sprintInterference,
   defectsOverTime,
-  userStories,
+  userStories
 };
+
+console.log("Initial state", initialState);
 
 const metricsReducer = (state = initialState, action) => {
   switch (action.type) {
