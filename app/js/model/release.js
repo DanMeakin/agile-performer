@@ -54,4 +54,23 @@ export default class Release {
       ];
     return data;
   }
+
+
+  /**
+   * Calculate the maximum value to use as upper bounds for velocity and
+   * burndown charts. The max value is rounded to the nearest 20.
+   *
+   * @returns {Integer} - the maximum points committed or completed in any
+   * sprint within this release
+   */
+  maximumPoints() {
+    let rawMax = this.sprints.reduce((currentMax, thisSprint) => (
+      Math.max(
+        thisSprint.committedStoryPoints(),
+        thisSprint.completedStoryPoints(),
+        currentMax
+      )
+    ), 0);
+    return Math.ceil(rawMax / 20) * 20;
+  }
 };

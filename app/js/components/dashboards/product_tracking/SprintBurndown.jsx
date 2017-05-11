@@ -6,16 +6,30 @@ import LineChart from '../../charts/LineChart';
 class SprintBurndown extends Component {
   render() {
     return (
-      <LineChart data={this.props.chartData} title="Sprint Burndown" />
+      <LineChart data={this.props.chartData} options={this.props.options} title="Sprint Burndown" />
     )
   }
 }
 
 function mapStateToProps(state) {
   let currentTeam = state.metrics.currentTeam,
-    sprints = state.metrics.release.sprintsForTeam(currentTeam);
+    sprints = state.metrics.release.sprintsForTeam(currentTeam),
+    options = {
+      scales: {
+        yAxes: [{
+          display: true,
+          ticks: {
+            min: 0,
+            max: state.metrics.release.maximumPoints(),
+            beginAtZero: true
+          }
+        }]
+      }
+    };
+
   return {
-    chartData: sprints[sprints.length - 1].burndownData()
+    chartData: sprints[sprints.length - 1].burndownData(),
+    options
   };
 };
 
