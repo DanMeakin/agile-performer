@@ -25,10 +25,10 @@ function mapStateToProps(state) {
           }
         }]
       }
-    };
-
+    },
+    chartData = sprints.length == 0 ? [] : sprints[sprints.length - 1].burndownData();
   return {
-    chartData: sprints[sprints.length - 1].burndownData(),
+    chartData,
     options
   };
 };

@@ -32,7 +32,7 @@ class TeamSelector extends Component {
           </select>
         </label>
       </div>
-    )
+    );
   }
 }
 
