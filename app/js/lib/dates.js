@@ -16,7 +16,7 @@
  */
 function makePeriod(startDate, endDate, excludePredicate) {
   let dayLength = 24 * 60 * 60 * 1000, // Day length in ms
-      periodLength = Math.round((endDate - startDate) / dayLength);
+    periodLength = Math.round((endDate - startDate) / dayLength);
   if (startDate >= endDate) {
     return [];
   } else {
@@ -57,4 +57,24 @@ function dateDiff(date1, date2) {
   return Math.round(Math.abs(milliseconds / (1000 * 60 * 60 * 24)));
 }
 
-export { makePeriod, addDays, dateDiff };
+/**
+ * Create a form string formatting of a date.
+ *
+ * @param {Date} date
+ * @returns {String} - the date formatted in short form
+ */
+function shortDate(date) {
+  let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      day = date.getDate(),
+      monthNum = date.getMonth(),
+      year = date.getFullYear();
+  return day + " " + months[monthNum] + " " + year;
+}
+
+export {
+  makePeriod,
+  addDays,
+  dateDiff,
+  shortDate
+};
