@@ -621,7 +621,6 @@ var tauSprint3 = [
 ];
 //95 points
 var tauSprint2 = [
-  //14 points 
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
@@ -837,7 +836,7 @@ var tauSprint1 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-01-30"),
     new Date("2017-02-03")
   ),
@@ -861,7 +860,7 @@ var tauSprint1 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-02-05"),
     new Date("2017-02-10")
   ),
@@ -886,7 +885,7 @@ var tauSprint1 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-02-05"),
     new Date("2017-02-10")
   ),
@@ -1018,7 +1017,7 @@ var thetaSprint5 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-04-24"),
     new Date("2017-04-25")
   ),
@@ -1077,7 +1076,7 @@ var thetaSprint5 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-04-25"),
     new Date("2017-05-05")
   ),
@@ -1217,7 +1216,7 @@ var thetaSprint4 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-04-03"),
     new Date("2017-04-06")
   ),
@@ -1281,7 +1280,7 @@ var thetaSprint4 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-04-03"),
     new Date("2017-04-11")
   ),
@@ -1431,7 +1430,7 @@ var thetaSprint3 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-13"),
     new Date("2017-03-20")
   ),
@@ -1473,7 +1472,7 @@ var thetaSprint3 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-13"),
     new Date("2017-03-24")
   ),
@@ -1485,7 +1484,7 @@ var thetaSprint3 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-16"),
     new Date("2017-03-24")
   ),
@@ -1644,7 +1643,7 @@ var thetaSprint2 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-02")
   ),
   new UserStory(
@@ -1655,7 +1654,7 @@ var thetaSprint2 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-01"),
     new Date("2017-03-03")
   ),
@@ -1772,7 +1771,7 @@ var thetaSprint1 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-01-30"),
     new Date("2017-02-03")
   ),
@@ -1796,7 +1795,7 @@ var thetaSprint1 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-02-05"),
     new Date("2017-02-10")
   ),
@@ -1821,7 +1820,7 @@ var thetaSprint1 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-02-05"),
     new Date("2017-02-10")
   ),
@@ -1935,7 +1934,7 @@ var lambdaSprint5 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-04-17"),
     new Date("2017-04-25")
   ),
@@ -1994,7 +1993,7 @@ var lambdaSprint5 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-04-19"),
     new Date("2017-04-28")
   ),
@@ -2136,7 +2135,7 @@ var lambdaSprint4 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-27"),
     new Date("2017-04-06")
   ),
@@ -2195,7 +2194,7 @@ var lambdaSprint4 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-04-03"),
     new Date("2017-04-07")
   ),
@@ -2341,7 +2340,7 @@ var lambdaSprint3 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-13"),
     new Date("2017-03-20")
   ),
@@ -2383,7 +2382,7 @@ var lambdaSprint3 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-13"),
     new Date("2017-03-24")
   ),
@@ -2565,7 +2564,7 @@ var lambdaSprint2 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-02-15"),
     new Date("2017-02-20")
   ),
@@ -2577,7 +2576,7 @@ var lambdaSprint2 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-02-14"),
     new Date("2017-02-22")
   ),
@@ -2700,7 +2699,7 @@ var lambdaSprint1 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-01-26"),
     new Date("2017-02-03")
   ),
@@ -2724,7 +2723,7 @@ var lambdaSprint1 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-01-23"),
     new Date("2017-02-01")
   ),
@@ -2749,7 +2748,7 @@ var lambdaSprint1 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-01-23"),
     new Date("2017-01-27")
   ),
@@ -2860,7 +2859,7 @@ var epsSprint5 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-04-12"),
     new Date("2017-04-20")
   ),
@@ -2921,7 +2920,7 @@ var epsSprint5 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-04-12"),
     new Date("2017-04-19")
   ),
@@ -3081,7 +3080,7 @@ var epsSprint4 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-22"),
     new Date("2017-03-28")
   ),
@@ -3148,7 +3147,7 @@ var epsSprint4 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-21"),
     new Date("2017-03-30")
   ),
@@ -3159,7 +3158,7 @@ var epsSprint4 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-23"),
     new Date("2017-03-29")
   ),
@@ -3327,7 +3326,7 @@ var epsSprint3 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-01"),
     new Date("2017-03-10")
   ),
@@ -3376,7 +3375,7 @@ var epsSprint3 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-01"),
     new Date("2017-03-03")
   ),
@@ -3549,7 +3548,7 @@ var epsSprint2 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-02-06"),
     new Date("2017-02-17")
   ),
@@ -3574,7 +3573,7 @@ var epsSprint2 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-02-06"),
     new Date("2017-02-14")
   ),
@@ -3694,7 +3693,7 @@ var epsSprint1 = [
   //second round: 23 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-01-17"),
     new Date("2017-01-27")
   ),
@@ -3858,7 +3857,7 @@ var betaSprint5 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    13,
     new Date("2017-04-12"),
     new Date("2017-04-20")
   ),
@@ -3894,7 +3893,7 @@ var betaSprint5 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-04-12"),
     new Date("2017-04-19")
   ),
@@ -4054,7 +4053,7 @@ var betaSprint4 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-22"),
     new Date("2017-03-28")
   ),
@@ -4097,7 +4096,7 @@ var betaSprint4 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-21"),
     new Date("2017-03-30")
   ),
@@ -4109,7 +4108,7 @@ var betaSprint4 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-23"),
     new Date("2017-03-29")
   ),
@@ -4246,7 +4245,7 @@ var betaSprint3 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-01"),
     new Date("2017-03-10")
   ),
@@ -4295,7 +4294,7 @@ var betaSprint3 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-01"),
     new Date("2017-03-03")
   ),
@@ -4455,7 +4454,7 @@ var betaSprint2 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-02-06"),
     new Date("2017-02-17")
   ),
@@ -4480,7 +4479,7 @@ var betaSprint2 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-02-06"),
     new Date("2017-02-14")
   ),
@@ -4594,7 +4593,7 @@ var betaSprint1 = [
   //second round: 26 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-01-17"),
     new Date("2017-01-27")
   ),
@@ -4624,7 +4623,7 @@ var betaSprint1 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-01-23")
     //blank
   ),
@@ -4758,7 +4757,7 @@ var alphaSprint5 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-04-03"),
     new Date("2017-04-06")
   ),
@@ -4800,7 +4799,7 @@ var alphaSprint5 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-04-03"),
     new Date("2017-04-11")
   ),
@@ -4937,7 +4936,7 @@ var alphaSprint4 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-13"),
     new Date("2017-03-20")
   ),
@@ -4979,7 +4978,7 @@ var alphaSprint4 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-13"),
     new Date("2017-03-24")
   ),
@@ -4991,7 +4990,7 @@ var alphaSprint4 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-16"),
     new Date("2017-03-24")
   ),
@@ -5126,7 +5125,7 @@ var alphaSprint3 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-02-20"),
     new Date("2017-03-03")
   ),
@@ -5168,7 +5167,7 @@ var alphaSprint3 = [
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-02")
   ),
   new UserStory(
@@ -5179,7 +5178,7 @@ var alphaSprint3 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-03-01"),
     new Date("2017-03-03")
   ),
@@ -5314,7 +5313,7 @@ var alphaSprint2 = [
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-01-30"),
     new Date("2017-02-03")
   ),
@@ -5344,7 +5343,7 @@ var alphaSprint2 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-02-05"),
     new Date("2017-02-10")
   ),
@@ -5369,7 +5368,7 @@ var alphaSprint2 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-02-05"),
     new Date("2017-02-10")
   ),
@@ -5513,7 +5512,7 @@ var alphaSprint1 = [
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    7,
+    8,
     new Date("2017-01-09"),
     new Date("2017-01-19")
   ),
@@ -5605,7 +5604,1032 @@ var alphaSprint1 = [
   ),
 ];
 
-var unassignedStories = [];
+var unassignedStories = [
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    13,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    8,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+  ),
+];
 
 const userStories = {
   alpha: [alphaSprint1, alphaSprint2, alphaSprint3, alphaSprint4, alphaSprint5],
@@ -5616,5 +6640,9 @@ const userStories = {
   tau: [tauSprint1, tauSprint2, tauSprint3, tauSprint4, tauSprint5],
   unassigned: unassignedStories
 };
+
+console.log("Amount of points in sprint:", getStoryPoints(tauSprint5))
+console.log("User stories", userStories)
+
 
 export default userStories;
