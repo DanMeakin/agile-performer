@@ -9,7 +9,207 @@ var getStoryPoints = (userStories) => {
 };
 
 //95 points
-var tauSprint5 = [];
+var tauSprint5 = [
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-24")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-25")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-24")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-24"),
+    new Date("2017-04-29")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-24"),
+    new Date("2017-04-24")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-24")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-25")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-24")
+  ),
+  //second round: 25 points 
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    7,
+    new Date("2017-04-24"),
+    new Date("2017-04-25")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-26")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-25"),
+    new Date("2017-04-25")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-25"),
+    new Date("2017-05-02")),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-25"),
+    new Date("2017-04-28")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-25"),
+    new Date("2017-04-29")),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-25"),
+    new Date("2017-04-27")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-25"),
+    new Date("2017-05-03")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-25"),
+    new Date("2017-05-04")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-25"),
+    new Date("2017-04-29")
+  ),
+  //Third round: story points 29
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    7,
+    new Date("2017-04-25"),
+    new Date("2017-05-05")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-25"),
+    new Date("2017-05-03")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-28"),
+    new Date("2017-04-29")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-28"),
+    new Date("2017-04-29")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-28"),
+    new Date("2017-05-02")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-28"),
+    new Date("2017-05-03")
+  ),
+  //Fourth round: 16 point
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-28"),
+    new Date("2017-05-03")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-05-03"),
+    new Date("2017-05-05")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-05-03"),
+    new Date("2017-05-04")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-05-03"),
+    new Date("2017-05-04")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-05-03"),
+    new Date("2017-05-05")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-05-03"),
+    new Date("2017-05-03")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-05-03"),
+    new Date("2017-05-05")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-05-02"),
+    new Date("2017-05-02")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-05-03"),
+    new Date("2017-05-03")
+  ),
+];
 //102 points
 var tauSprint4 = [
   //14 points
@@ -719,36 +919,248 @@ var tauSprint1 = [
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-02-05"),
-    new Date("2017-01-06")
+    new Date("2017-02-07")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-02-05"),
-    new Date("2017-01-07")
+    new Date("2017-02-07")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-02-05"),
-    new Date("2017-01-07")
+    new Date("2017-02-07")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-02-05"),
-    new Date("2017-01-09")
+    new Date("2017-02-09")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-02-05"),
-    new Date("2017-01-08")
+    new Date("2017-02-08")
   ),
 ];
 
 //100 points
-var thetaSprint5 = [];
+var thetaSprint5 = [
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-24"),
+    new Date("2017-04-29")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-24"),
+    new Date("2017-04-24")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-24")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-25")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-24")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-24"),
+    new Date("2017-04-29")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-24"),
+    new Date("2017-04-24")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-24")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-25")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-24")
+  ),
+  //second round: 25 points 
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    7,
+    new Date("2017-04-24"),
+    new Date("2017-04-25")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-24"),
+    new Date("2017-04-26")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-25"),
+    new Date("2017-04-25")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-25"),
+    new Date("2017-05-02")),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-25"),
+    new Date("2017-04-28")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-25"),
+    new Date("2017-04-29")),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-25"),
+    new Date("2017-04-27")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-25"),
+    new Date("2017-05-03")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-25"),
+    new Date("2017-05-04")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-25"),
+    new Date("2017-04-29")
+  ),
+  //Third round: story points 29
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    7,
+    new Date("2017-04-25"),
+    new Date("2017-05-05")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-25"),
+    new Date("2017-05-03")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-28"),
+    new Date("2017-04-29")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-28"),
+    new Date("2017-04-29")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-28"),
+    new Date("2017-05-02")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-28"),
+    new Date("2017-05-03")
+  ),
+  //Fourth round: 16 point
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-28"),
+    new Date("2017-05-03")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-05-03"),
+    new Date("2017-05-05")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-05-03"),
+    new Date("2017-05-04")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-05-03"),
+    new Date("2017-05-04")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-05-03"),
+    new Date("2017-05-05")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-05-03"),
+    new Date("2017-05-03")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-05-03"),
+    new Date("2017-05-05")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-05-02"),
+    new Date("2017-05-02")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-05-03"),
+    new Date("2017-05-03")
+  ),
+];
 //102 points
 var thetaSprint4 = [
   //14 points 
@@ -1439,162 +1851,341 @@ var thetaSprint1 = [
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-02-05"),
-    new Date("2017-01-06")
+    new Date("2017-02-06")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-02-05"),
-    new Date("2017-01-07")
+    new Date("2017-02-07")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-02-05"),
-    new Date("2017-01-07")
+    new Date("2017-02-07")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-02-05"),
-    new Date("2017-01-09")
+    new Date("2017-02-09")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-02-05"),
-    new Date("2017-01-08")
+    new Date("2017-02-08")
   ),
 ];
 
 
-var lambdaSprint5 = [];
-var lambdaSprint4 = [
-  //14 points 
+//93
+var lambdaSprint5 = [
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
-    new Date("2017-04-03"),
-    new Date("2017-04-05")
+    new Date("2017-04-17"),
+    new Date("2017-04-19")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-04-03"),
-    new Date("2017-04-04")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    2,
-    new Date("2017-04-03"),
-    new Date("2017-04-05")
+    new Date("2017-04-17"),
+    new Date("2017-04-18")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
-    new Date("2017-04-03"),
-    new Date("2017-04-06")
+    new Date("2017-04-17"),
+    new Date("2017-04-17")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
-    new Date("2017-04-03"),
-    new Date("2017-04-07")
+    new Date("2017-04-17"),
+    new Date("2017-04-17")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
-    new Date("2017-04-03"),
-    new Date("2017-04-04")
+    new Date("2017-04-17"),
+    new Date("2017-04-18")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
-    new Date("2017-04-03"),
-    new Date("2017-04-05")
+    new Date("2017-04-17"),
+    new Date("2017-04-17")
   ),
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
     7,
-    new Date("2017-04-03"),
+    new Date("2017-04-17"),
+    new Date("2017-04-25")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-17"),
+    new Date("2017-04-18")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-04-17"),
+    new Date("2017-04-18")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-17"),
+    new Date("2017-04-21")),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-17"),
+    new Date("2017-04-19")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-17"),
+    new Date("2017-04-20")),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-17"),
+    new Date("2017-04-19")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-17"),
+    new Date("2017-04-26")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-17"),
+    new Date("2017-04-27")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-17"),
+    new Date("2017-04-20")
+  ),
+  //Third round: story points 29
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    7,
+    new Date("2017-04-19"),
+    new Date("2017-04-28")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-19"),
+    new Date("2017-04-25")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-19"),
+    new Date("2017-04-25")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-19"),
+    new Date("2017-04-21")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-19"),
+    new Date("2017-04-26")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-19"),
+    new Date("2017-04-28")
+  ),
+  //Fourth round: 16 point
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-04-19"),
+    new Date("2017-04-26")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-19"),
+    new Date("2017-04-21")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-19"),
+    new Date("2017-04-20")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-19"),
+    new Date("2017-04-21")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-19"),
+    new Date("2017-04-26")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-19"),
+    new Date("2017-04-21")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-04-19"),
+    new Date("2017-04-27")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-19"),
+    new Date("2017-04-26")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-04-19"),
+    new Date("2017-04-27")
+  ),
+];
+//95
+var lambdaSprint4 = [
+  //14 points 
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-03-27"),
+    new Date("2017-03-30")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-03-27"),
+    new Date("2017-03-28")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-03-27"),
+    new Date("2017-03-27")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-03-27"),
+    new Date("2017-03-27")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-03-27"),
+    new Date("2017-03-27")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-03-27"),
+    new Date("2017-03-27")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-03-27"),
+    new Date("2017-03-27")
+  ),
+  //second round: 25 points 
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    7,
+    new Date("2017-03-27"),
     new Date("2017-04-06")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
-    new Date("2017-04-05"),
+    new Date("2017-03-27"),
     new Date("2017-04-07")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
-    new Date("2017-04-05"),
+    new Date("2017-03-27"),
     new Date("2017-04-06")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
-    new Date("2017-04-05"),
-    new Date("2017-04-11")),
+    new Date("2017-03-27"),
+    new Date("2017-04-07")),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-04-10"),
-    new Date("2017-04-14")
+    new Date("2017-03-27"),
+    new Date("2017-03-28")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
-    new Date("2017-04-05"),
-    new Date("2017-04-12")),
+    new Date("2017-03-27"),
+    new Date("2017-03-29")),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-04-10"),
-    new Date("2017-04-13")
+    new Date("2017-03-27"),
+    new Date("2017-03-30")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
-    new Date("2017-04-10"),
-    new Date("2017-04-14")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    2,
-    new Date("2017-04-10")
+    new Date("2017-03-27"),
+    new Date("2017-04-04")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
-    new Date("2017-04-10"),
-    new Date("2017-04-14")
+    new Date("2017-03-27"),
+    new Date("2017-04-03")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-04-03"),
-    new Date("2017-04-13")
+    new Date("2017-04-07")
   ),
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
     7,
     new Date("2017-04-03"),
-    new Date("2017-04-11")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    5,
-    new Date("2017-04-05"),
-    new Date("2017-04-10")
+    new Date("2017-04-07")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
     new Date("2017-04-03"),
-    new Date("2017-04-12")
+    new Date("2017-04-07")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -1605,13 +2196,13 @@ var lambdaSprint4 = [
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-04-03"),
-    new Date("2017-04-13")
+    new Date("2017-04-03")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
     new Date("2017-04-03"),
-    new Date("2017-04-10")
+    new Date("2017-04-06")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -1624,25 +2215,25 @@ var lambdaSprint4 = [
     "As a user i would like to go out and have fun",
     5,
     new Date("2017-04-03"),
-    new Date("2017-04-10")
+    new Date("2017-04-07")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-04-03"),
-    new Date("2017-04-11")
+    new Date("2017-04-04")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-04-03"),
-    new Date("2017-04-13")
+    new Date("2017-04-04")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-04-03"),
-    new Date("2017-04-12")
+    new Date("2017-04-05")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -1654,27 +2245,28 @@ var lambdaSprint4 = [
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-04-03"),
-    new Date("2017-04-11")
+    new Date("2017-04-03")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-04-03"),
-    new Date("2017-04-13")
+    new Date("2017-04-05")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-04-03"),
-    new Date("2017-04-14")
+    new Date("2017-04-07")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
     new Date("2017-04-05"),
-    new Date("2017-04-14")
+    new Date("2017-04-07")
   ),
 ];
+//90
 var lambdaSprint3 = [
   //14 points 
   new UserStory(
@@ -1863,161 +2455,170 @@ var lambdaSprint3 = [
     new Date("2017-03-14")
   ),
 ];
+//91
 var lambdaSprint2 = [
   //14 points 
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-02-13"),
+    new Date("2017-02-23")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-02-13"),
+    new Date("2017-02-17")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-02-15"),
+    new Date("2017-02-21")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-02-14"),
+    new Date("2017-02-16")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-02-13"),
+    new Date("2017-02-13")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-02-13"),
+    new Date("2017-02-23")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-02-13"),
+    new Date("2017-02-13")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-02-13"),
+    new Date("2017-02-15")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    3,
+    new Date("2017-02-15"),
+    new Date("2017-03-21")
+  ),
+  //second round: 25 points 
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-02-20"),
+    new Date("2017-02-24")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-02-20"),
+    new Date("2017-02-23")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-02-16"),
+    new Date("2017-02-20")
+  ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
     new Date("2017-02-20"),
     new Date("2017-02-23")
   ),
+  //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
-    2,
-    new Date("2017-02-20"),
-    new Date("2017-02-24")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    5,
-    new Date("2017-02-20"),
-    new Date("2017-03-01")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    2,
-    new Date("2017-02-20"),
-    new Date("2017-02-24")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    1,
-    new Date("2017-02-20"),
+    7,
+    new Date("2017-02-15"),
     new Date("2017-02-20")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    1,
-    new Date("2017-02-20"),
-    new Date("2017-02-21")
+    5,
+    new Date("2017-02-14"),
+    new Date("2017-02-17")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
-    1,
-    new Date("2017-02-20"),
+    7,
+    new Date("2017-02-14"),
     new Date("2017-02-22")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
-    new Date("2017-02-20"),
-    new Date("2017-03-01")
+    new Date("2017-02-14"),
+    new Date("2017-02-17")
   ),
-  //second round: 25 points 
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    2,
+    new Date("2017-02-14")
+  ),
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
+    new Date("2017-02-14"),
+    new Date("2017-02-22")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    5,
+    new Date("2017-02-14"),
     new Date("2017-02-20")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    2,
-    new Date("2017-02-20"),
-    new Date("2017-03-01")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    5,
-    new Date("2017-02-20"),
-    new Date("2017-03-03")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    3,
-    new Date("2017-02-20"),
-    new Date("2017-03-02")
-  ),
-  //Third round: story points 29
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    7,
-    new Date("2017-03-02")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    5,
-    new Date("2017-03-01"),
-    new Date("2017-03-02")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    7,
-    new Date("2017-03-01"),
-    new Date("2017-03-03")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    3,
-    new Date("2017-03-01"),
-    new Date("2017-03-03")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    2,
-    new Date("2017-03-01")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    5,
-    new Date("2017-03-01"),
-    new Date("2017-03-03")
-  ),
-  new UserStory(
-    "As a user i would like to go out and have fun",
-    5,
-    new Date("2017-03-01"),
-    new Date("2017-03-03")
   ),
   //Fourth round: 16 point
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
-    new Date("2017-03-01"),
-    new Date("2017-03-01")
+    new Date("2017-02-14"),
+    new Date("2017-02-17")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-03-01"),
-    new Date("2017-03-01")
+    new Date("2017-02-14"),
+    new Date("2017-02-16")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-03-01")
+    new Date("2017-02-14")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-03-01")
+    new Date("2017-02-23")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
-    new Date("2017-03-01"),
-    new Date("2017-03-03")
+    new Date("2017-02-23"),
+    new Date("2017-02-24")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-03-01"),
-    new Date("2017-03-02")
+    new Date("2017-02-21"),
+    new Date("2017-02-22")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
-    new Date("2017-03-01"),
-    new Date("2017-03-02")
+    new Date("2017-02-22"),
+    new Date("2017-02-24")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
@@ -2032,156 +2633,165 @@ var lambdaSprint2 = [
     new Date("2017-02-24")
   ),
 ];
+//84
 var lambdaSprint1 = [
   //first round: 14 points 
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
-    new Date("2017-01-30"),
-    new Date("2017-02-02")
+    new Date("2017-01-23"),
+    new Date("2017-01-25")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-01-30"),
-    new Date("2017-02-01")
+    new Date("2017-01-23"),
+    new Date("2017-01-28")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
-    new Date("2017-01-30"),
-    new Date("2017-02-31")
+    new Date("2017-01-23"),
+    new Date("2017-01-23")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
-    new Date("2017-01-30"),
-    new Date("2017-02-07")
+    new Date("2017-01-23"),
+    new Date("2017-01-23")
+  ),
+  new UserStory(
+    "As a user i would like to go out and have fun",
+    1,
+    new Date("2017-01-23"),
+    new Date("2017-01-23")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
-    new Date("2017-01-30"),
-    new Date("2017-02-05")
+    new Date("2017-01-26"),
+    new Date("2017-01-30")
   ),
   //second round: 25 points 
   new UserStory(
     "As a user i would like to go out and have fun",
     7,
-    new Date("2017-01-30"),
+    new Date("2017-01-26"),
     new Date("2017-02-03")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     1,
-    new Date("2017-02-02"),
-    new Date("2017-02-05")
+    new Date("2017-01-27"),
+    new Date("2017-01-28")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
-    new Date("2017-02-05"),
-    new Date("2017-02-08")
+    new Date("2017-01-23"),
+    new Date("2017-01-31")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-02-05"),
-    new Date("2017-02-09")
+    new Date("2017-02-01"),
+    new Date("2017-02-02")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     7,
-    new Date("2017-02-05"),
-    new Date("2017-02-10")
+    new Date("2017-01-23"),
+    new Date("2017-02-01")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
-    new Date("2017-02-05"),
-    new Date("2017-02-09")
+    new Date("2017-02-01"),
+    new Date("2017-02-03")
   ),
   //Third round: story points 29
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
-    new Date("2017-02-05"),
-    new Date("2017-02-10")
+    new Date("2017-02-01"),
+    new Date("2017-02-03")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
-    new Date("2017-02-05"),
-    new Date("2017-02-07")
+    new Date("2017-01-23"),
+    new Date("2017-01-31")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     7,
-    new Date("2017-02-05"),
-    new Date("2017-02-10")
+    new Date("2017-01-23"),
+    new Date("2017-01-27")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
-    new Date("2017-02-05"),
-    new Date("2017-02-06")
+    new Date("2017-01-23"),
+    new Date("2017-01-24")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-02-05"),
-    new Date("2017-02-08")
+    new Date("2017-02-02"),
+    new Date("2017-02-03")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
-    new Date("2017-02-05"),
-    new Date("2017-02-07")
+    new Date("2017-01-23"),
+    new Date("2017-01-27")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
-    new Date("2017-02-05"),
-    new Date("2017-02-10")
+    new Date("2017-01-24"),
+    new Date("2017-02-31")
   ),
   //Fourth round: 16 point
   new UserStory(
     "As a user i would like to go out and have fun",
     5,
-    new Date("2017-02-05"),
-    new Date("2017-02-09")
+    new Date("2017-01-25"),
+    new Date("2017-02-01")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-02-05"),
-    new Date("2017-01-06")
+    new Date("2017-01-23"),
+    new Date("2017-01-24")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-02-05"),
-    new Date("2017-01-07")
+    new Date("2017-01-23"),
+    new Date("2017-01-25")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-02-05"),
-    new Date("2017-01-07")
+    new Date("2017-01-23"),
+    new Date("2017-01-25")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     3,
-    new Date("2017-02-05"),
-    new Date("2017-01-09")
+    new Date("2017-01-23"),
+    new Date("2017-01-26")
   ),
   new UserStory(
     "As a user i would like to go out and have fun",
     2,
-    new Date("2017-02-05"),
-    new Date("2017-01-08")
+    new Date("2017-01-23"),
+    new Date("2017-01-24")
   ),
 ];
+console.log("Amount of points in sprint:", getStoryPoints(tauSprint5))
+
 
 //101 points
 var epsSprint5 = [
@@ -3176,7 +3786,6 @@ var epsSprint1 = [
     new Date("2017-01-26")
   ),
 ];
-//console.log("Amount of points in sprint:", getStoryPoints(tauSprint3))
 
 //90
 var betaSprint5 = [
