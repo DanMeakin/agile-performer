@@ -94,4 +94,68 @@ export default class Team {
       data = criteria.map(dataForCriterion);
     return data;
   }
+
+  scrumPracticesData() {
+    let criteria = this.practiceAssessments[0].scrumPractices(),
+      dataForCriterion = criterion => {
+        let dataset = this.practiceAssessments.reduce((all, practices) => {
+          all[shortDate(practices.date)] = practices.scrumAssessment[criterion];
+          return all;
+        }, {});
+        return {
+          description: criterion,
+          data: dataset
+        };
+      },
+      data = criteria.map(dataForCriterion);
+    return data;
+  }
+
+  xpPracticesData() {
+    let criteria = this.practiceAssessments[0].xpPractices(),
+      dataForCriterion = criterion => {
+        let dataset = this.practiceAssessments.reduce((all, practices) => {
+          all[shortDate(practices.date)] = practices.xpAssessment[criterion];
+          return all;
+        }, {});
+        return {
+          description: criterion,
+          data: dataset
+        };
+      },
+      data = criteria.map(dataForCriterion);
+    return data;
+  }
+
+  otherPracticesData() {
+    let criteria = this.practiceAssessments[0].otherPractices(),
+      dataForCriterion = criterion => {
+        let dataset = this.practiceAssessments.reduce((all, practices) => {
+          all[shortDate(practices.date)] = practices.otherAssessment[criterion];
+          return all;
+        }, {});
+        return {
+          description: criterion,
+          data: dataset
+        };
+      },
+      data = criteria.map(dataForCriterion);
+    return data;
+  }
+
+  sprintInterferenceData() {
+    let criteria = this.timeBreakdowns[0].tasks(),
+      dataForCriterion = criterion => {
+        let dataset = this.timeBreakdowns.reduce((all, breakdowns) => {
+          all[shortDate(breakdowns.date)] = breakdowns.breakdown[criterion];
+          return all;
+        }, {});
+        return {
+          description: criterion,
+          data: dataset
+        };
+      },
+      data = criteria.map(dataForCriterion);
+    return data;
+  }
 };

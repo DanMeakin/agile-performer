@@ -30,15 +30,15 @@ class Practices {
     this.date = date;
   }
 
-  get scrumPractices() {
+  scrumPractices() {
     return Object.keys(this.scrumAssessment);
   }
 
-  get xpPractices() {
+  xpPractices() {
     return Object.keys(this.xpAssessment);
   }
 
-  get otherPractices() {
+  otherPractices() {
     return Object.keys(this.otherAssessment);
   }
 };
