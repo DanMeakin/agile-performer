@@ -1,4 +1,4 @@
-import RGB from '../lib/rgb';
+import RGB from '../../lib/rgb';
 
 let burndownData = {
     "Start": { remaining: 220, added: 0 },

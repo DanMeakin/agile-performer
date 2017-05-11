@@ -1,4 +1,4 @@
-import { menuItems, filterMenuItems } from 'js/mocked_data/menu_items';
+import { menuItems, filterMenuItems } from 'js/mocked_data/old_mocked_data/menu_items';
 
  const initialState = menuItems;
 

@@ -14,7 +14,7 @@ import {
   RemedialFocusMetric,
   SprintInterferenceMetric,
   DefectsOverTimeMetric
-} from '../components/metrics/';
+} from '../../components/metrics';
 
 /*
    Opinion on the best ten metrics:-
