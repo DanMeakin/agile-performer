@@ -50,7 +50,15 @@ let startingDates = {
 // -------------------------------------------------------------------------- //
 // Assign Assessments to Teams //
 
-Object.keys(teams).forEach(teamName => {
+teams.teamNames = Object.keys(teams);
+
+teams.shortNames = teams.teamNames.map(teamName => teams[teamName].name);
+
+teams.selectTeam = teamName => (
+  teams.teamNames.map(k => teams[k]).find(team => team.name == teamName)
+);
+
+teams.teamNames.forEach(teamName => {
   let calcFriday = weekNum => addDays(startingDates[teamName], 4 + weekNum * 7),
     calcRetro = sprintNum => addDays(startingDates[teamName], 16 + sprintNum * 21),
     happiness = happinessAssessments[teamName].map((happinessValue, idx) => (
