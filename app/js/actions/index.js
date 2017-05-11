@@ -19,4 +19,11 @@ const filterMetrics = (term) => {
   };
 };
 
-export { selectView, selectMetric, filterMetrics };
+const selectTeam = (teamName) => {
+  return {
+    type: "SELECT_TEAM",
+    teamName
+  };
+};
+
+export { selectView, selectMetric, filterMetrics, selectTeam };

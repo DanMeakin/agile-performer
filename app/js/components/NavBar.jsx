@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { selectMetric, filterMetrics } from "../actions";
+import { selectMetric, filterMetrics, selectTeam } from "../actions";
+import TeamSelector from './TeamSelector';
 
 class NavBar extends Component {
   constructor(props) {
@@ -51,6 +52,7 @@ class NavBar extends Component {
                 <button className="button" onClick={this.clearFilter}>×</button>
               </div>
             </div>
+            <TeamSelector />
           </form>
         </header>
       </div>
@@ -80,7 +82,7 @@ class NavBar extends Component {
 function mapStateToProps(state) {
   return {
     menuItems: state.menuItems.items,
-    metricFilter: state.menuItems.filterTerm
+    metricFilter: state.menuItems.filterTerm,
   };
 }
 
@@ -88,7 +90,7 @@ function matchDispatchToProps(dispatch) {
   return bindActionCreators(
     {
       selectMetric: selectMetric,
-      filterMetrics: filterMetrics
+      filterMetrics: filterMetrics,
     },
     dispatch
   );

@@ -1,5 +1,10 @@
 /****SIDE-NAV****/
 
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
 .sidebar {
     background: #FAFAFA;
     padding: 32px, 20px;

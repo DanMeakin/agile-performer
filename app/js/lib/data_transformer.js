@@ -19,7 +19,7 @@ const opacity = 1;
  *
  * @returns {} A full set of chart data ready for use within a Chart.js chart.
  */
-const chartData = (chartType, performanceData, colours = defaultColours, sortLabels = true) => {
+const chartData = (chartType, performanceData, colours = defaultColours, sortLabels = false) => {
   var makeDataset = function (data, i) {
     let type = data.type || chartType,
         borderDash = data.borderDash || [],

@@ -13,8 +13,9 @@ import {
   TeamCodeOwnershipMetric,
   RemedialFocusMetric,
   SprintInterferenceMetric,
-  DefectsOverTimeMetric
+  DefectsOverTimeMetric,
 } from '../../components/metrics';
+import { SprintBurndown, Velocity } from '../../components/dashboards/product_tracking';
 
 /*
    Opinion on the best ten metrics:-
@@ -49,6 +50,19 @@ import {
 const menuItems = {
   filterTerm: "",
   items: [
+    {
+      heading: "NEW",
+      metrics: [
+        {
+          type: Velocity,
+          name: "Velocity (Product Tracking)"
+        },
+        {
+          type: SprintBurndown,
+          name: "Sprint Burndown (Product Tracking)"
+        }
+      ]
+    },
     {
       heading: "Agility",
       metrics: [
