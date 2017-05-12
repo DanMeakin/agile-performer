@@ -1,13 +1,16 @@
 import RGB from './rgb';
 
 const defaultColours = [
-  new RGB(92, 153, 237),  // blue
-  new RGB(219, 70, 70),   // red
-  new RGB(244, 214, 33), // yellow
-  new RGB(203, 120, 230),  // purple
-  new RGB(80, 186, 104), // green
-  new RGB(219, 70, 165), // pink
-  new RGB(194, 219, 70), // lime
+  new RGB(0, 84, 139),  // Blue
+  new RGB(38, 166, 91), // Green
+  new RGB(17, 216, 194), // Cyan
+  new RGB(247, 202, 24), // Yellow
+  new RGB(237, 136, 20), //Orange
+  new RGB(207, 30, 15),   // Red
+  new RGB(137, 12, 198),  // Purple
+  new RGB(237, 209, 112), //Bone
+  new RGB(192, 96, 64), //Redish oranga
+  new RGB(65, 36, 15), // Brown
 ];
 
 const opacity = 1;
