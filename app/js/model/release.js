@@ -87,6 +87,76 @@ export default class Release {
           data: completed
         }
       ];
+      console.log("Velocity", data);
+    return data;
+  }
+
+  /**
+   * Generate a set of velocity trend data for use in a velocity chart.
+   *
+   * @param {String} teamName - the name of the team whose velocity to collect
+   * @returns {Array[Object]} - velocity data for use within a Velocity chart
+   */
+  velocityTrendData(teamName) {
+    let teamSprints = this.sprintsForTeam(teamName),
+      commitment = teamSprints.reduce((commitmentData, sprint) => {
+        commitmentData["Sprint " + sprint.number] = sprint.committedStoryPoints();
+        return commitmentData;
+      }, {}),
+      completed = teamSprints.reduce((completionData, sprint) => {
+        completionData["Sprint " + sprint.number] = sprint.completedStoryPoints();
+        return completionData;
+      }, {}),
+      completionRate = this.calcCompletionRate(teamSprints),
+      averageVelocity = this.calcAverageVelocity(teamSprints),
+      data = [
+        {
+          description: "Work Completed",
+          data: completed
+        },
+        {
+          description: "Commitment",
+          data: commitment
+        },
+        {
+          description: "Completion Rate",
+          data: completionRate
+        },
+        {
+          description: "Average Velocity",
+          data: averageVelocity
+        },
+      ];
+      console.log("Velocity", data);
+    return data;
+  }
+
+  calcAverageVelocity(sprints){
+    let total = sprints.reduce((points, sprint)=>{
+      return points + sprint.completedStoryPoints();
+    }, 0),
+    data = sprints.reduce((averagePoints, sprint) => {
+      averagePoints["Sprint " + sprint.number] = total / sprints.length;
+      return averagePoints
+    }, {})
+        console.log("Velocity", data);
+        console.log("Velocity", total);
+    return data;
+  }
+
+/**
+ * Calcs the completion rate for a list of sprints 
+ * 
+ * @param {Array[Sprint]} sprints - sprints for which you want to calc the completion rate
+ * @returns {Object}
+ */
+  calcCompletionRate(sprints){
+    let data = sprints.reduce((completionRateData, sprint) => {
+      let completionRate = sprint.completedStoryPoints() / sprint.committedStoryPoints();
+      let completionPercentage = completionRate * 100 
+      completionRateData["Sprint " + sprint.number] =  completionPercentage;
+      return completionRateData
+    }, {})
     return data;
   }
 
@@ -109,10 +179,10 @@ export default class Release {
   }
 
   /**
-   * Calculates burndown for a given team.
+   * Generate burndown trend data for all sprints for a given team.
    *
-   * @param {String} teamName - the name of the team whose velocity to collect
-   * @returns {Array[Object]} - velocity data for use within a Velocity chart
+   * @param {String} teamName - the name of the team whose burndown trend to collect
+   * @returns {Array[Object]} - burndown trend data for use within a linechart
    */
    burndownData(teamName) {
       let sprints = this.sprintsForTeam(teamName),
@@ -126,7 +196,6 @@ export default class Release {
           data: burndown
         }
       }) 
-      console.log("burndown", data);
       return data;
    }
 

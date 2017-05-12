@@ -18,6 +18,7 @@ import {
 
 import { SprintBurndown, Velocity, Happiness, Satisfaction, ReleaseBurnup } from '../../components/dashboards/product_tracking';
 import { 
+  VelocityTrend,
   SprintBurndownTrend,
   ScrumPractices,
   XpPractices, 
@@ -32,6 +33,10 @@ const menuItems = {
     {
       heading: "AGILE MATURITY",
       metrics: [
+        {
+          type: VelocityTrend,
+          name: "Velocity Trend"
+        },
         {
           type: ScrumPractices,
           name: "Scrum"
