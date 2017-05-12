@@ -6,11 +6,8 @@ const defaultColours = [
   new RGB(244, 214, 33), // yellow
   new RGB(203, 120, 230),  // purple
   new RGB(80, 186, 104), // green
-  new RGB(92, 153, 237),  // blue
-  new RGB(219, 70, 70),   // red
-  new RGB(244, 214, 33), // yellow
-  new RGB(203, 120, 230),  // purple
-  new RGB(80, 186, 104), // green
+  new RGB(219, 70, 165), // pink
+  new RGB(194, 219, 70), // lime
 ];
 
 const opacity = 1;
