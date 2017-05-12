@@ -16,7 +16,13 @@ import {
   DefectsOverTimeMetric,
 } from '../../components/metrics';
 import { SprintBurndown, Velocity, Happiness, Satisfaction } from '../../components/dashboards/product_tracking';
-import { ScrumPractices,XpPractices, OtherPractices, SprintInterference } from '../../components/dashboards/agile_maturity';
+import { 
+  SprintBurndownTrend,
+  ScrumPractices,
+  XpPractices, 
+  OtherPractices, 
+  SprintInterference 
+} from '../../components/dashboards/agile_maturity';
 
 const menuItems = {
   filterTerm: "",
@@ -40,6 +46,10 @@ const menuItems = {
           type: SprintInterference,
           name: "Sprint Interference"
         },
+        {
+          type: SprintBurndownTrend,
+          name: "Burndown Trend"
+        }
       ]
     },
     {

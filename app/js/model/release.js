@@ -73,4 +73,27 @@ export default class Release {
     ), 0);
     return Math.ceil(rawMax / 20) * 20;
   }
+
+  /**
+   * Calculates burndown for a given team.
+   *
+   * @param {String} teamName - the name of the team whose velocity to collect
+   * @returns {Array[Object]} - velocity data for use within a Velocity chart
+   */
+   burndownData(teamName) {
+      let sprints = this.sprintsForTeam(teamName),
+      data = sprints.map((sprint) =>{
+        let burndown = sprint.burndown().reduce((dataPoint, points, idx) => {
+          dataPoint[idx] = points;
+          return dataPoint;
+        }, {});
+        return {
+          description: "Sprint " + sprint.number, 
+          data: burndown
+        }
+      }) 
+      console.log("burndown", data);
+      return data;
+   }
+
 };
