@@ -4,7 +4,7 @@ export default class UserStory {
 
    * @param {string} description - A description of the story
    * @param {integer} storyPoints - The number of story points for this story
-   * @param {date} dateAdded - The date this story was added to a sprint
+   * @param {date} dateAdded - The date this story was added to a release
    * @param {date} dateDone - The date this story was complete
    * @param {boolean} isAdditional - Flag whether this story is added to a
    * release post-planning, i.e. is additional to scope
