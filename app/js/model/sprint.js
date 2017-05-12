@@ -42,6 +42,14 @@ export default class Sprint {
     this.period = makePeriod(startDate, endDate);
   }
 
+  startDate() {
+    return this.period[0];
+  }
+
+  endDate() {
+    return this.period[this.period.length - 1];
+  }
+
   /**
    * Calculate the total story points committed to in this Sprint.
    *
