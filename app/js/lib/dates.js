@@ -16,11 +16,11 @@
  */
 function makePeriod(startDate, endDate, excludePredicate) {
   let dayLength = 24 * 60 * 60 * 1000, // Day length in ms
-    periodLength = Math.round((endDate - startDate) / dayLength);
-  if (startDate >= endDate) {
+    periodLength = Math.ceil((endDate - startDate) / dayLength);
+  if (startDate > endDate) {
     return [];
   } else {
-    return [...Array(periodLength).keys()].reduce((periodDates, dayNumber) => {
+    return [...Array(periodLength + 1).keys()].reduce((periodDates, dayNumber) => {
       let nextDate = new Date(startDate);
       nextDate.setDate(startDate.getDate() + dayNumber);
       if (excludePredicate && excludePredicate(nextDate)) {

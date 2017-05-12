@@ -15,6 +15,7 @@ import {
   SprintInterferenceMetric,
   DefectsOverTimeMetric,
 } from '../../components/metrics';
+<<<<<<< HEAD
 import { SprintBurndown, Velocity, Happiness, Satisfaction } from '../../components/dashboards/product_tracking';
 import { 
   SprintBurndownTrend,
@@ -23,6 +24,10 @@ import {
   OtherPractices, 
   SprintInterference 
 } from '../../components/dashboards/agile_maturity';
+=======
+import { SprintBurndown, Velocity, Happiness, Satisfaction, ReleaseBurnup } from '../../components/dashboards/product_tracking';
+import { ScrumPractices,XpPractices, OtherPractices, SprintInterference } from '../../components/dashboards/agile_maturity';
+>>>>>>> 62b46ff8e49ec488bdd87b6d6d944f447c62be7d
 
 const menuItems = {
   filterTerm: "",
@@ -55,6 +60,10 @@ const menuItems = {
     {
       heading: "PRODUCT TRACKING DASHBOARD",
       metrics: [
+        {
+          type: ReleaseBurnup,
+          name: "Release Burnup"
+        },
         {
           type: Velocity,
           name: "Velocity"

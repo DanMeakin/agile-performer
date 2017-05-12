@@ -11,6 +11,41 @@ export default class Release {
     this.sprints = [];
   }
 
+  /**
+   * Return the start date of this release.
+   *
+   * The start date is the date the first sprint commences.
+   *
+   * @returns {Date} - the start date for this release
+   */
+  startDate() {
+    // Shortcut - assume it is the first sprint added
+    return this.sprints[0].startDate();
+  }
+
+  /**
+   * Return the end date of this release.
+   *
+   * The end date is later of the release date, and the end date of the final
+   * sprint for this release.
+   *
+   * @returns {Date} - the end date for this release 
+   */
+  endDate() {
+    // Shortcut - assume the last sprint is the one with the latest end date
+    return Math.max(this.plannedDate, this.finalSprintEndDate());
+  }
+
+  /**
+   * Return the end date of the latest sprint in this release, or today if this
+   * date is in the future.
+   * 
+   * @returns {Date} - the end date for the latest sprint this release 
+   */
+  finalSprintEndDate() {
+    return Math.min(this.sprints[this.sprints.length - 1].endDate(), Date.now());
+  }
+
   planSprint(team, startDate, endDate, stories) {
     let sprintNum = 1,
       sprint = new Sprint(team, sprintNum, stories, startDate, endDate);
@@ -54,7 +89,6 @@ export default class Release {
       ];
     return data;
   }
-
 
   /**
    * Calculate the maximum value to use as upper bounds for velocity and
