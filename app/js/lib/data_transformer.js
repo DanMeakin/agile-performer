@@ -25,7 +25,7 @@ const chartData = (chartType, performanceData, colours = defaultColours, sortLab
   var makeDataset = function (data, i) {
     let type = data.type || chartType,
         borderDash = data.borderDash || [],
-        colour = data.borderColor || colours[i],
+        colour = data.borderColor || data.backgroundColor || colours[i],
         basicData = {
       label: data.label,
       backgroundColor: colour.toRGBA(opacity),
