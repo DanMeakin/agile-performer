@@ -23,9 +23,13 @@ class OverviewTable extends Component {
           <tbody>
             {teamNames.map(teamName => (
               <tr key={"team-" + teamName + "-overview"}>
-                <td>{teamName}</td>
-                <td><StatusIndicator value={overview.velocityIndicator(teamName)} /></td>
-                <td><StatusIndicator value={overview.deliveryIndicator(teamName)} /></td>
+                <td className="team-name">{teamName}</td>
+                <td className="indicator">
+                  <StatusIndicator value={overview.velocityIndicator(teamName)} />
+                </td>
+                <td clasName="indicator">
+                  <StatusIndicator value={overview.deliveryIndicator(teamName)} />
+                </td>
               </tr>
             ))}
           </tbody>

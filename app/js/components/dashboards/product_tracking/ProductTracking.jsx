@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import ReleaseBurnup from './ReleaseBurnup';
-import StatusIndicator from '../../StatusIndicator';
+import OverviewTable from './OverviewTable';
 
 class ProductTracking extends Component {
   render() {
@@ -10,11 +10,11 @@ class ProductTracking extends Component {
       <div className="product-tracking-dashboard">
         <h1>Product Tracking</h1>
         <div className="row">
-          <div className="medium-10 columns">
+          <div className="medium-9 columns">
             <ReleaseBurnup className="main-visualisation" />
           </div>
-          <div className="medium-2 columns">
-            <StatusIndicator value="GREEN" />
+          <div className="medium-3 columns">
+            <OverviewTable />
           </div>
         </div>
       </div>
