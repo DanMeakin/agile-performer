@@ -16,7 +16,7 @@ import {
   DefectsOverTimeMetric,
 } from '../../components/metrics';
 
-import { SprintBurndown, Velocity, Happiness, Satisfaction, ReleaseBurnup } from '../../components/dashboards/product_tracking';
+import { SprintBurndown, Velocity, Happiness, Satisfaction, ProductTracking } from '../../components/dashboards/product_tracking';
 import { 
   VelocityTrend,
   SprintBurndownTrend,
@@ -63,8 +63,8 @@ const menuItems = {
       heading: "PRODUCT TRACKING DASHBOARD",
       metrics: [
         {
-          type: ReleaseBurnup,
-          name: "Release Burnup"
+          type: ProductTracking,
+          name: "PRODUCT TRACKING"
         },
         {
           type: Velocity,
