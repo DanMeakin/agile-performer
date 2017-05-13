@@ -33,7 +33,7 @@ export default class Release {
    */
   endDate() {
     // Shortcut - assume the last sprint is the one with the latest end date
-    return Math.max(this.plannedDate, this.finalSprintEndDate());
+    return new Date(Math.max(this.plannedDate, this.finalSprintEndDate()));
   }
 
   /**
@@ -43,7 +43,7 @@ export default class Release {
    * @returns {Date} - the end date for the latest sprint this release 
    */
   finalSprintEndDate() {
-    return Math.min(this.sprints[this.sprints.length - 1].endDate(), Date.now());
+    return new Date(Math.min(this.sprints[this.sprints.length - 1].endDate(), Date.now()));
   }
 
   planSprint(team, startDate, endDate, stories) {

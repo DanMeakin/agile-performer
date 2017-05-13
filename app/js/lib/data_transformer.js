@@ -40,7 +40,8 @@ const chartData = (chartType, performanceData, colours = defaultColours, sortLab
       pointHoverBackgroundColor: "#fff",
       pointHoverStrokeColor: colour.toRGBA(1),
       data: data.values,
-      type: data.type
+      type: data.type,
+      yAxisID: data.yAxisID
     };
 
     switch (type) {

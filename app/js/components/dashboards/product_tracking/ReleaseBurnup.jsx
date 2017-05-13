@@ -10,8 +10,22 @@ class ReleaseBurnup extends Component {
         scales: {
           yAxes: [
             {
-              stacked: true
+              id: "bars",
+              stacked: true,
+              ticks: {
+                min: 0,
+                max: 4000
+              }
             },
+            {
+              id: "lines",
+              stacked: false,
+              display: false,
+              ticks: {
+                min: 0,
+                max: 4000
+              }
+            }
           ]
       }
     });
