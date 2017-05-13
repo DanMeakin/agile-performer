@@ -3,22 +3,25 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 export default class StatusIndicator extends Component {
-  statusIndication() {
+  statusClass() {
+    let indicatorState;
     switch(this.props.value) {
       case "GREEN":
-        return "OK";
+        indicatorState = "status-good";
+        break;
       case "YELLOW":
-        return "Meh";
+        indicatorState = "status-neutral";
+        break;
       case "RED":
-        return "BAD"
+        indicatorState = "status-bad";
+        break;
     }
+    return "status-indicator " + indicatorState;
   }
 
   render() {
     return (
-      <div className="status-indicator">
-        {this.statusIndication()}
-      </div>
+      <div className={this.statusClass()} />
     );
   }
 }
