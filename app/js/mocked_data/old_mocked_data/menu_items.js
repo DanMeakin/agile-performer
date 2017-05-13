@@ -23,7 +23,8 @@ import {
   ScrumPractices,
   XpPractices, 
   OtherPractices, 
-  SprintInterference 
+  SprintInterference, 
+  CodeOwnership,
 } from '../../components/dashboards/agile_maturity';
 
 
@@ -33,6 +34,10 @@ const menuItems = {
     {
       heading: "AGILE MATURITY",
       metrics: [
+        {
+          type: CodeOwnership,
+          name: "Code Ownership"
+        },
         {
           type: VelocityTrend,
           name: "Velocity Trend"

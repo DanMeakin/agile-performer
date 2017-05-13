@@ -16,6 +16,7 @@ export default class Team {
     this.happinessAssessments = [];
     this.satisfactionAssessments = [];
     this.timeBreakdowns = [];
+    this.repositories = [];
   }
 
   /**
@@ -157,5 +158,21 @@ export default class Team {
       },
       data = criteria.map(dataForCriterion);
     return data;
+  }
+  
+  codeOwnershipData(){
+    let codeOwnershipData = this.repositories.reduce((data, repository)=>{
+      let key = repository.contributors.length + " teammembers";
+      if (key in data){
+        data[key]++;
+      }else{
+        data[key] = 1;
+      }
+      return data;  
+    }, {});
+    return [{
+      description: "Team " + this.name + " code ownership",
+      data: codeOwnershipData
+    }];
   }
 };
