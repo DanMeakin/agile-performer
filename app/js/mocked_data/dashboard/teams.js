@@ -22,6 +22,7 @@ import practiceAssessments from './teams/practices';
 import happinessAssessments from './teams/happiness';
 import satisfactionAssessments from './teams/satisfaction';
 import timeBreakdowns from './teams/time_breakdowns';
+import { codeOwnership } from './teams/code_ownership';
 
 // -------------------------------------------------------------------------- //
 // Create Teams //
@@ -71,13 +72,15 @@ teams.teamNames.forEach(teamName => {
       new TimeBreakdown(breakdownValue, calcRetro(idx))
     )),
       practices = practiceAssessments[teamName],
-      teamDefects = defects[teamName];
+      teamDefects = defects[teamName],
+      teamcodeOwnership = codeOwnership[teamName];
 
   teams[teamName].happinessAssessments = happiness;
   teams[teamName].satisfactionAssessments = satisfaction;
   teams[teamName].timeBreakdowns = timeBreakdown;
   teams[teamName].practiceAssessments = practices;
   teams[teamName].defects = teamDefects;
+  teams[teamName].repositories = teamcodeOwnership;
 });
 
 export { startingDates, teams };
