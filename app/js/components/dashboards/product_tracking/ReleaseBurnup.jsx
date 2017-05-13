@@ -44,9 +44,12 @@ class ReleaseBurnup extends Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.handleChangeBreakdown} className="button">Toggle Breakdown</button>
-        <MultiBarChart data={this.props.chartData} options={this.chartOptions()} title="Release Burnup" />
+      <div className={this.props.className}>
+        <div className="columns row">
+          <h3 className="float-left">Release Burnup</h3>
+          <button onClick={this.handleChangeBreakdown} className="button float-right">Toggle Breakdown</button>
+        </div>
+        <MultiBarChart data={this.props.chartData} options={this.chartOptions()} />
       </div>
     )
   }
