@@ -68,6 +68,7 @@ const initialState = {
   // New data
   release,
   teams,
+  options: {},
   // Probably temporary
   scrumPractices,
   xpPractices,
@@ -93,12 +94,14 @@ const initialState = {
     team: teamCodeOwnership
   },
   sprintInterference,
-  defectsOverTime,
+  defectsOverTime
 };
 
 console.log("Initial state", initialState);
 
 const metricsReducer = (state = initialState, action) => {
+  let opts = state.options,
+      newOpts = opts;
   switch (action.type) {
     case "SELECT_METRIC":
       return Object.assign({}, state, {
@@ -107,6 +110,20 @@ const metricsReducer = (state = initialState, action) => {
     case "SELECT_TEAM":
       return Object.assign({}, state, {
         currentTeam: action.teamName
+      });
+    case "SELECT_SPRINT":
+      newOpts = Object.assign({}, opts, {
+        focusedSprint: action.sprint
+      });
+      return Object.assign({}, state, {
+        options: newOpts
+      });
+    case "BURNUP_BREAKDOWN_BY_TEAMS":
+        newOpts = Object.assign({}, opts, {
+          burnupTeamBreakdown: !opts.burnupTeamBreakdown
+        });
+      return Object.assign({}, state, {
+        options: newOpts
       });
     default:
       return state;

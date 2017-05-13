@@ -10,6 +10,15 @@ import RGB from '../../../lib/rgb';
 
 const excludeNonFridays = date => date.getDay() != 5;
 
+const teamColours = [
+  new RGB(0, 84, 139),  // Blue
+  new RGB(38, 166, 91), // Green
+  new RGB(17, 216, 194), // Cyan
+  new RGB(247, 202, 24), // Yellow
+  new RGB(237, 136, 20), //Orange
+  new RGB(207, 30, 15),   // Red
+];
+
 class ReleaseBurnup {
   constructor(release) {
     this.release = release;
@@ -221,9 +230,10 @@ class ReleaseBurnup {
    * @returns {Array[Object]} - chart data for plotting team progress over time
    */
   teamBars() {
-    return Object.keys(this.cumulativePointsByTeam()).map(teamName => ({
+    return Object.keys(this.cumulativePointsByTeam()).map((teamName, idx) => ({
       description: "Team " + teamName,
-      data: this.cumulativePointsByTeam()[teamName]
+      data: this.cumulativePointsByTeam()[teamName],
+      backgroundColor: teamColours[idx]
     }));
   }
 
@@ -241,6 +251,7 @@ class ReleaseBurnup {
     return [{
       description: "Completed Points",
       data,
+      backgroundColor: new RGB(137, 12, 198),
       yAxisID: "bars"
     }];
   }
@@ -308,23 +319,25 @@ class ReleaseBurnup {
           return [avgs, mins, maxs];
         }, [{}, {}, {}]);
     return [
-      {
+      /*{
         description: "Trajectory (Average)",
         data: avgTrend,
         chartType: "line",
         yAxisID: "lines"
-      },
+      },*/
       {
         description: "Trajectory (Best Case)",
         data: maxTrend,
         chartType: "line",
-        yAxisID: "lines"
+        yAxisID: "lines",
+        borderColor: new RGB(164, 224, 2)
       },
       {
         description: "Trajectory (Worst Case)",
         data: minTrend,
         chartType: "line",
-        yAxisID: "lines"
+        yAxisID: "lines",
+        borderColor: new RGB(224, 13, 2)
       }
     ];
   }
@@ -340,15 +353,19 @@ class ReleaseBurnup {
    *
    * In addition to the actual stats, the burn-up contains projections.
    */
-  releaseBurnup() {
-    this.releaseTrajectory();
-    let burnup =
-        this.teamBars().concat(this.releaseScope(), this.releaseTrajectory());
-    console.log("Burnup", burnup);
-    return burnup;
+  releaseBurnup(breakdownByTeam) {
+    let bars;
+    if (breakdownByTeam) {
+      bars = this.teamBars();
+    } else {
+      bars = this.totalBars();
+    }
+    return this.releaseScope().concat(this.releaseTrajectory(), bars);
   }
 }
 
-const releaseBurnup = release => (new ReleaseBurnup(release)).releaseBurnup();
+const releaseBurnup = release => (new ReleaseBurnup(release)).releaseBurnup(false);
 
-export default releaseBurnup;
+const releaseBurnupByTeam = release => (new ReleaseBurnup(release)).releaseBurnup(true);
+
+export { releaseBurnup, releaseBurnupByTeam };
