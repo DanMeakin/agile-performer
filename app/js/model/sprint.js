@@ -131,12 +131,11 @@ export default class Sprint {
    */
   burndown() {
     return this.completedPointsByDay().reduce((dailyCumulative, currPoints) => {
-      let init = this.committedStoryPoints(),
-          previousTotal = dailyCumulative[dailyCumulative.length - 1] || init,
+      let previousTotal = dailyCumulative[dailyCumulative.length - 1],
           newTotal = previousTotal - currPoints;
       dailyCumulative.push(newTotal);
       return dailyCumulative;
-    }, []);
+    }, [this.committedStoryPoints()]);
   }
 
   /**
