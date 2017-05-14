@@ -4,13 +4,24 @@ import { connect } from 'react-redux';
 import ReleaseBurnup from './ReleaseBurnup';
 import StatusIndicator from '../../StatusIndicator';
 import Overview from './overview';
+import ProductTeamTracking from './ProductTeamTracking';
+import { selectTeamDashboard } from '../../../actions';
 
 class OverviewTable extends Component {
+  constructor(props) {
+    super(props);
+    this.handleSelectDashboard = this.handleSelectDashboard.bind(this);
+  }
+
+  handleSelectDashboard(teamName) {
+    this.props.selectTeamDashboard(teamName, ProductTeamTracking);
+  }
+
   render() {
     let teamNames = this.props.teams.shortNames;
     let overview = new Overview(this.props.release);
     return (
-      <div>
+      <div className="chart-panel">
         <h3>Team Overview</h3>
         <table className="unstriped hover team-overview-table">
           <thead>
@@ -22,7 +33,7 @@ class OverviewTable extends Component {
           </thead>
           <tbody>
             {teamNames.map(teamName => (
-              <tr key={"team-" + teamName + "-overview"}>
+              <tr key={"team-" + teamName + "-overview"} onClick={() => this.handleSelectDashboard(teamName)}>
                 <td className="team-name">{teamName}</td>
                 <td className="indicator">
                   <StatusIndicator value={overview.velocityIndicator(teamName)} />
@@ -46,4 +57,16 @@ function mapStateToProps(state) {
   };
 };
 
-export default connect(mapStateToProps)(OverviewTable);
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators(
+    {
+      selectTeamDashboard
+    },
+    dispatch
+  )
+}
+
+export default connect(
+  mapStateToProps,
+  matchDispatchToProps
+)(OverviewTable);
