@@ -32,6 +32,15 @@ const menuItems = {
   filterTerm: "",
   items: [
     {
+      heading: "DASHBOARDS",
+      metrics: [
+        {
+          type: ProductTracking,
+          name: "Product Tracking"
+        },
+      ]
+    },
+    {
       heading: "AGILE MATURITY",
       metrics: [
         {
@@ -61,31 +70,6 @@ const menuItems = {
         {
           type: SprintBurndownTrend,
           name: "Burndown Trend"
-        }
-      ]
-    },
-    {
-      heading: "PRODUCT TRACKING DASHBOARD",
-      metrics: [
-        {
-          type: ProductTracking,
-          name: "PRODUCT TRACKING"
-        },
-        {
-          type: Velocity,
-          name: "Velocity"
-        },
-        {
-          type: SprintBurndown,
-          name: "Sprint Burndown"
-        },
-        {
-          type: Happiness,
-          name: "Happiness"
-        },
-        {
-          type: Satisfaction,
-          name: "Satisfaction"
         }
       ]
     },
