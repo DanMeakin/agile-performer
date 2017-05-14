@@ -10,8 +10,8 @@ export default class PieChart extends React.Component {
     return (
       <div className="chart-panel">
         <h3>{this.props.title}</h3>
-        <Pie ref="chart" data={data} options={opts} />
         {this.props.children}
+        <Pie ref="chart" data={data} options={opts} />
       </div>
     )
   }
