@@ -8,6 +8,8 @@
  *
  * @param {Array[a]} arr - input array
  * @param {a -> b} groupFunction - function to use to group array values
+ * @returns {Object} - an object with the group value as key, and an array of
+ * grouped values as value
  */
 const groupBy = (arr, groupFunction) => (
   arr.reduce((grouped, element) => {
