@@ -85,6 +85,10 @@ table.team-overview-table {
   td.team-name {
     text-align: center;
   }
+
+  td {
+    cursor: pointer;
+  }
 }
 
 // Status Indicator
