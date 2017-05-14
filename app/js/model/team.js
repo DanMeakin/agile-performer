@@ -159,20 +159,124 @@ export default class Team {
       data = criteria.map(dataForCriterion);
     return data;
   }
-  
-  codeOwnershipData(){
-    let codeOwnershipData = this.repositories.reduce((data, repository)=>{
+  /**
+   * Will sort a JSON object by its keys in ascending order
+   * @param {Object} object 
+   */
+  sortObjectAscending(object) {
+    let sortedObject = Object.keys(object)
+      .sort()
+      .reduce((data, key) => {
+        data[key] = object[key];
+        return data;
+      }, {});
+    return sortedObject
+  }
+
+  codeOwnershipData() {
+    let codeOwnershipData = this.repositories.reduce((data, repository) => {
       let key = repository.contributors.length + " teammembers";
-      if (key in data){
+      if (key in data) {
         data[key]++;
-      }else{
+      } else {
         data[key] = 1;
       }
-      return data;  
-    }, {});
+      return data;
+    }, {}),
+      sortedData = this.sortObjectAscending(codeOwnershipData);
     return [{
       description: "Team " + this.name + " code ownership",
-      data: codeOwnershipData
+      data: sortedData
     }];
   }
+
+  countByCreationDate(defectsArray) {
+    return defectsArray.reduce((data, defect) => {
+      let key = "" + shortDate(defect.creationDate)
+      if (key in data) {
+        data[key]++;
+      } else {
+        data[key] = 1;
+      }
+      return data;
+    }, {})
+  }
+  countByReslutionDate(defectsArray) {
+    return defectsArray.reduce((data, defect) => {
+      if (!defect.resolutionDate == null) {
+        let key = "" + shortDate(defect.resolutionDate)
+        if (key in data) {
+          data[key]++;
+        } else {
+          data[key] = 1;
+        }
+      }else{
+
+      }
+      return data;
+    }, {})
+  }
+
+  defectsOverTimeData() {
+    let defectData = this.defects.reduce((data, defect) => {
+      let key = defect.criticality
+      if (key in data) {
+        data[defect.criticality] = [defect].concat(data[defect.criticality]);
+      } else {
+        data[defect.criticality] = [defect]
+      }
+
+      return data;
+    }, {})
+    console.log("types?", defectData)
+    let createdDate = this.countByCreationDate(defectData[1])
+    let resolutionDate = this.countByReslutionDate(defectData[1])
+    return [{
+      description: "Occurence criticality 1",
+      data: this.countByCreationDate(defectData[1])
+    },
+    {
+      description: "Occurence criticality 2",
+      data: this.countByCreationDate(defectData[2])
+    },
+    {
+      description: "Occurence criticality 3",
+      data: this.countByCreationDate(defectData[3])
+    },
+    {
+      description: "Occurence criticality 4",
+      data: this.countByCreationDate(defectData[4])
+    },
+    {
+      description: "Occurence criticality 5",
+      data: this.countByCreationDate(defectData[5])
+    },
+    {
+      description: "Resoution of criticality 1",
+      data: this.countByReslutionDate(defectData[1])
+    },
+    {
+      description: "Resoution of criticality 1",
+      data: this.countByReslutionDate(defectData[2])
+    },
+    {
+      description: "Resoution of criticality 1",
+      data: this.countByReslutionDate(defectData[3])
+    },
+    {
+      description: "Resoution of criticality 1",
+      data: this.countByReslutionDate(defectData[4])
+    },
+    {
+      description: "Resoution of criticality 1",
+      data: this.countByReslutionDate(defectData[5])
+    },
+    ];
+    
+    
+    console.log("created??", createdDate)
+    console.log("resolved??", createdDate)
+  }
+
+
 };

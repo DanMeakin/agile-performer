@@ -26,11 +26,21 @@ import {
   SprintInterference, 
   CodeOwnership,
 } from '../../components/dashboards/agile_maturity';
+import { DefectsOverTime } from '../../components/dashboards/product_quality';
 
 
 const menuItems = {
   filterTerm: "",
   items: [
+    {
+      heading: "PRODUCT QUALITY",
+      metrics: [
+        {
+          type: DefectsOverTime,
+          name: "Defect Over Time"
+        }
+      ]
+    },
     {
       heading: "AGILE MATURITY",
       metrics: [
@@ -65,7 +75,7 @@ const menuItems = {
       ]
     },
     {
-      heading: "PRODUCT TRACKING DASHBOARD",
+      heading: "PRODUCT TRACKING",
       metrics: [
         {
           type: ReleaseBurnup,
