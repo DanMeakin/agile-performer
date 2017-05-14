@@ -83,31 +83,6 @@ const menuItems = {
       ]
     },
     {
-      heading: "PRODUCT TRACKING",
-      metrics: [
-        {
-          type: ReleaseBurnup,
-          name: "Release Burnup"
-        },
-        {
-          type: Velocity,
-          name: "Velocity"
-        },
-        {
-          type: SprintBurndown,
-          name: "Sprint Burndown"
-        },
-        {
-          type: Happiness,
-          name: "Happiness"
-        },
-        {
-          type: Satisfaction,
-          name: "Satisfaction"
-        }
-      ]
-    },
-    {
       heading: "Agility",
       metrics: [
         {
