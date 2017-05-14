@@ -26,7 +26,7 @@ class Breadcrumb extends Component {
 
   render() {
     return (
-      <nav aria-label="You are here:" role="navigation">
+      <nav aria-label="You are here:" role="navigation" className="breadcrumb">
         <ul className="breadcrumbs">
           {this.breadcrumbLinks()}
         </ul>
