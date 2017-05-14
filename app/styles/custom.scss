@@ -52,12 +52,32 @@ form .small-3.columns {
   padding: 0;
 }
 
+// Dashboards
+
+h1 {
+  text-align: center;
+}
+
+.team-selector-left {
+  padding-top: 1em;
+  margin-bottom: 0;
+}
+
+.sprint-selector {
+  margin-bottom: 0;
+
+  label {
+    margin-bottom: 0;
+  }
+}
+
+nav.breadcrumb {
+  padding: 1em;
+}
 
 // Product Tracking
 
 table.team-overview-table {
-  margin-top: 60px;
-
   th {
     text-align: center;
   }
@@ -68,6 +88,7 @@ table.team-overview-table {
 }
 
 // Status Indicator
+
 div.status-indicator {
   margin: 0 auto;
   $size: 30px;
