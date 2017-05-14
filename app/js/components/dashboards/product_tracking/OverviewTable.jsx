@@ -12,7 +12,7 @@ class OverviewTable extends Component {
     return (
       <div>
         <h3>Team Overview</h3>
-        <table className="unstriped team-overview-table">
+        <table className="unstriped hover team-overview-table">
           <thead>
             <tr>
               <th>Team</th>
@@ -27,7 +27,7 @@ class OverviewTable extends Component {
                 <td className="indicator">
                   <StatusIndicator value={overview.velocityIndicator(teamName)} />
                 </td>
-                <td clasName="indicator">
+                <td className="indicator">
                   <StatusIndicator value={overview.deliveryIndicator(teamName)} />
                 </td>
               </tr>
