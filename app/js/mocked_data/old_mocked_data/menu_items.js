@@ -83,7 +83,6 @@ const menuItems = {
       ]
     },
     {
-<<<<<<< HEAD
       heading: "PRODUCT TRACKING",
       metrics: [
         {
