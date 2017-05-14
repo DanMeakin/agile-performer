@@ -16,7 +16,8 @@ import {
   DefectsOverTimeMetric,
 } from '../../components/metrics';
 
-import { SprintBurndown, Velocity, Happiness, Satisfaction, ProductTracking } from '../../components/dashboards/product_tracking';
+import { ProductTracking } from '../../components/dashboards/product_tracking';
+import { DevelopmentHealth } from '../../components/dashboards/development_health';
 import { 
   VelocityTrend,
   SprintBurndownTrend,
@@ -39,6 +40,10 @@ const menuItems = {
           type: ProductTracking,
           name: "Product Tracking"
         },
+        {
+          type: DevelopmentHealth,
+          name: "Development Health"
+        }
       ]
     },
     {

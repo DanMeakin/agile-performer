@@ -59,6 +59,8 @@ teams.selectTeam = teamName => (
   teams.teamNames.map(k => teams[k]).find(team => team.name == teamName)
 );
 
+teams.allTeams = teams.teamNames.map(teamName => teams[teamName]);
+
 teams.teamNames.forEach(teamName => {
   let calcFriday = weekNum => addDays(startingDates[teamName], 4 + weekNum * 7),
     calcRetro = sprintNum => addDays(startingDates[teamName], 16 + sprintNum * 21),
