@@ -86,10 +86,6 @@ const menuItems = {
       heading: "PRODUCT TRACKING",
       metrics: [
         {
-          type: ReleaseBurnup,
-          name: "Release Burnup"
-        },
-        {
           type: Velocity,
           name: "Velocity"
         },
