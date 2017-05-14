@@ -6,7 +6,7 @@ import LineChart from '../../charts/LineChart';
 class SprintBurndownTrend extends Component {
   render() {
     return (
-      <LineChart data={this.props.chartData} options={this.props.options} title="Sprint Burndown" />
+      <LineChart data={this.props.chartData} options={this.props.options} title="Burndown Trend" />
     )
   }
 }

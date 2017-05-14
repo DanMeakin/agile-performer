@@ -6,7 +6,7 @@ import PercentageLineChart from '../../charts/PercentageLineChart';
 class SprintInterference extends Component {
   render() {
     return (
-      <PercentageLineChart data={this.props.chartData} options={this.props.options} title="Practices" />
+      <PercentageLineChart data={this.props.chartData} options={this.props.options} title="Sprint Interference" />
     )
   }
 }

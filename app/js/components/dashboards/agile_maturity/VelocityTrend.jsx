@@ -6,7 +6,7 @@ import LineChart from '../../charts/LineChart';
 class VelocityTrend extends Component {
   render() {
     return (
-      <LineChart data={this.props.chartData} options={this.props.options} title="Velocity" />
+      <LineChart data={this.props.chartData} options={this.props.options} title="Velocity Trend" />
     )
   }
 }
