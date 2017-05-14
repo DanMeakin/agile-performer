@@ -6,7 +6,7 @@ import LineChart from '../../charts/LineChart';
 class DefectsOverTime extends Component {
   render() {
     return (
-      <LineChart data={this.props.chartData} options={this.props.options} title="Practices" />
+      <LineChart data={this.props.chartData} options={this.props.options} title="Current Defects" />
     )
   }
 }
@@ -16,12 +16,8 @@ function mapStateToProps(state) {
     options = {
       scales: {
         yAxes: [{
-          display: true,
-          ticks: {
-            min: 0,
-            max: 5,
-            beginAtZero: true
-          }
+          stepped: true,
+          stacked: true
         }]
       }
     };

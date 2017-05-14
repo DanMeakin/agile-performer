@@ -1,6 +1,9 @@
 import {
-  shortDate
+  shortDate,
+  addDays,
+  makePeriod
 } from '../lib/dates';
+import { groupBy } from '../lib/array';
 
 /**
  * Define a Scrum team.
@@ -170,7 +173,7 @@ export default class Team {
         data[key] = object[key];
         return data;
       }, {});
-    return sortedObject
+    return sortedObject;
   }
 
   codeOwnershipData() {
@@ -190,93 +193,39 @@ export default class Team {
     }];
   }
 
-  countByCreationDate(defectsArray) {
-    return defectsArray.reduce((data, defect) => {
-      let key = "" + shortDate(defect.creationDate)
-      if (key in data) {
-        data[key]++;
-      } else {
-        data[key] = 1;
-      }
-      return data;
-    }, {})
-  }
-  countByReslutionDate(defectsArray) {
-    return defectsArray.reduce((data, defect) => {
-      if (!defect.resolutionDate == null) {
-        let key = "" + shortDate(defect.resolutionDate)
-        if (key in data) {
-          data[key]++;
-        } else {
-          data[key] = 1;
-        }
-      }else{
-
-      }
-      return data;
-    }, {})
-  }
-
   defectsOverTimeData() {
-    let defectData = this.defects.reduce((data, defect) => {
-      let key = defect.criticality
-      if (key in data) {
-        data[defect.criticality] = [defect].concat(data[defect.criticality]);
-      } else {
-        data[defect.criticality] = [defect]
+    let defectsByCreation = groupBy(this.defects, defect => (
+          defect.creationDate
+        )),
+      defectsByResolution = groupBy(this.defects, defect => (
+          defect.resolutionDate
+        )),
+        firstDefectDate = new Date(
+          Math.min.apply(null, this.defects.map(defect => defect.creationDate))
+        ),
+        defectsPeriod = makePeriod(firstDefectDate, new Date()),
+        defectsByCriticality = defectsPeriod.reduce((defectsData, date) => {
+      let group = defects => groupBy(defects, defect => defect.criticality),
+          newDefects = group(defectsByCreation[date] || []),
+          fixedDefects = group(defectsByResolution[date] || []),
+          previousDate = addDays(date, -1);
+      console.log("New defects", newDefects);
+      console.log("Fixed defects", fixedDefects);
+      [1, 2, 3, 4, 5].forEach(criticality => {
+        let thisCriticality = defectsData[criticality] || {},
+            numberNewDefects = (newDefects[criticality] || []).length,
+            numberResolvedDefects = (fixedDefects[criticality] || []).length,
+            previousDefects = thisCriticality[shortDate(previousDate)] || 0;
+        thisCriticality[shortDate(date)] = previousDefects + numberNewDefects - numberResolvedDefects;
+        defectsData[criticality] = thisCriticality;
+      });
+      return defectsData;
+    }, {});
+    return Object.keys(defectsByCriticality).map(key => (
+      {
+        description: "Criticality " + key,
+        data: defectsByCriticality[key]
       }
-
-      return data;
-    }, {})
-    console.log("types?", defectData)
-    let createdDate = this.countByCreationDate(defectData[1])
-    let resolutionDate = this.countByReslutionDate(defectData[1])
-    return [{
-      description: "Occurence criticality 1",
-      data: this.countByCreationDate(defectData[1])
-    },
-    {
-      description: "Occurence criticality 2",
-      data: this.countByCreationDate(defectData[2])
-    },
-    {
-      description: "Occurence criticality 3",
-      data: this.countByCreationDate(defectData[3])
-    },
-    {
-      description: "Occurence criticality 4",
-      data: this.countByCreationDate(defectData[4])
-    },
-    {
-      description: "Occurence criticality 5",
-      data: this.countByCreationDate(defectData[5])
-    },
-    {
-      description: "Resoution of criticality 1",
-      data: this.countByReslutionDate(defectData[1])
-    },
-    {
-      description: "Resoution of criticality 1",
-      data: this.countByReslutionDate(defectData[2])
-    },
-    {
-      description: "Resoution of criticality 1",
-      data: this.countByReslutionDate(defectData[3])
-    },
-    {
-      description: "Resoution of criticality 1",
-      data: this.countByReslutionDate(defectData[4])
-    },
-    {
-      description: "Resoution of criticality 1",
-      data: this.countByReslutionDate(defectData[5])
-    },
-    ];
-    
-    
-    console.log("created??", createdDate)
-    console.log("resolved??", createdDate)
+    ));
   }
-
-
 };
