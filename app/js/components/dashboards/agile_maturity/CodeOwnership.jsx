@@ -6,7 +6,7 @@ import PieChart from '../../charts/PieChart';
 class CodeOwnership extends Component {
   render() {
     return (
-      <PieChart data={this.props.chartData} options={this.props.options} title="Practices" />
+      <PieChart data={this.props.chartData} options={this.props.options} title="Code Ownership" />
     )
   }
 }
