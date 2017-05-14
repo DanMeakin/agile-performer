@@ -209,8 +209,6 @@ export default class Team {
           newDefects = group(defectsByCreation[date] || []),
           fixedDefects = group(defectsByResolution[date] || []),
           previousDate = addDays(date, -1);
-      console.log("New defects", newDefects);
-      console.log("Fixed defects", fixedDefects);
       [1, 2, 3, 4, 5].forEach(criticality => {
         let thisCriticality = defectsData[criticality] || {},
             numberNewDefects = (newDefects[criticality] || []).length,

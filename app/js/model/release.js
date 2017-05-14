@@ -1,3 +1,5 @@
+import { shortDate } from '../lib/dates';
+
 /**
  * Define one release within a development.
 
@@ -10,6 +12,46 @@ export default class Release {
     this.plannedDate = plannedDate;
     this.sprints = [];
   }
+
+  /**
+   * Return a list of all teams involved in this release.
+   *
+   * @returns {Array[Team]} - a list of all teams participating in this release
+   */
+  teams() {
+    return this.sprints.reduce((allTeams, sprint) => {
+      let team = sprint.team;
+      if (allTeams.indexOf(team) == -1) {
+        allTeams.push(team);
+      }
+      return allTeams;
+    }, []);
+  }
+
+  defectsOverTime() {
+    let combineDefectData = (dataset1, dataset2) => {
+      let newDataset = Object.assign({}, dataset1);
+      return Object.keys(dataset2).reduce((combinedDataset, dateKey) => {
+        combinedDataset[dateKey] = (combinedDataset[dateKey] || 0) + dataset2[dateKey];
+        return combinedDataset;
+      }, newDataset);
+    };
+    return this.teams().reduce((defectsData, team) => {
+      let teamDefectsData = team.defectsOverTimeData();
+      if (defectsData.length == 0) {
+        return teamDefectsData;
+      } else {
+        return defectsData.map(({ description, data }, idx) => {
+          console.log("This data", data);
+          return {
+            description,
+            data: combineDefectData(data, teamDefectsData[idx].data)
+          };
+        });
+      }
+    }, []);
+  }
+
 
   /**
    * Return the start date of this release.
