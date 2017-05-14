@@ -19,20 +19,48 @@ class TeamSelector extends Component {
     this.props.selectTeam(null);
   }
 
-  render() {
+  selectBox() {
     return (
-      <div className="input-group">
+      <select className="input-group-field" onChange={this.handleSelectTeam} value={this.props.currentTeam || "---"}>
+        <option value={null} key="empty" disabled="true">---</option>
+        {this.props.teamNames.map(teamName => (
+          <option value={teamName} key={teamName}>{"Team " + teamName}</option>
+        ))
+        }
+      </select>
+    );
+  }
+  renderWithLabelAbove() {
+    return (
+      <div className="input-group team-selector-top">
         <label>Team
-          <select className="input-group-field" onChange={this.handleSelectTeam} defaultValue="---">
-            <option value={null} key="empty" disabled="true">---</option>
-            {this.props.teamNames.map(teamName => (
-              <option value={teamName} key={teamName}>{"Team " + teamName}</option>
-            ))
-            }
-          </select>
+          {this.selectBox()}
         </label>
       </div>
     );
+  }
+
+  renderWithLabelLeft() {
+    return (
+      <div className="input-group team-selector-left">
+        <div className="row">
+          <div className="small-3 columns">
+            <label for="middle-label" className="text-right middle">Team</label>
+          </div>
+          <div className="small-9 columns">
+            {this.selectBox()}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  render() {
+    if (this.props.labelPosition == "left") {
+      return this.renderWithLabelLeft()
+    } else {
+      return this.renderWithLabelAbove()
+    }
   }
 }
 

@@ -12,6 +12,14 @@ const selectMetric = (metricName) => {
   };
 };
 
+const selectTeamDashboard = (teamName, dashboard) => {
+  return {
+    type: "SELECT_TEAM_DASHBOARD",
+    teamName,
+    dashboard
+  };
+};
+
 const filterMetrics = (term) => {
   return {
     type: "FILTER_METRICS",
@@ -42,6 +50,7 @@ const selectSprint = (sprintNumber) => {
 export {
   selectView,
   selectMetric,
+  selectTeamDashboard,
   filterMetrics,
   selectTeam,
   burnupBreakdownByTeams,

@@ -16,7 +16,7 @@ import {
   DefectsOverTimeMetric,
 } from '../../components/metrics';
 
-import { SprintBurndown, Velocity, Happiness, Satisfaction, ReleaseBurnup } from '../../components/dashboards/product_tracking';
+import { SprintBurndown, Velocity, Happiness, Satisfaction, ProductTracking } from '../../components/dashboards/product_tracking';
 import { 
   VelocityTrend,
   SprintBurndownTrend,
@@ -33,13 +33,21 @@ const menuItems = {
   filterTerm: "",
   items: [
     {
+      heading: "DASHBOARDS",
+      metrics: [
+        {
+          type: ProductTracking,
+          name: "Product Tracking"
+        },
+      ]
+    },
+    {
       heading: "PRODUCT QUALITY",
       metrics: [
         {
           type: DefectsOverTime,
           name: "Defect Over Time"
-        }
-      ]
+        }]
     },
     {
       heading: "AGILE MATURITY",
@@ -75,6 +83,7 @@ const menuItems = {
       ]
     },
     {
+<<<<<<< HEAD
       heading: "PRODUCT TRACKING",
       metrics: [
         {

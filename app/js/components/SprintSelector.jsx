@@ -16,15 +16,20 @@ class SprintSelector extends Component {
 
   render() {
     return (
-      <div className="input-group">
-        <label>Sprint No.
-          <select className="input-group-field" onChange={this.handleSelectSprint} defaultValue={this.props.currentSprint}>
-          {this.props.sprintOptions.map(sprintNum => (
-            <option value={sprintNum} key={"sprint-" + sprintNum}>{sprintNum}</option>
-          ))
-        }
-          </select>
-        </label>
+      <div className="input-group sprint-selector">
+        <div className="row">
+          <div className="small-6 columns">
+            <label for="middle-label" className="text-right middle">Sprint No.</label>
+          </div>
+          <div className="small-6 columns">
+            <select className="input-group-field" onChange={this.handleSelectSprint} defaultValue={this.props.currentSprint}>
+            {this.props.sprintOptions.map(sprintNum => (
+              <option value={sprintNum} key={"sprint-" + sprintNum}>{sprintNum}</option>
+            ))
+          }
+            </select>
+          </div>
+        </div>
       </div>
     )
   }

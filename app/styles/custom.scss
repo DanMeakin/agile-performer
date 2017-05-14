@@ -51,3 +51,62 @@ select {
 form .small-3.columns {
   padding: 0;
 }
+
+// Dashboards
+
+h1 {
+  text-align: center;
+}
+
+.team-selector-left {
+  padding-top: 1em;
+  margin-bottom: 0;
+}
+
+.sprint-selector {
+  margin-bottom: 0;
+
+  label {
+    margin-bottom: 0;
+  }
+}
+
+nav.breadcrumb {
+  padding: 1em;
+}
+
+// Product Tracking
+
+table.team-overview-table {
+  th {
+    text-align: center;
+  }
+
+  td.team-name {
+    text-align: center;
+  }
+}
+
+// Status Indicator
+
+div.status-indicator {
+  margin: 0 auto;
+  $size: 30px;
+  width: $size;
+  height: $size;
+  border-radius: $size / 2;
+  -webkit-border-radius: $size / 2;
+  -moz-border-radius: $size / 2;
+
+  &.status-good {
+    background: green;
+  }
+
+  &.status-neutral {
+    background: yellow;
+  }
+
+  &.status-bad {
+    background: red;
+  }
+}

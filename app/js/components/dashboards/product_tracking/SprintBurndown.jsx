@@ -8,8 +8,16 @@ class SprintBurndown extends Component {
   render() {
     return (
       <div>
-        <SprintSelector />
-        <LineChart data={this.props.chartData} options={this.props.options} title="Sprint Burndown" />
+        <LineChart data={this.props.chartData} options={this.props.options}>
+          <div className="row">
+            <div className="small-6 columns">
+              <h3>Sprint Burndown</h3>
+            </div>
+            <div className="small-6 columns">
+              <SprintSelector />
+            </div>
+          </div>
+        </LineChart>
       </div>
     )
   }

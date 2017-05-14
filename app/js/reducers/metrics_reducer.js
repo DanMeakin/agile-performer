@@ -111,6 +111,11 @@ const metricsReducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         currentTeam: action.teamName
       });
+    case "SELECT_TEAM_DASHBOARD":
+      return Object.assign({}, state, {
+        currentTeam: action.teamName,
+        currentMetric: action.dashboard
+      });
     case "SELECT_SPRINT":
       newOpts = Object.assign({}, opts, {
         focusedSprint: action.sprint
