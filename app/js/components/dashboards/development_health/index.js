@@ -1,3 +1,3 @@
 import DevelopmentHealth from './DevelopmentHealth';
 
-export { DevelopmentHealth };
+export default DevelopmentHealth;
