@@ -54,6 +54,15 @@ const chartData = (chartType, performanceData, colours = defaultColours, sortLab
           borderWidth: 2
         };
         return Object.assign(basicData, extraData);
+      case "filledLine":
+        let filledLineData = {
+          fill: true,
+          backgroundColor: colour.toRGBA(opacity),
+          pointRadius: 0,
+          lineTension: 0.1,
+          borderWidth: 2
+        }
+        return Object.assign(basicData, filledLineData);
       case "radar":
         return Object.assign(basicData, {
           borderWidth: 2,
