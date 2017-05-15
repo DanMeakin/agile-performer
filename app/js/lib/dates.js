@@ -23,6 +23,7 @@ function makePeriod(startDate, endDate, excludePredicate) {
     return [...Array(periodLength + 1).keys()].reduce((periodDates, dayNumber) => {
       let nextDate = new Date(startDate);
       nextDate.setDate(startDate.getDate() + dayNumber);
+      nextDate.setUTCHours(0);
       if (excludePredicate && excludePredicate(nextDate)) {
         return periodDates;
       } else {
