@@ -251,7 +251,7 @@ class ReleaseBurnup {
     return [{
       description: "Completed Points",
       data,
-      backgroundColor: new RGB(137, 12, 198),
+      backgroundColor: new RGB(0, 84, 139),
       yAxisID: "bars"
     }];
   }

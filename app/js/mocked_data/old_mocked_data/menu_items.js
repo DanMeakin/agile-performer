@@ -16,7 +16,7 @@ import {
   DefectsOverTimeMetric,
 } from '../../components/metrics';
 
-import { ProductTracking, DevelopmentHealth } from '../../components/dashboards';
+import { ProductTracking, DevelopmentHealth, AgileMaturityContainer, ProductQualityContainer } from '../../components/dashboards';
 import { 
   VelocityTrend,
   SprintBurndownTrend,
@@ -35,13 +35,21 @@ const menuItems = {
       heading: "DASHBOARDS",
       metrics: [
         {
-          type: ProductTracking,
-          name: "Product Tracking"
+          type: AgileMaturityContainer,
+          name: "Agile Maturity"
         },
         {
           type: DevelopmentHealth,
           name: "Development Health"
-        }
+        },
+        {
+          type: ProductTracking,
+          name: "Product Tracking"
+        },
+        {
+          type: ProductQualityContainer,
+          name: "Product Quality"
+        },
       ]
     },
     {
