@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 class MetricContainer extends Component {
   render() {
-    console.log("Current metric", this.props.currentMetric)
     return React.createElement(
       this.props.currentMetric || "div",
       {},

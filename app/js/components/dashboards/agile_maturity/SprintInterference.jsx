@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import PercentageLineChart from '../../charts/PercentageLineChart';
+import PercentageFilledLineChart from '../../charts/PercentageFilledLineChart';
 
 class SprintInterference extends Component {
   render() {
     return (
-      <PercentageLineChart data={this.props.chartData} options={this.props.options} title="Sprint Interference" />
+      <PercentageFilledLineChart data={this.props.chartData} options={this.props.options} title="Sprint Interference" />
     )
   }
 }

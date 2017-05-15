@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Dashboard } from '../dashboards';
-import OverviewTable from './agile_maturity/OverviewTable';
+import OverviewTable from './product_quality/QualityOverviewTable';
 import Breadcrumb from '../Breadcrumb';
 import DashboardTitle from '../DashboardTitle';
-import DefectsOverTime from './product_quality/DefectsOverTime'
+import TotalDefects from './product_quality/TotalDefects'
 
 class ProductQualityContainer extends Component {
   render() {
@@ -25,7 +25,7 @@ class ProductQualityContainer extends Component {
         <DashboardTitle>Product Quality</DashboardTitle>
         <div className="row">
           <div className="medium-8 columns">
-            <DefectsOverTime className="main-visualisation" />
+            <TotalDefects className="main-visualisation" />
           </div>
           <div className="medium-4 columns">
             <OverviewTable />

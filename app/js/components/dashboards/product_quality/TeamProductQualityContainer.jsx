@@ -5,12 +5,12 @@ import { Dashboard } from '../../dashboards';
 import Breadcrumb from '../../Breadcrumb';
 import DashboardTitle from '../../DashboardTitle';
 import TeamSelector from '../../TeamSelector';
-import AgileMaturityContainer from '../AgileMaturityContainer';
+import ProductQualityContainer from '../ProductQualityContainer';
 import DefectsOverTime from './DefectsOverTime';
 import CodeOwnership from '../agile_maturity/CodeOwnership';
 
 
-class TeamMaturityContainer extends Component {
+class TeamProductQualityContainer extends Component {
   render() {
     let breadcrumbLinks = [
       {
@@ -18,12 +18,12 @@ class TeamMaturityContainer extends Component {
         label: "Home"
       },
       {
-        view: AgileMaturityContainer,
-        label: "Agile Maturity"
+        view: ProductQualityContainer,
+        label: "Product Quality"
       },
       {
-        view: TeamMaturityContainer,
-        label: "Team Maturity"
+        view: TeamProductQualityContainer,
+        label: "Team Product Quality"
       }
     ];
     return (
@@ -36,12 +36,12 @@ class TeamMaturityContainer extends Component {
             <TeamSelector labelPosition="left" />
           </div>
         </div>
-        <DashboardTitle>Team Tracking</DashboardTitle>
+        <DashboardTitle>Team Product Quality</DashboardTitle>
         <div className="row">
-          <div className="medium-12 columns">
+          <div className="medium-6 columns">
             <CodeOwnership />
           </div>
-          <div className="medium-12 columns">
+          <div className="medium-6 columns">
             <DefectsOverTime />
           </div>
         </div>
@@ -50,4 +50,4 @@ class TeamMaturityContainer extends Component {
   }
 }
 
-export default connect()(TeamMaturityContainer);
+export default connect()(TeamProductQualityContainer);
