@@ -1,4 +1,4 @@
-import { shortDate } from '../lib/dates';
+import { shortDate, veryShortDate } from '../lib/dates';
 
 /**
  * Define one release within a development.
@@ -112,12 +112,23 @@ export default class Release {
    */
   velocityData(teamName) {
     let teamSprints = this.sprintsForTeam(teamName),
+        sprintLabel = (sprint) => (
+          [
+            "Sprint ",
+            sprint.number,
+            " (",
+            veryShortDate(sprint.startDate()),
+            " - ",
+            veryShortDate(sprint.endDate()),
+            ")"
+          ].join("")
+        ),
       commitment = teamSprints.reduce((commitmentData, sprint) => {
-        commitmentData["Sprint " + sprint.number] = sprint.committedStoryPoints();
+        commitmentData[sprintLabel(sprint)] = sprint.committedStoryPoints();
         return commitmentData;
       }, {}),
       completed = teamSprints.reduce((completionData, sprint) => {
-        completionData["Sprint " + sprint.number] = sprint.completedStoryPoints();
+        completionData[sprintLabel(sprint)] = sprint.completedStoryPoints();
         return completionData;
       }, {}),
       data = [{
@@ -236,8 +247,8 @@ export default class Release {
         return {
           description: "Sprint " + sprint.number, 
           data: burndown
-        }
-      }) 
+        };
+      });
       return data;
    }
 

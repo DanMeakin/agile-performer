@@ -73,9 +73,20 @@ function shortDate(date) {
   return day + " " + months[monthNum] + " " + year;
 }
 
+/**
+ * Create a very short form formatting of a date.
+ *
+ * @param {Date} date
+ * @returns {String} - the date formatted as "dd/mm"
+ */
+function veryShortDate(date) {
+  return date.getDate() + "/" + (date.getMonth() + 1);
+}
+
 export {
   makePeriod,
   addDays,
   dateDiff,
-  shortDate
+  shortDate,
+  veryShortDate
 };
