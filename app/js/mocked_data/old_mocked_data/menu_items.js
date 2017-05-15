@@ -16,8 +16,7 @@ import {
   DefectsOverTimeMetric,
 } from '../../components/metrics';
 
-import { ProductTracking } from '../../components/dashboards/product_tracking';
-import { DevelopmentHealth } from '../../components/dashboards/development_health';
+import { ProductTracking, DevelopmentHealth } from '../../components/dashboards';
 import { 
   VelocityTrend,
   SprintBurndownTrend,
@@ -28,7 +27,6 @@ import {
   CodeOwnership,
 } from '../../components/dashboards/agile_maturity';
 import { DefectsOverTime } from '../../components/dashboards/product_quality';
-
 
 const menuItems = {
   filterTerm: "",

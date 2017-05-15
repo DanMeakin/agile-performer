@@ -62,8 +62,10 @@ import {
   teams
 } from '../mocked_data/dashboard/teams';
 
+import { Dashboard } from '../components/dashboards';
+
 const initialState = {
-  currentMetric: null,
+  currentMetric: Dashboard,
   currentTeam: null,
   // New data
   release,
