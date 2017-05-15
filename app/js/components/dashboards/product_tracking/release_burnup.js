@@ -92,7 +92,7 @@ class ReleaseBurnup {
   releaseDates() {
     let dates = makePeriod(
       this.startDate(),
-      this.endDate(),
+      addDays(this.endDate(), 1),
       excludeNonFridays
     );
     return dates;
@@ -110,7 +110,7 @@ class ReleaseBurnup {
    */
   releaseTrajectoryDates() {
     let dates = makePeriod(
-      addDays(this.finalSprintEndDate(), - 6),
+      addDays(this.finalSprintEndDate(), - 7),
       this.endDate(),
       excludeNonFridays
     );
