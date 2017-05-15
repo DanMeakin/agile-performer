@@ -5,7 +5,11 @@ import { Dashboard } from '../../dashboards';
 import Breadcrumb from '../../Breadcrumb';
 import DashboardTitle from '../../DashboardTitle';
 import TeamSelector from '../../TeamSelector';
-import { ProductTracking, Happiness, Satisfaction, Velocity, SprintBurndown } from '../product_tracking';
+import ProductTracking from '../product_tracking';
+import Happiness from './Happiness';
+import Satisfaction from './Satisfaction';
+import Velocity from './Velocity';
+import SprintBurndown from './SprintBurndown';
 
 class ProductTeamTracking extends Component {
   render() {

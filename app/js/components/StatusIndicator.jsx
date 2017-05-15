@@ -6,6 +6,7 @@ export default class StatusIndicator extends Component {
   statusClass() {
     let indicatorState,
       indicatorTrend;
+    console.log("PROPS", this.props);
     switch(this.props.colour) {
       case "GREEN":
         indicatorState = "status-good";
