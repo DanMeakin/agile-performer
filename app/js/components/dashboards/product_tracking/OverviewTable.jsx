@@ -36,10 +36,10 @@ class OverviewTable extends Component {
               <tr key={"team-" + teamName + "-overview"} onClick={() => this.handleSelectDashboard(teamName)}>
                 <td className="team-name">{teamName}</td>
                 <td className="indicator">
-                  <StatusIndicator value={overview.velocityIndicator(teamName)} />
+                  <StatusIndicator colour={overview.velocityIndicator(teamName)} />
                 </td>
                 <td className="indicator">
-                  <StatusIndicator value={overview.deliveryIndicator(teamName)} />
+                  <StatusIndicator colour={overview.deliveryIndicator(teamName)} />
                 </td>
               </tr>
             ))}

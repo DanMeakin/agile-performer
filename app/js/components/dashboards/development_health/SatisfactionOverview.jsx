@@ -41,7 +41,7 @@ class SatisfactionOverview extends Component {
                 <td className="team-name">{teamName}</td>
                 {criteria.map(criterion => (
                   <td className="indicator" key={"indicator-" + teamName + "-" + criterion}>
-                   <StatusIndicator value={satisfactionOverview.indicator(teamName, criterion)} />
+                   <StatusIndicator colour={satisfactionOverview.indicator(teamName, criterion).colour} trend={satisfactionOverview.indicator(teamName, criterion).trend} />
                   </td>
                 ))}
               </tr>

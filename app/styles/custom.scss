@@ -72,7 +72,7 @@ h1 {
 }
 
 nav.breadcrumb {
-  padding: 1em;
+  padding-top: 1em;
 }
 
 // Product Tracking
@@ -94,8 +94,10 @@ table.team-overview-table {
 // Status Indicator
 
 div.status-indicator {
+  text-align: center;
   margin: 0 auto;
-  $size: 30px;
+  $size: 32px;
+  font-size: 20px;
   width: $size;
   height: $size;
   border-radius: $size / 2;
@@ -104,6 +106,7 @@ div.status-indicator {
 
   &.status-good {
     background: green;
+    color: white;
   }
 
   &.status-neutral {
@@ -112,5 +115,19 @@ div.status-indicator {
 
   &.status-bad {
     background: red;
+    color: white;
+  }
+
+  &.status-increasing::after {
+    content: "🢁";
+  }
+
+  &.status-steady::after {
+    content: "−";
+    font-weight: bold;
+  }
+
+  &.status-decreasing::after {
+    content: "🢃";
   }
 }

@@ -43,27 +43,34 @@ export default class Overview {
   }
 
   makeIndicator(trend, currentPoints) {
-    switch(trend) {
-    case "INCREASING":
-      if (currentPoints >= 3.5) {
-        return "GREEN";
-      } else {
-        return "YELLOW";
-      }
-    case "STEADY":
-      if (currentPoints >= 3.5) {
-        return "GREEN";
-      } else if (currentPoints >= 2) {
-        return "YELLOW";
-      } else {
-        return "RED";
-      }
-    case "DECREASING":
-      if (currentPoints >= 3.5) {
-        return "YELLOW";
-      } else {
-        return "RED";
-      }
+    let colour = (trendDesc) => {
+      switch(trendDesc) {
+      case "INCREASING":
+        if (currentPoints >= 3.5) {
+          return "GREEN";
+        } else {
+          return "YELLOW";
+        }
+      case "STEADY":
+        if (currentPoints >= 3.5) {
+          return "GREEN";
+        } else if (currentPoints >= 2) {
+          return "YELLOW";
+        } else {
+          return "RED";
+        }
+      case "DECREASING":
+        if (currentPoints >= 3.5) {
+          return "YELLOW";
+        } else {
+          return "RED";
+        }
+      };
+      return "???";
+    };
+    return {
+      trend,
+      colour: colour(trend)
     };
   }
 }

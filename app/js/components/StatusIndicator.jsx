@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 
 export default class StatusIndicator extends Component {
   statusClass() {
-    let indicatorState;
-    switch(this.props.value) {
+    let indicatorState,
+      indicatorTrend;
+    switch(this.props.colour) {
       case "GREEN":
         indicatorState = "status-good";
         break;
@@ -16,7 +17,21 @@ export default class StatusIndicator extends Component {
         indicatorState = "status-bad";
         break;
     }
-    return "status-indicator " + indicatorState;
+    switch(this.props.trend) {
+      case "INCREASING":
+        indicatorTrend = "status-increasing";
+        break;
+      case "STEADY":
+        indicatorTrend = "status-steady";
+        break;
+      case "DECREASING":
+        indicatorTrend = "status-decreasing";
+        break;
+      default:
+        indicatorTrend = "";
+        break;
+    }
+    return ["status-indicator", indicatorState, indicatorTrend].join(" ");
   }
 
   render() {
