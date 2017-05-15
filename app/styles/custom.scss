@@ -103,6 +103,7 @@ div.status-indicator {
   border-radius: $size / 2;
   -webkit-border-radius: $size / 2;
   -moz-border-radius: $size / 2;
+  font-family: FontAwesome;
 
   &.status-good {
     background: green;
@@ -119,7 +120,7 @@ div.status-indicator {
   }
 
   &.status-increasing::after {
-    content: "🢁";
+    content: "";
   }
 
   &.status-steady::after {
@@ -128,6 +129,6 @@ div.status-indicator {
   }
 
   &.status-decreasing::after {
-    content: "🢃";
+    content: "";
   }
 }
