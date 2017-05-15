@@ -26,20 +26,12 @@ class OverviewTable extends Component {
           <thead>
             <tr>
               <th>Team</th>
-              <th>Stability</th>
-              <th>Delivery</th>
             </tr>
           </thead>
           <tbody>
             {teamNames.map(teamName => (
               <tr key={"team-" + teamName + "-overview"} onClick={() => this.handleSelectDashboard(teamName)}>
                 <td className="team-name">{teamName}</td>
-                <td className="indicator">
-                  <StatusIndicator colour={overview.velocityIndicator(teamName)} />
-                </td>
-                <td className="indicator">
-                  <StatusIndicator colour={overview.deliveryIndicator(teamName)} />
-                </td>
               </tr>
             ))}
           </tbody>
