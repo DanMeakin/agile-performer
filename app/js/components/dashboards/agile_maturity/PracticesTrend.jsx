@@ -18,6 +18,7 @@ function mapStateToProps(state) {
           display: true,
           ticks: {
             min: 0,
+            max: 5,
             beginAtZero: true
           }
         }]
