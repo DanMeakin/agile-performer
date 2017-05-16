@@ -30,6 +30,21 @@ class Practices {
     this.date = date;
   }
 
+  combinedAssessment() {
+    let combined = Object.assign(
+      {},
+      this.scrumAssessment,
+      this.xpAssessment,
+      this.otherAssessment
+    );
+    console.log("Assessment", combined);
+    return combined;
+  }
+
+  allPractices() {
+    return Object.keys(this.combinedAssessment());
+  }
+
   scrumPractices() {
     return Object.keys(this.scrumAssessment);
   }

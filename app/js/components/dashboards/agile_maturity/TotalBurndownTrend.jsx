@@ -27,7 +27,6 @@ function mapStateToProps(state) {
       }
     },
     chartData = sprints;
-    console.log("Sprints data", sprints);
   return {
     chartData,
     options

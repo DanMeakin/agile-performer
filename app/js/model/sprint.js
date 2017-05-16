@@ -144,12 +144,10 @@ export default class Sprint {
    * @returns {Array[Object]} - burndown data for use in a sprint burndown 
    */
   burndownData() {
-    console.log("burndown", this.burndown())
     let remaining = this.burndown().reduce((data, points, idx) => {
       data[idx] = points;
       return data;
     }, {});
-    console.log("burndown", remaining)
     return [
       {
         description: "Ideal Burndown",

@@ -40,6 +40,12 @@ const burnupBreakdownByTeams = () => {
   };
 };
 
+const togglePracticesByPractice = () => {
+  return {
+    type: "PRACTICES_BY_PRACTICE"
+  };
+};
+
 const selectSprint = (sprintNumber) => {
   return {
     type: "SELECT_SPRINT",
@@ -54,5 +60,6 @@ export {
   filterMetrics,
   selectTeam,
   burnupBreakdownByTeams,
+  togglePracticesByPractice,
   selectSprint
 };
