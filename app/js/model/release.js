@@ -269,13 +269,80 @@ export default class Release {
           sprintTrend[idx] = pointsTotal / teamSprints.length;
           return sprintTrend
         }, {})
-        return {
-          description: "Team " + team.name,
-          data: sprintTrendData
-        }
+      return {
+        description: "Team " + team.name,
+        data: sprintTrendData
+      }
     });
     console.log("trend", teamSprintsData)
     return teamSprintsData;
+  }
+
+  practicesTrendData() {
+    let teamTrendData = this.teams().map((team) =>{
+      console.log("reduce data all teams", this.teamPracticeTrend(team))
+      return this.teamPracticeTrend(team);
+    })
+    return teamTrendData;
+  }
+
+  teamPracticeTrend(team) {
+    let practicesTrend = team.practiceAssessments.reduce((assessments, practices)=>{
+      Object.values(practices.scrumAssessment).forEach((valueInAssesment)=>{
+          assessments[shortDate(practices.date)] = (assessments[shortDate(practices.date)] || 0) + valueInAssesment;
+      })
+      Object.values(practices.xpAssessment).forEach((valueInAssesment)=>{
+          assessments[shortDate(practices.date)] = (assessments[shortDate(practices.date)] || 0) + valueInAssesment;
+      })
+      Object.values(practices.xpAssessment).forEach((valueInAssesment)=>{
+          assessments[shortDate(practices.date)] = (assessments[shortDate(practices.date)] || 0) + valueInAssesment;
+      })
+      return assessments;
+    }, {})
+    return{
+      description: "Team " + team.name,
+      data: practicesTrend
+    }
+  }
+
+  scrumPracticesAssessment() {
+    return this.teams()
+      .map((team) => {
+        let data = team.practiceAssessments
+          .reduce((assessments, practices) => {
+            Object.values(practices.scrumAssessment).forEach((valueInAssesment) => {
+              assessments[shortDate(practices.date)] = (assessments[shortDate(practices.date)] || 0) + valueInAssesment;
+            })
+            return assessments;
+          }, {})
+        return data;
+      })
+      .reduce((assements, teamAssessment) => {
+        Object.keys(teamAssessment).forEach((date) => {
+          assements[date] = (assements[date] || 0) + teamAssessment[date]
+        })
+        return assements;
+      }, {})
+  }
+
+  xpPracticesAssessment() {
+    return this.teams()
+      .map((team) => {
+        let data = team.practiceAssessments
+          .reduce((assessments, practices) => {
+            Object.values(practices.xpAssessment).forEach((valueInAssesment) => {
+              assessments[shortDate(practices.date)] = (assessments[shortDate(practices.date)] || 0) + valueInAssesment;
+            })
+            return assessments;
+          }, {})
+        return data;
+      })
+      .reduce((assements, teamAssessment) => {
+        Object.keys(teamAssessment).forEach((date) => {
+          assements[date] = (assements[date] || 0) + teamAssessment[date]
+        })
+        return assements;
+      }, {})
   }
 
 }
