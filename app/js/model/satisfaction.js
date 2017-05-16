@@ -14,4 +14,11 @@ export default class Satisfaction {
   satisfactionCriteria() {
     return Object.keys(this.satisfaction);
   }
+
+  averageSatisfaction() {
+    let keys = Object.keys(this.satisfaction);
+    return keys.reduce((total, key) => (
+      total + this.satisfaction[key]
+    ), 0) / keys.length;
+  }
 };

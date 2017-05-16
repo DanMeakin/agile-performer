@@ -4,9 +4,12 @@ import { connect } from 'react-redux';
 import DashboardTitle from '../DashboardTitle';
 import Breadcrumb from '../Breadcrumb';
 import LandingPanel from '../LandingPanel';
+import StatusIndicator from '../StatusIndicator';
 import { ProductTracking, ProductQuality, AgileMaturity, DevelopmentHealth } from '.';
+import Overview from './development_health/overview';
+import { releaseStatus } from './product_tracking/release_burnup';
 
-export default class Dashboard extends Component {
+class Dashboard extends Component {
   render() {
     let breadcrumbLinks = [
       {
@@ -18,12 +21,28 @@ export default class Dashboard extends Component {
         <Breadcrumb links={breadcrumbLinks} />
         <DashboardTitle>Agile Dashboard</DashboardTitle>
         <div className="row">
-          <LandingPanel title="Product Tracking" dashboard={ProductTracking} />
+          <LandingPanel title="Product Tracking" dashboard={ProductTracking}>
+            <StatusIndicator colour={releaseStatus(this.props.release)} />
+          </LandingPanel>
           <LandingPanel title="Product Quality" dashboard={ProductQuality} />
           <LandingPanel title="Agile Maturity" dashboard={AgileMaturity} />
-          <LandingPanel title="Development Health" dashboard={DevelopmentHealth} />
+          <LandingPanel title="Development Health" dashboard={DevelopmentHealth}>
+            <StatusIndicator colour={(new Overview(this.props.teams.allTeams)).combinedIndicator()} />
+          </LandingPanel>
         </div>
       </div>
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    release: state.metrics.release,
+    teams: state.metrics.teams
+  }
+}
+
+export default connect(
+  mapStateToProps
+)(Dashboard);
+

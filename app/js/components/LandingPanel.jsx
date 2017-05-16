@@ -10,6 +10,7 @@ class LandingPanel extends Component {
     return (
       <div className="landing-panel medium-6 columns">
         <h3>{this.props.title}</h3>
+        {this.props.children}
         <a href="#" onClick={() => this.props.selectMetric(dashboard)}>
           View
         </a>

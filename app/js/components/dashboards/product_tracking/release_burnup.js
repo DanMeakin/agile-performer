@@ -319,12 +319,6 @@ class ReleaseBurnup {
           return [avgs, mins, maxs];
         }, [{}, {}, {}]);
     return [
-      /*{
-        description: "Trajectory (Average)",
-        data: avgTrend,
-        chartType: "line",
-        yAxisID: "lines"
-      },*/
       {
         description: "Trajectory (Best Case)",
         data: maxTrend,
@@ -340,6 +334,22 @@ class ReleaseBurnup {
         borderColor: new RGB(224, 13, 2)
       }
     ];
+  }
+
+  releaseStatus() {
+    let scope = this.releaseScope()[0],
+        trajectory = this.releaseTrajectory(),
+        releaseDate = this.release.plannedDate;
+    let endScope = scope.data[shortDate(releaseDate)],
+        worstCase = trajectory[1].data[shortDate(releaseDate)],
+        bestCase = trajectory[0].data[shortDate(releaseDate)];
+    if (worstCase > endScope) {
+      return "GREEN";
+    } else if (bestCase > endScope) {
+      return "YELLOW";
+    } else {
+      return "RED";
+    }
   }
 
   /**
@@ -360,7 +370,9 @@ class ReleaseBurnup {
     } else {
       bars = this.totalBars();
     }
-    return this.releaseScope().concat(this.releaseTrajectory(), bars);
+    let output = this.releaseScope().concat(this.releaseTrajectory(), bars);
+    console.log("Release burnup", output);
+    return output;
   }
 }
 
@@ -368,4 +380,6 @@ const releaseBurnup = release => (new ReleaseBurnup(release)).releaseBurnup(fals
 
 const releaseBurnupByTeam = release => (new ReleaseBurnup(release)).releaseBurnup(true);
 
-export { releaseBurnup, releaseBurnupByTeam };
+const releaseStatus = release => (new ReleaseBurnup(release)).releaseStatus();
+
+export { releaseBurnup, releaseBurnupByTeam, releaseStatus };

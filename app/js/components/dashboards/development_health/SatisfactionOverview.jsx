@@ -20,30 +20,29 @@ class SatisfactionOverview extends Component {
   render() {
     let teams = this.props.teams.allTeams,
       teamNames = this.props.teams.shortNames,
-      satisfactionOverview = new Overview(teams),
-      criteria = satisfactionOverview.allCriteria();
+      satisfactionOverview = new Overview(teams);
 
     return (
-      <div className="satisfaction-overview">
+      <div className="chart-panel">
         <h3>Satisfaction Overview</h3>
         <table className="unstriped hover team-overview-table">
           <thead>
             <tr>
               <th className="criterion-heading">Team</th>
-              {criteria.map(criterion => (
-                <th key={"heading-" + criterion} className="criterion-heading">{criterion}</th>
-              ))}
+              <th key="heading-happiness" className="criterion-heading">Happiness</th>
+              <th key="heading-satisfaction" className="criterion-heading">Satisfaction</th>
             </tr>
           </thead>
           <tbody>
             {teamNames.map(teamName => (
               <tr key={"team-" + teamName + "-overview"} onClick={() => this.handleSelectDashboard(teamName)}>
                 <td className="team-name">{teamName}</td>
-                {criteria.map(criterion => (
-                  <td className="indicator" key={"indicator-" + teamName + "-" + criterion}>
-                   <StatusIndicator colour={satisfactionOverview.indicator(teamName, criterion).colour} trend={satisfactionOverview.indicator(teamName, criterion).trend} />
+                  <td className="indicator" key={"indicator-" + teamName + "-happiness"}>
+                   <StatusIndicator colour={satisfactionOverview.happinessIndicator(teamName).colour} trend={satisfactionOverview.happinessIndicator(teamName).trend} />
                   </td>
-                ))}
+                  <td className="indicator" key={"indicator-" + teamName + "-satisfaction"}>
+                   <StatusIndicator colour={satisfactionOverview.satisfactionIndicator(teamName).colour} trend={satisfactionOverview.satisfactionIndicator(teamName).trend} />
+                  </td>
               </tr>
             ))}
           </tbody>

@@ -99,18 +99,6 @@ table.team-overview-table {
   }
 }
 
-// Development Health
-
-th.criterion-heading {
-  font-size: smaller;
-  padding: 0.3em;
-}
-
-.satisfaction-overview {
-  margin-top: 3em;
-  margin-bottom: 3em;
-}
-
 // Status Indicator
 
 div.status-indicator {
@@ -144,8 +132,6 @@ div.status-indicator {
   }
 
   &.status-steady::after {
-    content: "−";
-    font-weight: bold;
   }
 
   &.status-decreasing::after {
