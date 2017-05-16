@@ -6,7 +6,7 @@ import BarLineChart from '../../charts/BarLineChart';
 class PracticesTrend extends Component {
   render() {
     return (
-      <BarLineChart data={this.props.chartData} options={this.props.options} title="Burndown Trend" />
+      <BarLineChart data={this.props.chartData} options={this.props.options} title="Team Maturity" />
     )
   }
 }
