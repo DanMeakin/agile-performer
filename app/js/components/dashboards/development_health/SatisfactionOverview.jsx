@@ -24,7 +24,7 @@ class SatisfactionOverview extends Component {
       criteria = satisfactionOverview.allCriteria();
 
     return (
-      <div className="chart-panel">
+      <div className="satisfaction-overview">
         <h3>Satisfaction Overview</h3>
         <table className="unstriped hover team-overview-table">
           <thead>
