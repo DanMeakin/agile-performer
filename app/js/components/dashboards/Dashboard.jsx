@@ -8,6 +8,8 @@ import StatusIndicator from '../StatusIndicator';
 import { ProductTracking, ProductQuality, AgileMaturity, DevelopmentHealth } from '.';
 import Overview from './development_health/overview';
 import { releaseStatus } from './product_tracking/release_burnup';
+import QualityOverview from './product_quality/overview'
+import AgileOverview from './agile_maturity/overview'
 
 class Dashboard extends Component {
   render() {
@@ -16,6 +18,8 @@ class Dashboard extends Component {
         label: "Home"
       }
     ];
+    let teams = this.props.teams,
+    release = this.props.release
     return (
       <div>
         <Breadcrumb links={breadcrumbLinks} />
@@ -24,9 +28,9 @@ class Dashboard extends Component {
           <div className="small-10 small-offset-1 columns">
             <div className="row">
               <LandingPanel title="Product Tracking" dashboard={ProductTracking} status={releaseStatus(this.props.release)} />
-              <LandingPanel title="Product Quality" dashboard={ProductQuality} />
-              <LandingPanel title="Agile Maturity" dashboard={AgileMaturity} />
-              <LandingPanel title="Development Health" dashboard={DevelopmentHealth} status={(new Overview(this.props.teams.allTeams)).combinedIndicator()} />
+              <LandingPanel title="Product Quality" dashboard={ProductQuality} status={(new QualityOverview(release, teams)).totalDefectIndicator()}/>
+              <LandingPanel title="Agile Maturity" dashboard={AgileMaturity} status={(new AgileOverview(release, teams)).totalMaturityIndicator()}/>
+              <LandingPanel title="Development Health" dashboard={DevelopmentHealth} status={(new Overview(teams.allTeams)).combinedIndicator()} />
             </div>
           </div>
         </div>
