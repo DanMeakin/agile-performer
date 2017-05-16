@@ -1,10 +1,4 @@
-import {
-  release
-} from '../mocked_data/release';
-import {
-  teams
-} from '../mocked_data/teams';
-
+import { release, teams } from '../mocked_data';
 import { Dashboard } from '../components/dashboards';
 
 const initialState = {
