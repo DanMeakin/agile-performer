@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Dashboard } from '../dashboards';
-import OverviewTable from './product_quality/QualityOverviewTable';
-import Breadcrumb from '../Breadcrumb';
-import DashboardTitle from '../DashboardTitle';
-import TotalDefects from './product_quality/TotalDefects'
+import { Dashboard } from '../../dashboards';
+import OverviewTable from './QualityOverviewTable';
+import Breadcrumb from '../../Breadcrumb';
+import DashboardTitle from '../../DashboardTitle';
+import TotalDefects from './TotalDefects'
 
-class ProductQualityContainer extends Component {
+class ProductQuality extends Component {
   render() {
     let breadcrumbLinks = [
       {
@@ -15,7 +15,7 @@ class ProductQualityContainer extends Component {
         label: "Home"
       },
       {
-        view: ProductQualityContainer,
+        view: ProductQuality,
         label: "Product Quality"
       }
     ];
@@ -36,4 +36,4 @@ class ProductQualityContainer extends Component {
   }
 }
 
-export default connect()(ProductQualityContainer);
+export default connect()(ProductQuality);

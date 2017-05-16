@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import StatusIndicator from '../../StatusIndicator';
 import Overview from './overview';
-import TeamMaturityContainer from './TeamMaturityContainer';
+import TeamMaturity from './TeamMaturity';
 import { selectTeamDashboard } from '../../../actions';
 
 class OverviewTable extends Component {
@@ -13,7 +13,7 @@ class OverviewTable extends Component {
   }
 
   handleSelectDashboard(teamName) {
-    this.props.selectTeamDashboard(teamName, TeamMaturityContainer);
+    this.props.selectTeamDashboard(teamName, TeamMaturity);
   }
 
   render() {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import NavBar from './NavBar';
 import MetricContainer from './MetricContainer';
 import RGB from 'js/lib/rgb';
 import { selectView } from 'js/actions';
@@ -17,15 +16,8 @@ var colours = [
 class App extends Component {
   render() {
     return (
-      <div>
-        <div className="row">
-          <div className="small-2 columns sidebar app-dashboard-sidebar">
-            <NavBar />
-          </div>
-          <div className="small-10 columns">
-            <MetricContainer />
-          </div>
-        </div>
+      <div className="row columns">
+        <MetricContainer />
       </div>
     );
   }

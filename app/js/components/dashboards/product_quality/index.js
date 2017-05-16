@@ -1,3 +1,3 @@
-import DefectsOverTime from './DefectsOverTime';
+import ProductQuality from './ProductQuality';
 
-export {DefectsOverTime};
+export default ProductQuality;

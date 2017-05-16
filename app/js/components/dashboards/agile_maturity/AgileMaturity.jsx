@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Dashboard } from '../dashboards';
-import OverviewTable from './agile_maturity/OverviewTable';
-import Breadcrumb from '../Breadcrumb';
-import DashboardTitle from '../DashboardTitle';
-import SprintBurndownTrend from './agile_maturity/SprintBurndownTrend'
+import { Dashboard } from '../../dashboards';
+import OverviewTable from './OverviewTable';
+import Breadcrumb from '../../Breadcrumb';
+import DashboardTitle from '../../DashboardTitle';
+import SprintBurndownTrend from './SprintBurndownTrend'
 
-class AgileMaturityContainer extends Component {
+class AgileMaturity extends Component {
   render() {
     let breadcrumbLinks = [
       {
@@ -36,4 +36,4 @@ class AgileMaturityContainer extends Component {
   }
 }
 
-export default connect()(AgileMaturityContainer);
+export default connect()(AgileMaturity);

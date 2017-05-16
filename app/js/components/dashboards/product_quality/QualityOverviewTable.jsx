@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import StatusIndicator from '../../StatusIndicator';
 import Overview from './overview';
-import TeamProductQualityContainer from './TeamProductQualityContainer';
+import TeamProductQuality from './TeamProductQuality';
 import { selectTeamDashboard } from '../../../actions';
 
 class QualityOverviewTable extends Component {
@@ -13,7 +13,7 @@ class QualityOverviewTable extends Component {
   }
 
   handleSelectDashboard(teamName) {
-    this.props.selectTeamDashboard(teamName, TeamProductQualityContainer);
+    this.props.selectTeamDashboard(teamName, TeamProductQuality);
   }
 
   render() {

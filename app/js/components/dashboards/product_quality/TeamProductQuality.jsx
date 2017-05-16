@@ -5,12 +5,11 @@ import { Dashboard } from '../../dashboards';
 import Breadcrumb from '../../Breadcrumb';
 import DashboardTitle from '../../DashboardTitle';
 import TeamSelector from '../../TeamSelector';
-import ProductQualityContainer from '../ProductQualityContainer';
+import ProductQuality from './ProductQuality';
 import DefectsOverTime from './DefectsOverTime';
 import CodeOwnership from '../agile_maturity/CodeOwnership';
 
-
-class TeamProductQualityContainer extends Component {
+class TeamProductQuality extends Component {
   render() {
     let breadcrumbLinks = [
       {
@@ -18,11 +17,11 @@ class TeamProductQualityContainer extends Component {
         label: "Home"
       },
       {
-        view: ProductQualityContainer,
+        view: ProductQuality,
         label: "Product Quality"
       },
       {
-        view: TeamProductQualityContainer,
+        view: TeamProductQuality,
         label: "Team Product Quality"
       }
     ];
@@ -50,4 +49,4 @@ class TeamProductQualityContainer extends Component {
   }
 }
 
-export default connect()(TeamProductQualityContainer);
+export default connect()(TeamProductQuality);

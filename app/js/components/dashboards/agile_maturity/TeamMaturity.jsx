@@ -5,7 +5,7 @@ import { Dashboard } from '../../dashboards';
 import Breadcrumb from '../../Breadcrumb';
 import DashboardTitle from '../../DashboardTitle';
 import TeamSelector from '../../TeamSelector';
-import AgileMaturityContainer from '../AgileMaturityContainer';
+import AgileMaturity from '../agile_maturity';
 import SprintBurndownTrend from './SprintBurndownTrend';
 import CodeOwnership from './CodeOwnership';
 import VelocityTrend from './VelocityTrend';
@@ -14,8 +14,7 @@ import ScrumPractices from './ScrumPractices';
 import XpPractices from './XpPractices';
 import OtherPractices from './OtherPractices';
 
-
-class TeamMaturityContainer extends Component {
+class TeamMaturity extends Component {
   render() {
     let breadcrumbLinks = [
       {
@@ -23,11 +22,11 @@ class TeamMaturityContainer extends Component {
         label: "Home"
       },
       {
-        view: AgileMaturityContainer,
+        view: AgileMaturity,
         label: "Agile Maturity"
       },
       {
-        view: TeamMaturityContainer,
+        view: TeamMaturity,
         label: "Team Maturity"
       }
     ];
@@ -70,4 +69,4 @@ class TeamMaturityContainer extends Component {
   }
 }
 
-export default connect()(TeamMaturityContainer);
+export default connect()(TeamMaturity);
