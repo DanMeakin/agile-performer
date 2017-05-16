@@ -1,4 +1,4 @@
-import Defect from '../../../model/defect';
+import Defect from '../../model/defect';
 
 // Mock a series of defects. These were randomly generated, going up to the
 // middle of May 2017.

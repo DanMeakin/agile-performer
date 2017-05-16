@@ -1,7 +1,7 @@
 import {
   Practices,
   maturity
-} from '../../../model/practices';
+} from '../../model/practices';
 // -------------------------------------------------------------------------- //
 // Practice Assessments //
 

@@ -1,4 +1,4 @@
-import UserStory from '../../model/user_story';
+import UserStory from '../model/user_story';
 
 var getStoryPoints = (userStories) => {
   var sum = 0;
