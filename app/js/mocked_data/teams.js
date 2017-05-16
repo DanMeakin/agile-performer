@@ -10,10 +10,7 @@
  * Data is here: https://docs.google.com/spreadsheets/d/1uyrMFglZ--AyONmUNv0L8YmV_NMoBCPQMwvjMJam1iA/pubhtml
  */
 import { addDays } from '../lib/dates';
-import Team from '../model/team';
-import Happiness from '../model/happiness';
-import Satisfaction from '../model/satisfaction';
-import TimeBreakdown from '../model/time_breakdown';
+import { Happiness, Satisfaction, Team, TimeBreakdown } from '../model';
 
 import defects from './teams/defects';
 import practiceAssessments from './teams/practices';

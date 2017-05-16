@@ -1,4 +1,4 @@
-import Repository from '../../model/repository'
+import { Repository } from '../../model';
 
 let codeOwnership = {
     alpha: [

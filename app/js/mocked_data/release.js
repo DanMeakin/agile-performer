@@ -8,8 +8,7 @@ import { teams, startingDates } from './teams';
 import userStories from './user_stories';
 
 import { addDays } from '../lib/dates';
-import Sprint from '../model/sprint';
-import Release from '../model/release';
+import { Sprint, Release } from '../model';
 
 let createSprints = (teamName => [...Array(5).keys()].map(sprintNumber => {
     let startDate = addDays(startingDates[teamName], sprintNumber * 21),

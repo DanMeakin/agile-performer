@@ -1,7 +1,5 @@
-import {
-  Practices,
-  maturity
-} from '../../model/practices';
+import { Practices, maturity } from '../../model';
+
 // -------------------------------------------------------------------------- //
 // Practice Assessments //
 
