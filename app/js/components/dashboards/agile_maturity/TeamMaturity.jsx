@@ -40,7 +40,7 @@ class TeamMaturity extends Component {
             <TeamSelector labelPosition="left" />
           </div>
         </div>
-        <DashboardTitle>Team Tracking</DashboardTitle>
+        <DashboardTitle>Team Maturity</DashboardTitle>
         <div className="row">
           <div className="medium-6 columns">
             <VelocityTrend />
