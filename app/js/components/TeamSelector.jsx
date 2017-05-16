@@ -21,8 +21,7 @@ class TeamSelector extends Component {
 
   selectBox() {
     return (
-      <select className="input-group-field" onChange={this.handleSelectTeam} value={this.props.currentTeam || "---"}>
-        <option value={null} key="empty" disabled="true">---</option>
+      <select className="input-group-field" onChange={this.handleSelectTeam} value={this.props.currentTeam}>
         {this.props.teamNames.map(teamName => (
           <option value={teamName} key={teamName}>{"Team " + teamName}</option>
         ))
