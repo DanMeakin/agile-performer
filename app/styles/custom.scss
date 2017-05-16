@@ -144,8 +144,6 @@ div.status-indicator {
   }
 
   &.status-steady::after {
-    content: "−";
-    font-weight: bold;
   }
 
   &.status-decreasing::after {

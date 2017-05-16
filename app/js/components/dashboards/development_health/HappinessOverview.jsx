@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import LineChart from '../../charts/LineChart';
+import Overview from './overview';
 
 class HappinessOverview extends Component {
   render() {
     return (
-      <LineChart data={this.props.chartData} options={this.props.options} title="Happiness" />
+      <LineChart data={this.props.chartData} options={this.props.options} title="Average Happiness" />
     )
   }
 }
@@ -24,14 +25,12 @@ function mapStateToProps(state) {
         }]
       }
   },
-    chartData = [].concat.apply(
-      [],
-      state.metrics.teams.allTeams.map(team => {
-        let data = team.happinessData()
-        data[0].description = "Team " + team.name;
-        return data;
-      })
-    );
+    overview = new Overview(state.metrics.teams.allTeams),
+    chartData = [{
+      description: "Happiness",
+      data: overview.averageHappiness()
+    }]
+  console.log("Data", chartData);
   return {
     chartData,
     options
