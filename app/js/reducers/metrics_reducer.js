@@ -43,6 +43,13 @@ const metricsReducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         options: newOpts
       });
+    case "PRACTICES_BY_PRACTICE":
+      newOpts = Object.assign({}, opts, {
+        practicesByPractice: !opts.practicesByPractice
+      });
+      return Object.assign({}, state, {
+        options: newOpts
+      });
     default:
       return state;
   }
