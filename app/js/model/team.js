@@ -3,6 +3,7 @@ import {
   addDays,
   makePeriod
 } from '../lib/dates';
+import RGB from '../lib/rgb';
 import { groupBy } from '../lib/array';
 
 /**
@@ -99,51 +100,39 @@ export default class Team {
     return data;
   }
 
-  scrumPracticesData() {
-    let criteria = this.practiceAssessments[0].scrumPractices(),
-      dataForCriterion = criterion => {
-        let dataset = this.practiceAssessments.reduce((all, practices) => {
-          all[shortDate(practices.date)] = practices.scrumAssessment[criterion];
-          return all;
-        }, {});
-        return {
-          description: criterion,
-          data: dataset
-        };
-      },
-      data = criteria.map(dataForCriterion);
+  practicesData() {
+    if (this.practiceAssessments.length == 0) {
+      return [];
+    };
+    let criteria = this.practiceAssessments[0].allPractices(),
+        dataForCriterion = criterion => {
+          let dataset = this.practiceAssessments.reduce((all, practices) => {
+            let assessment = practices.combinedAssessment();
+            all[shortDate(practices.date)] = assessment[criterion];
+            return all;
+          }, {});
+          return {
+            description: criterion,
+            data: dataset
+          };
+        },
+        data = criteria.map(dataForCriterion);
     return data;
   }
 
-  xpPracticesData() {
-    let criteria = this.practiceAssessments[0].xpPractices(),
-      dataForCriterion = criterion => {
-        let dataset = this.practiceAssessments.reduce((all, practices) => {
-          all[shortDate(practices.date)] = practices.xpAssessment[criterion];
-          return all;
-        }, {});
-        return {
-          description: criterion,
-          data: dataset
-        };
-      },
-      data = criteria.map(dataForCriterion);
-    return data;
-  }
-
-  otherPracticesData() {
-    let criteria = this.practiceAssessments[0].otherPractices(),
-      dataForCriterion = criterion => {
-        let dataset = this.practiceAssessments.reduce((all, practices) => {
-          all[shortDate(practices.date)] = practices.otherAssessment[criterion];
-          return all;
-        }, {});
-        return {
-          description: criterion,
-          data: dataset
-        };
-      },
-      data = criteria.map(dataForCriterion);
+  practicesDataByPractice() {
+    if (this.practiceAssessments.length == 0) {
+      return [];
+    };
+    let criteria = this.practiceAssessments[0].allPractices(),
+        dataForAssessment = assessment => (
+          {
+            description: shortDate(assessment.date),
+            data: assessment.combinedAssessment(),
+            backgroundColor: new RGB(200, 25, 50)
+          }
+        ),
+        data = this.practiceAssessments.map(dataForAssessment);
     return data;
   }
 

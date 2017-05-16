@@ -10,8 +10,6 @@ const initialState = {
   options: {}
 };
 
-console.log("Initial state", initialState);
-
 const metricsReducer = (state = initialState, action) => {
   let opts = state.options,
       newOpts = opts;
@@ -44,6 +42,7 @@ const metricsReducer = (state = initialState, action) => {
         options: newOpts
       });
     case "PRACTICES_BY_PRACTICE":
+    console.log("PRACTICES BY PRACTICE", opts);
       newOpts = Object.assign({}, opts, {
         practicesByPractice: !opts.practicesByPractice
       });

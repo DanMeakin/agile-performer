@@ -10,9 +10,7 @@ import SprintBurndownTrend from './SprintBurndownTrend';
 import CodeOwnership from './CodeOwnership';
 import VelocityTrend from './VelocityTrend';
 import SprintInterference from './SprintInterference';
-import ScrumPractices from './ScrumPractices';
-import XpPractices from './XpPractices';
-import OtherPractices from './OtherPractices';
+import Practices from './Practices';
 
 class TeamMaturity extends Component {
   render() {
@@ -54,14 +52,8 @@ class TeamMaturity extends Component {
           <div className="medium-6 columns">
             <SprintInterference />
           </div>
-          <div className="medium-6 columns">
-            <ScrumPractices />
-          </div>
-          <div className="medium-6 columns">
-            <XpPractices />
-          </div>
-          <div className="medium-6 columns">
-            <OtherPractices />
+          <div className="medium-12 columns">
+            <Practices />
           </div>
         </div>
       </div>

@@ -139,7 +139,6 @@ export default class Release {
         data: completed
       }
       ];
-    console.log("Velocity", data);
     return data;
   }
 
@@ -179,7 +178,6 @@ export default class Release {
           data: averageVelocity
         },
       ];
-    console.log("Velocity", data);
     return data;
   }
 
@@ -191,8 +189,6 @@ export default class Release {
         averagePoints["Sprint " + sprint.number] = total / sprints.length;
         return averagePoints
       }, {})
-    console.log("Velocity", data);
-    console.log("Velocity", total);
     return data;
   }
 
@@ -274,7 +270,6 @@ export default class Release {
           data: sprintTrendData
         }
     });
-    console.log("trend", teamSprintsData)
     return teamSprintsData;
   }
 

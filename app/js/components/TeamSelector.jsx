@@ -11,7 +11,6 @@ class TeamSelector extends Component {
   }
 
   handleSelectTeam(event) {
-    console.log("Target value", event.target.value);
     this.props.selectTeam(event.target.value);
   }
 
@@ -44,7 +43,7 @@ class TeamSelector extends Component {
       <div className="input-group team-selector-left">
         <div className="row">
           <div className="small-3 columns">
-            <label for="middle-label" className="text-right middle">Team</label>
+            <label className="text-right middle">Team</label>
           </div>
           <div className="small-9 columns">
             {this.selectBox()}
