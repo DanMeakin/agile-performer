@@ -1,3 +1,12 @@
+@mixin rounded-element($size) {
+  width: $size;
+  height: $size;
+  border-radius: $size / 2;
+  -webkit-border-radius: $size / 2;
+  -moz-border-radius: $size / 2;
+}
+
+
 /****SIDE-NAV****/
 
 select {
@@ -26,7 +35,6 @@ select {
 .nav-entry:hover{
     background-color: lightgray;
 }
-
 
 .row{
     max-width: 200rem;
@@ -79,8 +87,51 @@ nav.breadcrumb {
 
 .landing-panel {
   text-align: center;
-  padding: 1em;
-  margin-bottom: 5em;
+  vertical-align: middle;
+
+  h3 {
+    padding-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .inner-panel {
+    vertical-align: middle;
+    padding: 1em;
+    width: 100%;
+    $size: 300px;
+    @include rounded-element(300px);
+  }
+
+  @mixin link-style($colour) {
+    .view-link {
+      display: inline-block;
+      margin: 0 auto;
+      background: $colour;
+      @include rounded-element(60px);
+      line-height: 60px;
+      vertical-align: middle;
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+  .status-green {
+    border: 2px solid green;
+    @include link-style(green);
+  }
+
+  .status-yellow {
+    border: 2px solid yellow;
+    @include link-style(yellow);
+  }
+
+  .status-red {
+    border: 2px solid red;
+    @include link-style(red);
+  }
 }
 
 // Product Tracking
@@ -102,15 +153,10 @@ table.team-overview-table {
 // Status Indicator
 
 div.status-indicator {
+  @include rounded-element(32px);
   text-align: center;
   margin: 0 auto;
-  $size: 32px;
   font-size: 20px;
-  width: $size;
-  height: $size;
-  border-radius: $size / 2;
-  -webkit-border-radius: $size / 2;
-  -moz-border-radius: $size / 2;
   font-family: FontAwesome;
 
   &.status-good {

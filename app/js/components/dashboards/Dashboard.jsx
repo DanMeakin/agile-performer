@@ -21,14 +21,14 @@ class Dashboard extends Component {
         <Breadcrumb links={breadcrumbLinks} />
         <DashboardTitle>Agile Dashboard</DashboardTitle>
         <div className="row">
-          <LandingPanel title="Product Tracking" dashboard={ProductTracking}>
-            <StatusIndicator colour={releaseStatus(this.props.release)} />
-          </LandingPanel>
-          <LandingPanel title="Product Quality" dashboard={ProductQuality} />
-          <LandingPanel title="Agile Maturity" dashboard={AgileMaturity} />
-          <LandingPanel title="Development Health" dashboard={DevelopmentHealth}>
-            <StatusIndicator colour={(new Overview(this.props.teams.allTeams)).combinedIndicator()} />
-          </LandingPanel>
+          <div className="small-10 small-offset-1 columns">
+            <div className="row">
+              <LandingPanel title="Product Tracking" dashboard={ProductTracking} status={releaseStatus(this.props.release)} />
+              <LandingPanel title="Product Quality" dashboard={ProductQuality} />
+              <LandingPanel title="Agile Maturity" dashboard={AgileMaturity} />
+              <LandingPanel title="Development Health" dashboard={DevelopmentHealth} status={(new Overview(this.props.teams.allTeams)).combinedIndicator()} />
+            </div>
+          </div>
         </div>
       </div>
     )

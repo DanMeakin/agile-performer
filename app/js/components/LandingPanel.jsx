@@ -6,14 +6,20 @@ import { selectMetric } from '../actions';
 
 class LandingPanel extends Component {
   render() {
-    let dashboard = this.props.dashboard;
+    let dashboard = this.props.dashboard,
+      statusClass = this.props.status ? "status-" + this.props.status.toLowerCase() : "",
+      panelClass = "landing-panel medium-3 columns";
     return (
-      <div className="landing-panel medium-6 columns">
-        <h3>{this.props.title}</h3>
-        {this.props.children}
-        <a href="#" onClick={() => this.props.selectMetric(dashboard)}>
-          View
-        </a>
+      <div className={panelClass}>
+        <div className={statusClass + " inner-panel"}>
+          <h3>{this.props.title}</h3>
+          {this.props.children}
+          <div className="view-link">
+            <a href="#" onClick={() => this.props.selectMetric(dashboard)}>
+              View
+            </a>
+          </div>
+        </div>
       </div>
     )
   }
