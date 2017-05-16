@@ -23,7 +23,7 @@ class SatisfactionOverview extends Component {
       satisfactionOverview = new Overview(teams);
 
     return (
-      <div className="satisfaction-overview">
+      <div className="chart-panel">
         <h3>Satisfaction Overview</h3>
         <table className="unstriped hover team-overview-table">
           <thead>

@@ -76,7 +76,24 @@ export default class Overview {
       trend = "STEADY";
     }
     return this.makeIndicator(trend, endingPoints);
-   
+  }
+
+  combinedIndicator() {
+    let happinessIndicators = this.teams.map(team => this.happinessIndicator(team.name)),
+        satisfactionIndicators = this.teams.map(team => this.satisfactionIndicator(team.name));
+    // Combine indicators, taking the worst indicator overall.
+    let indicatorCount = happinessIndicators.concat(satisfactionIndicators).reduce((counts, { colour }) => {
+      counts[colour] = (counts[colour] || 0) + 1;
+      return counts;
+    }, {}),
+        totalIndicators = happinessIndicators.length + satisfactionIndicators.length;
+    if (indicatorCount.RED > totalIndicators / 10) {
+      return "RED";
+    } else if (indicatorCount.YELLOW > totalIndicators / 10) {
+      return "YELLOW";
+    } else {
+      return "GREEN";
+    }
   }
 
   makeIndicator(trend, currentPoints) {
