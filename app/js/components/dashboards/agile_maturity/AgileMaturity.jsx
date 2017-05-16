@@ -5,7 +5,7 @@ import { Dashboard } from '../../dashboards';
 import OverviewTable from './OverviewTable';
 import Breadcrumb from '../../Breadcrumb';
 import DashboardTitle from '../../DashboardTitle';
-import SprintBurndownTrend from './SprintBurndownTrend'
+import TotalBurndownTrend from './TotalBurndownTrend'
 
 class AgileMaturity extends Component {
   render() {
@@ -15,7 +15,7 @@ class AgileMaturity extends Component {
         label: "Home"
       },
       {
-        view: AgileMaturityContainer,
+        view: AgileMaturity,
         label: "Agile Maturity"
       }
     ];
@@ -25,7 +25,7 @@ class AgileMaturity extends Component {
         <DashboardTitle>Agile Maturity</DashboardTitle>
         <div className="row">
           <div className="medium-8 columns">
-            <SprintBurndownTrend className="main-visualisation" />
+            <TotalBurndownTrend className="main-visualisation" />
           </div>
           <div className="medium-4 columns">
             <OverviewTable />

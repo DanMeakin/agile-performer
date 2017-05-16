@@ -42,7 +42,6 @@ export default class Release {
         return teamDefectsData;
       } else {
         return defectsData.map(({ description, data }, idx) => {
-          console.log("This data", data);
           return {
             description,
             data: combineDefectData(data, teamDefectsData[idx].data)
@@ -112,17 +111,17 @@ export default class Release {
    */
   velocityData(teamName) {
     let teamSprints = this.sprintsForTeam(teamName),
-        sprintLabel = (sprint) => (
-          [
-            "Sprint ",
-            sprint.number,
-            " (",
-            veryShortDate(sprint.startDate()),
-            " - ",
-            veryShortDate(sprint.endDate()),
-            ")"
-          ].join("")
-        ),
+      sprintLabel = (sprint) => (
+        [
+          "Sprint ",
+          sprint.number,
+          " (",
+          veryShortDate(sprint.startDate()),
+          " - ",
+          veryShortDate(sprint.endDate()),
+          ")"
+        ].join("")
+      ),
       commitment = teamSprints.reduce((commitmentData, sprint) => {
         commitmentData[sprintLabel(sprint)] = sprint.committedStoryPoints();
         return commitmentData;
@@ -132,15 +131,15 @@ export default class Release {
         return completionData;
       }, {}),
       data = [{
-          description: "Commitment",
-          data: commitment
-        },
-        {
-          description: "Work Completed",
-          data: completed
-        }
+        description: "Commitment",
+        data: commitment
+      },
+      {
+        description: "Work Completed",
+        data: completed
+      }
       ];
-      console.log("Velocity", data);
+    console.log("Velocity", data);
     return data;
   }
 
@@ -180,34 +179,34 @@ export default class Release {
           data: averageVelocity
         },
       ];
-      console.log("Velocity", data);
+    console.log("Velocity", data);
     return data;
   }
 
-  calcAverageVelocity(sprints){
-    let total = sprints.reduce((points, sprint)=>{
+  calcAverageVelocity(sprints) {
+    let total = sprints.reduce((points, sprint) => {
       return points + sprint.completedStoryPoints();
     }, 0),
-    data = sprints.reduce((averagePoints, sprint) => {
-      averagePoints["Sprint " + sprint.number] = total / sprints.length;
-      return averagePoints
-    }, {})
-        console.log("Velocity", data);
-        console.log("Velocity", total);
+      data = sprints.reduce((averagePoints, sprint) => {
+        averagePoints["Sprint " + sprint.number] = total / sprints.length;
+        return averagePoints
+      }, {})
+    console.log("Velocity", data);
+    console.log("Velocity", total);
     return data;
   }
 
-/**
- * Calcs the completion rate for a list of sprints 
- * 
- * @param {Array[Sprint]} sprints - sprints for which you want to calc the completion rate
- * @returns {Object}
- */
-  calcCompletionRate(sprints){
+  /**
+   * Calcs the completion rate for a list of sprints 
+   * 
+   * @param {Array[Sprint]} sprints - sprints for which you want to calc the completion rate
+   * @returns {Object}
+   */
+  calcCompletionRate(sprints) {
     let data = sprints.reduce((completionRateData, sprint) => {
       let completionRate = sprint.completedStoryPoints() / sprint.committedStoryPoints();
-      let completionPercentage = completionRate * 100 
-      completionRateData["Sprint " + sprint.number] =  completionPercentage;
+      let completionPercentage = completionRate * 100
+      completionRateData["Sprint " + sprint.number] = completionPercentage;
       return completionRateData
     }, {})
     return data;
@@ -237,19 +236,46 @@ export default class Release {
    * @param {String} teamName - the name of the team whose burndown trend to collect
    * @returns {Array[Object]} - burndown trend data for use within a linechart
    */
-   burndownData(teamName) {
-      let sprints = this.sprintsForTeam(teamName),
-      data = sprints.map((sprint) =>{
+  burndownData(teamName) {
+    let sprints = this.sprintsForTeam(teamName),
+      data = sprints.map((sprint) => {
         let burndown = sprint.burndown().reduce((dataPoint, points, idx) => {
           dataPoint[idx] = points;
           return dataPoint;
         }, {});
         return {
-          description: "Sprint " + sprint.number, 
+          description: "Sprint " + sprint.number,
           data: burndown
         };
       });
-      return data;
-   }
+    return data;
+  }
 
-};
+  burndownDataProduct() {
+    let teamSprintsData = this.teams().map((team) => {
+      let teamSprints = this.sprintsForTeam(team.name);
+      let sprintTrendData = teamSprints
+        .map((sprint) => {
+          let totalData = sprint.burndown()
+          return totalData
+        })
+        .reduce((teamSprintTotal, teamSprint, idx) => {
+          teamSprint.forEach((sprintDay, i) => {
+            teamSprintTotal[i] = (teamSprintTotal[i] || 0) + sprintDay;
+          })
+          return teamSprintTotal
+        }, [])
+        .reduce((sprintTrend, pointsTotal, idx) => {
+          sprintTrend[idx] = pointsTotal / teamSprints.length;
+          return sprintTrend
+        }, {})
+        return {
+          description: "Team " + team.name,
+          data: sprintTrendData
+        }
+    });
+    console.log("trend", teamSprintsData)
+    return teamSprintsData;
+  }
+
+}
