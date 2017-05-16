@@ -24,10 +24,10 @@ class DevelopmentHealth extends Component {
         <Breadcrumb links={breadcrumbLinks} />
         <DashboardTitle>Development Health</DashboardTitle>
         <div className="row">
-          <div className="medium-12 columns">
+          <div className="medium-8 columns">
             <HappinessOverview className="main-visualisation" />
           </div>
-          <div className="medium-12 columns">
+          <div className="medium-4 columns">
             <SatisfactionOverview className="main-visualisation" />
           </div>
         </div>

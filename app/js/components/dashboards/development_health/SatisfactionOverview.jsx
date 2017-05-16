@@ -29,9 +29,9 @@ class SatisfactionOverview extends Component {
         <table className="unstriped hover team-overview-table">
           <thead>
             <tr>
-              <th>Team</th>
+              <th className="criterion-heading">Team</th>
               {criteria.map(criterion => (
-                <th key={"heading-" + criterion}>{criterion}</th>
+                <th key={"heading-" + criterion} className="criterion-heading">{criterion}</th>
               ))}
             </tr>
           </thead>

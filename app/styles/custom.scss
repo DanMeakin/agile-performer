@@ -75,6 +75,14 @@ nav.breadcrumb {
   padding-top: 1em;
 }
 
+// Landing dashboard
+
+.landing-panel {
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 5em;
+}
+
 // Product Tracking
 
 table.team-overview-table {
@@ -89,6 +97,13 @@ table.team-overview-table {
   td {
     cursor: pointer;
   }
+}
+
+// Development Health
+
+th.criterion-heading {
+  font-size: smaller;
+  padding: 0.3em;
 }
 
 // Status Indicator
