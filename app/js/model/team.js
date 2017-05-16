@@ -23,6 +23,12 @@ export default class Team {
     this.repositories = [];
   }
 
+  getTeamByName(teamName) {
+    if(teamName === this.name){
+      return this;
+    } 
+  }
+
   /**
    * Add a practices assessment to this team.
    *

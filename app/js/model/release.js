@@ -275,9 +275,10 @@ export default class Release {
 
   practicesTrendData() {
     let teamTrendData = this.teams().map((team) => {
-      console.log("reduce data all teams", this.teamPracticeTrend(team))
       return this.teamPracticeTrend(team);
     })
+    console.log("trend", teamTrendData)
+
     return teamTrendData;
   }
 
@@ -287,14 +288,10 @@ export default class Release {
         return total + valueInAssesment;
       }, 0)
       assessments[shortDate(practices.date)] = scrumTotal / Object.values(practices.scrumAssessment).length
-      console.log("scrumTotal", scrumTotal)
       let xpTotal = Object.values(practices.xpAssessment).reduce((total, valueInAssesment) => {
         return total + valueInAssesment;
       }, 0)
-      console.log("xpTotal", xpTotal)
       assessments[shortDate(practices.date)] = xpTotal / Object.values(practices.xpAssessment).length
-      console.log("scrumTotal", assessments)
-
       return assessments;
     }, {})
     return {

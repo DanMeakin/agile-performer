@@ -18,7 +18,7 @@ class OverviewTable extends Component {
 
   render() {
     let teamNames = this.props.teams.shortNames;
-    let overview = new Overview(this.props.release);
+    let overview = new Overview(this.props.release, this.props.teams);
     return (
       <div className="chart-panel">
         <h3>Team Overview</h3>
@@ -32,6 +32,9 @@ class OverviewTable extends Component {
             {teamNames.map(teamName => (
               <tr key={"team-" + teamName + "-overview"} onClick={() => this.handleSelectDashboard(teamName)}>
                 <td className="team-name">{teamName}</td>
+                <td className="indicator">
+                  <StatusIndicator colour={overview.maturityIndicator(teamName)} />
+                </td>
               </tr>
             ))}
           </tbody>
