@@ -7,6 +7,10 @@
  * Licensed under MIT Open Source
  */
 /****SIDE-NAV****/
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+
 .sidebar {
   background: #FAFAFA;
   padding: 32px, 20px; }
@@ -40,6 +44,113 @@
 
 form .small-3.columns {
   padding: 0; }
+
+h1 {
+  text-align: center; }
+
+.team-selector-left {
+  padding-top: 1em;
+  margin-bottom: 0; }
+
+.sprint-selector {
+  margin-bottom: 0; }
+  .sprint-selector label {
+    margin-bottom: 0; }
+
+nav.breadcrumb {
+  padding-top: 1em; }
+
+.landing-panel {
+  text-align: center;
+  vertical-align: middle; }
+  .landing-panel h3 {
+    padding-top: 2em;
+    margin-left: 1.5em;
+    margin-right: 1.5em; }
+  .landing-panel .inner-panel {
+    vertical-align: middle;
+    padding: 1em;
+    width: 100%;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px; }
+  .landing-panel .status-green {
+    border: 2px solid green; }
+    .landing-panel .status-green .view-link {
+      display: inline-block;
+      margin: 0 auto;
+      background: green;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      line-height: 60px;
+      vertical-align: middle; }
+      .landing-panel .status-green .view-link a {
+        color: white; }
+  .landing-panel .status-yellow {
+    border: 2px solid yellow; }
+    .landing-panel .status-yellow .view-link {
+      display: inline-block;
+      margin: 0 auto;
+      background: yellow;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      line-height: 60px;
+      vertical-align: middle; }
+      .landing-panel .status-yellow .view-link a {
+        color: white; }
+  .landing-panel .status-red {
+    border: 2px solid red; }
+    .landing-panel .status-red .view-link {
+      display: inline-block;
+      margin: 0 auto;
+      background: red;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      line-height: 60px;
+      vertical-align: middle; }
+      .landing-panel .status-red .view-link a {
+        color: white; }
+
+table.team-overview-table th {
+  text-align: center; }
+table.team-overview-table td.team-name {
+  text-align: center; }
+table.team-overview-table td {
+  cursor: pointer; }
+
+div.status-indicator {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
+  font-family: FontAwesome; }
+  div.status-indicator.status-good {
+    background: green;
+    color: white; }
+  div.status-indicator.status-neutral {
+    background: yellow; }
+  div.status-indicator.status-bad {
+    background: red;
+    color: white; }
+  div.status-indicator.status-increasing::after {
+    content: ""; }
+  div.status-indicator.status-decreasing::after {
+    content: ""; }
 
 .align-right {
   justify-content: flex-end; }
@@ -4696,7 +4807,12 @@ a.thumbnail {
 .clearfix::after {
   clear: both; }
 
+@charset "UTF-8";
 /****SIDE-NAV****/
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+
 .sidebar {
   background: #FAFAFA;
   padding: 32px, 20px; }
@@ -4730,6 +4846,113 @@ a.thumbnail {
 
 form .small-3.columns {
   padding: 0; }
+
+h1 {
+  text-align: center; }
+
+.team-selector-left {
+  padding-top: 1em;
+  margin-bottom: 0; }
+
+.sprint-selector {
+  margin-bottom: 0; }
+  .sprint-selector label {
+    margin-bottom: 0; }
+
+nav.breadcrumb {
+  padding-top: 1em; }
+
+.landing-panel {
+  text-align: center;
+  vertical-align: middle; }
+  .landing-panel h3 {
+    padding-top: 2em;
+    margin-left: 1.5em;
+    margin-right: 1.5em; }
+  .landing-panel .inner-panel {
+    vertical-align: middle;
+    padding: 1em;
+    width: 100%;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px; }
+  .landing-panel .status-green {
+    border: 2px solid green; }
+    .landing-panel .status-green .view-link {
+      display: inline-block;
+      margin: 0 auto;
+      background: green;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      line-height: 60px;
+      vertical-align: middle; }
+      .landing-panel .status-green .view-link a {
+        color: white; }
+  .landing-panel .status-yellow {
+    border: 2px solid yellow; }
+    .landing-panel .status-yellow .view-link {
+      display: inline-block;
+      margin: 0 auto;
+      background: yellow;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      line-height: 60px;
+      vertical-align: middle; }
+      .landing-panel .status-yellow .view-link a {
+        color: white; }
+  .landing-panel .status-red {
+    border: 2px solid red; }
+    .landing-panel .status-red .view-link {
+      display: inline-block;
+      margin: 0 auto;
+      background: red;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      line-height: 60px;
+      vertical-align: middle; }
+      .landing-panel .status-red .view-link a {
+        color: white; }
+
+table.team-overview-table th {
+  text-align: center; }
+table.team-overview-table td.team-name {
+  text-align: center; }
+table.team-overview-table td {
+  cursor: pointer; }
+
+div.status-indicator {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
+  font-family: FontAwesome; }
+  div.status-indicator.status-good {
+    background: green;
+    color: white; }
+  div.status-indicator.status-neutral {
+    background: yellow; }
+  div.status-indicator.status-bad {
+    background: red;
+    color: white; }
+  div.status-indicator.status-increasing::after {
+    content: ""; }
+  div.status-indicator.status-decreasing::after {
+    content: ""; }
 
 
 /*# sourceMappingURL=app.css.map*/
