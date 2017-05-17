@@ -6,6 +6,9 @@
   -moz-border-radius: $size / 2;
 }
 
+$good-indicator: green;
+$ok-indicator: gold;
+$bad-indicator: red;
 
 /****SIDE-NAV****/
 
@@ -103,7 +106,8 @@ nav.breadcrumb {
     @include rounded-element(300px);
   }
 
-  @mixin link-style($colour) {
+  @mixin status-style($colour) {
+    border: 2px solid $colour;
     .view-link {
       display: inline-block;
       margin: 0 auto;
@@ -119,18 +123,15 @@ nav.breadcrumb {
   }
 
   .status-green {
-    border: 2px solid green;
-    @include link-style(green);
+    @include status-style($good-indicator);
   }
 
   .status-yellow {
-    border: 2px solid yellow;
-    @include link-style(yellow);
+    @include status-style($ok-indicator);
   }
 
   .status-red {
-    border: 2px solid red;
-    @include link-style(red);
+    @include status-style($bad-indicator);
   }
 }
 
@@ -160,16 +161,17 @@ div.status-indicator {
   font-family: FontAwesome;
 
   &.status-good {
-    background: green;
+    background: $good-indicator;
     color: white;
   }
 
   &.status-neutral {
-    background: yellow;
+    background: $ok-indicator;
+    color: white;
   }
 
   &.status-bad {
-    background: red;
+    background: $bad-indicator;
     color: white;
   }
 
