@@ -52,7 +52,7 @@ function mapStateToProps(state) {
         yAxes: [{
           display: true,
           ticks: {
-          callback: displayTicks,
+            callback: displayTicks,
             min: 0,
             max: 5,
             stepSize: 1,

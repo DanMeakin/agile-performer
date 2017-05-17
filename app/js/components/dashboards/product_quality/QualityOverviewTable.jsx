@@ -26,6 +26,7 @@ class QualityOverviewTable extends Component {
           <thead>
             <tr>
               <th>Team</th>
+              <th>Quality</th>
             </tr>
           </thead>
           <tbody>

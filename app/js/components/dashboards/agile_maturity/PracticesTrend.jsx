@@ -12,13 +12,25 @@ class PracticesTrend extends Component {
 }
 
 function mapStateToProps(state) {
-  let options = {
+  let displayTicks = value => {
+      let adoptionLabels = {
+        1: "Adoption",
+        2: "Adaptation",
+        3: "Acceptance",
+        4: "Routinisation",
+        5: "Infusion"
+      };
+      return adoptionLabels[value] || "";
+    },
+  options = {
       scales: {
         yAxes: [{
           display: true,
           ticks: {
+            callback: displayTicks,
             min: 0,
             max: 5,
+            stepSize: 1,
             beginAtZero: true
           }
         }]
