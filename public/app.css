@@ -92,11 +92,11 @@ nav.breadcrumb {
       .landing-panel .status-green .view-link a {
         color: white; }
   .landing-panel .status-yellow {
-    border: 2px solid yellow; }
+    border: 2px solid gold; }
     .landing-panel .status-yellow .view-link {
       display: inline-block;
       margin: 0 auto;
-      background: yellow;
+      background: gold;
       width: 60px;
       height: 60px;
       border-radius: 30px;
@@ -143,7 +143,8 @@ div.status-indicator {
     background: green;
     color: white; }
   div.status-indicator.status-neutral {
-    background: yellow; }
+    background: gold;
+    color: white; }
   div.status-indicator.status-bad {
     background: red;
     color: white; }
@@ -4894,11 +4895,11 @@ nav.breadcrumb {
       .landing-panel .status-green .view-link a {
         color: white; }
   .landing-panel .status-yellow {
-    border: 2px solid yellow; }
+    border: 2px solid gold; }
     .landing-panel .status-yellow .view-link {
       display: inline-block;
       margin: 0 auto;
-      background: yellow;
+      background: gold;
       width: 60px;
       height: 60px;
       border-radius: 30px;
@@ -4945,7 +4946,8 @@ div.status-indicator {
     background: green;
     color: white; }
   div.status-indicator.status-neutral {
-    background: yellow; }
+    background: gold;
+    color: white; }
   div.status-indicator.status-bad {
     background: red;
     color: white; }
